@@ -21,9 +21,9 @@ Use AI for Science (1), Physics of AI (2), and AI Evaluation (3) as primary filt
 
 ### 3. 卡片：首页轻量，详情页充分 / Cards: Concise Overview, Complete Detail Pages
 
-每张卡首页显示标题、单句价值主张、2—3个关键数字、一张有物理含义的图、论文/GitHub链接；点击进入详情展开完整中英文正文、方法、核心结果、作者贡献、资料链接。静态数据与动态指标分开，GitHub Stars加日期。
+每张概览卡显示标题、单句价值主张、简短成果要点、科研图示与论文/GitHub链接。优先呈现论文接收、外部收录、开源影响及核心科研贡献，不设独立数字栏，也不显示“重点标签”小标题。完整实验数据、方法、作者贡献与资料链接保留在详情页。GitHub Stars 标注记录日期。
 
-On each overview card, show the title, a one-sentence value proposition, two or three key figures where available, a scientifically meaningful visual, and paper/GitHub links. Clicking through should reveal the complete bilingual description, methods, main results, contributor credits, and references. Keep stable facts separate from changing statistics, and date-stamp GitHub star counts.
+On each overview card, show the title, a one-sentence value proposition, concise achievements, a research visual, and paper/GitHub links. Prioritize publication, external recognition, open-source impact, and core scientific contributions. Render the bullets without a Highlights heading or a separate metric strip. Keep full experimental data, methods, contributor credits, and references on detail pages. Date-stamp GitHub star counts.
 
 ### 4. 建立跨项目研究叙事 / Connect the Projects into a Research Narrative
 
@@ -33,15 +33,15 @@ Below the three tracks, introduce a progression in evaluation capabilities: PHYB
 
 ### 5. 视觉与编辑标准 / Visual Design and Localization
 
-图像优先使用项目自有图、真实工作流图、评测可视化；素材应包含alt文本与来源署名。关键数字要标明测试年份/模型/分母，勿将后续55题规模与论文25题增益混用；外部合作、引用与团队主导使用不同徽标。中英切换应覆盖标题、段落、指标和按钮。王波圈图卡保持待补齐，前端隐藏空字段。
+图像优先使用项目自有图、真实工作流图、评测可视化；素材应包含alt文本与来源署名。详情页研究数据要标明测试年份/模型/分母，勿将后续55题规模与论文25题增益混用；外部合作、引用与团队主导使用不同徽标。中英切换应覆盖标题、段落、指标和按钮。王波圈图卡保持待补齐，前端隐藏空字段。
 
 Prefer original project figures, real workflow diagrams, and benchmark visualizations. Include alt text and image credits. Present key figures with the appropriate evaluation year, model, and scope; the 55-topic extended benchmark and the 25-topic paper result belong to different releases. Visually distinguish collaborations, references, and team-led work. Language switching must cover titles, descriptions, highlights, metrics, and buttons. Hide empty fields in the Bo Wang loop-diagram card until content is provided.
 
 ### 数据结构与前端对接 / Data Structure and Frontend Integration
 
-配套文件为 `research_projects_bilingual.json`。通过 `site.tracks` 和 `site.relationships` 构建筛选标签；通过 `projects[].track` 与 `projects[].relationship` 分类，通过 `projects[].order` 控制展示顺序。使用 `zh` / `en` 切换所有中英文内容；首页显示 `title`、`teaser`、`metrics`，详情页显示 `description`、`highlights`、`credits`、`publication`、`links` 与 `visual_brief`。空字段直接不渲染；王波圈图计算保留卡片字段，正文与成果内容留空。
+配套文件为 `team_projects_zh_en.json`。通过 `site.tracks` 和 `site.relationships` 构建筛选标签；通过 `projects[].track` 与 `projects[].relationship` 分类，通过 `projects[].order` 控制展示顺序。使用 `zh` / `en` 切换所有中英文内容；概览卡显示 `title`、`teaser`、`highlights`（无小标题）；`metrics` 仅用于详情页，详情页显示 `description`、`highlights`、`credits`、`publication`、`links` 与 `visual_brief`。空字段直接不渲染；王波圈图计算保留卡片字段，正文与成果内容留空。
 
-The companion `research_projects_bilingual.json` is the content source for the website. Build filters from `site.tracks` and `site.relationships`; categorize projects with `projects[].track` and `projects[].relationship`, and sort them using `projects[].order`. Switch all localized content between `zh` and `en`. Show `title`, `teaser`, and `metrics` on overview cards, and use `description`, `highlights`, `credits`, `publication`, `links`, and `visual_brief` on detail pages. Omit empty fields. The Bo Wang loop-diagram entry retains its data structure, with description and results left blank.
+The companion `team_projects_zh_en.json` is the content source for the website. Build filters from `site.tracks` and `site.relationships`; categorize projects with `projects[].track` and `projects[].relationship`, and sort them using `projects[].order`. Switch all localized content between `zh` and `en`. Show `title`, `teaser`, and unheaded `highlights` on overview cards; reserve `metrics` for detail pages, and use `description`, `highlights`, `credits`, `publication`, `links`, and `visual_brief` on detail pages. Omit empty fields. The Bo Wang loop-diagram entry retains its data structure, with description and results left blank.
 
 ## 二、栏目与归属关系 / Research Tracks and Project Relationships
 
@@ -62,11 +62,11 @@ The companion `research_projects_bilingual.json` is the content source for the w
 
 **首页一句话 / Teaser (ZH)**
 
-以500道高质量竞赛级物理题与先进的评分系统，重新刻画大模型的物理推理能力。
+以物理问题与 EED 表达式评分，检验大模型的科学推理。
 
 **Homepage Teaser (EN)**
 
-A benchmark of 500 high-quality, competition-level physics problems and an advanced scoring system that redefines how large language models are evaluated on physics reasoning.
+Evaluating scientific reasoning through physics problems and EED expression-level scoring.
 
 **项目详情正文（中文）/ Full Description (ZH)**
 
@@ -78,14 +78,16 @@ In May 2025, our team launched PHYBench together with 178 students from Peking U
 
 **重点标签 / Highlights**
 
-- 500道高质量原创物理题，覆盖多个难度层级与物理子领域  
-  *500 high-quality original physics problems across multiple subfields and difficulty levels*
-- EED提供细粒度表达式反馈；204%的样本效率提升  
-  *EED provides fine-grained expression-level feedback, with a 204% gain in sample efficiency*
-- NeurIPS 2025 Datasets & Benchmarks Track；Stanford HAI 2026 AI Index收录  
-  *Accepted to the NeurIPS 2025 Datasets & Benchmarks Track; featured in Stanford HAI’s 2026 AI Index Report*
+- NeurIPS 2025 Datasets & Benchmarks Track 接收
+  *Accepted to NeurIPS 2025 Datasets & Benchmarks*
+- Stanford《2026 AI Index Report》收录
+  *Featured in Stanford’s 2026 AI Index Report*
+- Hugging Face Trending Dataset 第 3 名
+  *Reached #3 on Hugging Face Trending Datasets*
+- alphaXiv 历史浏览量 Top 30
+  *Among alphaXiv’s all-time top 30 by views*
 
-**关键数字 / Key Metrics**
+**研究数据（详情页） / Research Data (Detail Page)**
 
 - **500** · 高质量原创物理题 / original physics problems
 - **204%** · 样本效率提升 / sample-efficiency improvement
@@ -131,14 +133,14 @@ ColliderAgent aims to make AI actually conduct high-energy physics research rath
 
 **重点标签 / Highlights**
 
-- 统一自然语言入口，贯通理论建模、事件生成、探测器模拟与数据分析  
-  *A unified natural-language interface spanning theoretical modeling, event generation, detector simulation, and data analysis*
-- Skills式工具接口与 Magnus 执行后端，降低领域软件编排成本  
-  *Skills-based tool interfaces and the Magnus execution backend reduce the complexity of orchestrating scientific software*
-- 10篇代表性高能物理论文端到端复现  
-  *End-to-end reproduction of 10 representative high-energy physics papers*
+- 代表性高能物理论文端到端复现
+  *End-to-end reproduction of high-energy physics papers*
+- 贯通理论建模、探测器模拟与分析
+  *One workflow from theory to detector-level analysis*
+- Skills 多智能体协同与 Magnus 执行后端
+  *Skills-based agents with the Magnus execution backend*
 
-**关键数字 / Key Metrics**
+**研究数据（详情页） / Research Data (Detail Page)**
 
 - **10** · 端到端复现的代表性论文 / representative papers reproduced end to end
 
@@ -180,14 +182,14 @@ Led by Zhuo-Yang Song, this research addresses a fundamental question in Physics
 
 **重点标签 / Highlights**
 
-- 以智能体状态转移代替token层级描述，研究宏观生成动力学  
-  *Studies macroscopic generative dynamics through agent-state transitions rather than token-level descriptions*
-- 最小作用量与有效势函数，将复杂生成偏好转化为可检验的动力学关系  
-  *Uses least action and an effective potential to turn complex generative preferences into testable dynamical relations*
-- 2026年10月27日发表于PRX Intelligence  
-  *Published in PRX Intelligence on October 27, 2026*
+- 发表于 PRX Intelligence
+  *Published in PRX Intelligence*
+- 以状态转移刻画智能体宏观动力学
+  *Macroscopic agent dynamics through state transitions*
+- 最小作用量重建生成过程的有效势
+  *Effective potentials reconstructed through least action*
 
-**关键数字 / Key Metrics**
+**研究数据（详情页） / Research Data (Detail Page)**
 
 - **PRX Intelligence** · 正式发表期刊 / publishing journal
 - **2026.10.27** · 正式发表日期 / publication date
@@ -224,7 +226,7 @@ A state-transition graph and an effective-potential landscape, preferably using 
 
 **重点标签 / Highlights**
 
-**关键数字 / Key Metrics**
+**研究数据（详情页） / Research Data (Detail Page)**
 
 **链接 / Links**
 
@@ -264,14 +266,14 @@ PRBench advances scientific-agent evaluation from “Can an AI answer a physics 
 
 **重点标签 / Highlights**
 
-- 30个经过端到端验证的真实论文复现任务，覆盖11个物理领域  
-  *30 end-to-end-validated tasks reproducing real papers across 11 physics subfields*
-- 20余个北大物理学院课题组共同贡献标准任务  
-  *Contributions from more than 20 research groups at Peking University’s School of Physics*
-- 最强受测agent综合得分34%，严格完整复现成功率0%  
-  *Best tested agent: 34% overall score; 0% strict complete-reproduction success rate*
+- 以真实论文复现评估科研执行能力
+  *Scientific execution evaluated through paper reproduction*
+- 北京大学物理学院多课题组共建
+  *Co-developed with Peking University physics research groups*
+- 专家端到端核验与逐项评分
+  *Expert-verified references and detailed scoring rubrics*
 
-**关键数字 / Key Metrics**
+**研究数据（详情页） / Research Data (Detail Page)**
 
 - **30 / 11** · 任务 / 物理子领域 / tasks / physics subfields
 - **34%** · 最佳受测Agent综合得分 / best agent’s overall score
@@ -302,34 +304,36 @@ Show a real reproduction workflow: Paper + Task → Sandbox Code → Simulation 
 
 **首页一句话 / Teaser (ZH)**
 
-把科研从线性流水线升级为会辩论、会调试、会积累经验的迭代闭环。
+让科研智能体在实验反馈中修正方法，并积累可复用的研究经验。
 
 **Homepage Teaser (EN)**
 
-Turning research from a linear pipeline into an iterative loop that debates, debugs, and accumulates experience.
+An autonomous research system that revises its methods through experiments and carries experience into subsequent runs.
 
 **项目详情正文（中文）/ Full Description (ZH)**
 
-AutoResearchClaw 的出发点是一个朴素但关键的判断：真实科研从来不是“给出想法—生成代码—写成论文”的一次性流程，而是伴随假设质疑、实验失败、路线调整与经验积累的循环。该项目构建了面向端到端科研的多智能体框架，以五类机制支撑更可靠的自主研究：结构化多智能体辩论促进假设生成与结果审查，Pivot/Refine 自愈执行循环将实验失败转化为下一步决策依据，可验证的报告机制约束数据与引用真实性，七种不同程度的人机协作模式允许研究者在高价值节点介入，跨轮次经验演化则使系统能从历史失误中持续改进。2026年5月发布的论文在最初25个机器学习研究课题上评估系统，相比 AI Scientist v2 报告54.7%的性能提升；消融实验同时发现，关键节点的精准人工干预往往优于完全放手或逐步盯守。此后公开版本将实验阶段扩展到高能物理、生物等专业科研Agent，并发布涵盖机器学习、高能物理、量子物理、生物学和统计学共55个课题的 ARC-Bench。项目由仇是作为共同第一作者之一参与牵头与核心研发，开源仓库截至2026年10月已获得超过1.4万GitHub Stars。AutoResearchClaw 将团队的长期研究主线凝聚为一个可扩展的科研平台：AI不仅执行任务，还必须能够在证据约束下迭代、纠错和协同。
+AutoResearchClaw 的出发点是一个朴素但关键的判断：真实科研从来不是“给出想法—生成代码—写成论文”的一次性流程，而是伴随假设质疑、实验失败、路线调整与经验积累的循环。该项目构建了面向端到端科研的多智能体框架，以五类机制支撑更可靠的自主研究：结构化多智能体辩论促进假设生成与结果审查，Pivot/Refine 自愈执行循环将实验失败转化为下一步决策依据，可验证的报告机制约束数据与引用真实性，七种不同程度的人机协作模式允许研究者在高价值节点介入，跨轮次经验演化则使系统能从历史失误中持续改进。2026年5月发布的论文在最初25个机器学习研究课题上评估系统，相比 AI Scientist v2 报告54.7%的性能提升；消融实验同时发现，关键节点的精准人工干预往往优于完全放手或逐步盯守。此后公开版本将实验阶段扩展到高能物理、生物等专业科研Agent，并发布涵盖机器学习、高能物理、量子物理、生物学和统计学共55个课题的 ARC-Bench。项目由仇是作为共同第一作者之一参与牵头与核心研发，开源仓库截至2026年10月已获得1.5万GitHub Stars。AutoResearchClaw 将团队的长期研究主线凝聚为一个可扩展的科研平台：AI不仅执行任务，还必须能够在证据约束下迭代、纠错和协同。
 
 **Project Description (English) / 英文详情正文**
 
-AutoResearchClaw starts from a simple but critical observation: real research is never a one-off sequence of “propose an idea, generate code, write a paper.” It is an iterative cycle of questioning hypotheses, encountering experimental failures, adjusting research directions, and accumulating experience. The project builds a multi-agent framework for end-to-end research, supported by five mechanisms for more reliable autonomy: structured multi-agent debate for hypothesis generation and critical review of results; a self-healing Pivot/Refine execution loop that converts experimental failures into evidence for the next decision; verifiable reporting that safeguards the integrity of data and citations; seven modes of human-AI collaboration that enable researchers to intervene at high-value decision points; and cross-run experience evolution that allows the system to improve continuously from past mistakes. The paper released in May 2026 evaluated the system on an initial set of 25 machine-learning research topics and reported a 54.7% performance improvement over AI Scientist v2. Ablation studies also found that targeted human intervention at critical decision points often outperformed both complete autonomy and step-by-step supervision. Later public releases extended the experiment stage to specialized scientific agents for high-energy physics, biology, and other domains, and introduced ARC-Bench with 55 topics across machine learning, high-energy physics, quantum physics, biology, and statistics. Shi Qiu contributed as a co-first author, project leader, and core developer. By October 2026, the open-source repository had attracted more than 14,000 GitHub stars. AutoResearchClaw brings the team’s long-term research direction together in an extensible research platform: AI must do more than execute tasks—it must iterate, correct errors, and collaborate under evidence-based constraints.
+AutoResearchClaw starts from a simple but critical observation: real research is never a one-off sequence of “propose an idea, generate code, write a paper.” It is an iterative cycle of questioning hypotheses, encountering experimental failures, adjusting research directions, and accumulating experience. The project builds a multi-agent framework for end-to-end research, supported by five mechanisms for more reliable autonomy: structured multi-agent debate for hypothesis generation and critical review of results; a self-healing Pivot/Refine execution loop that converts experimental failures into evidence for the next decision; verifiable reporting that safeguards the integrity of data and citations; seven modes of human-AI collaboration that enable researchers to intervene at high-value decision points; and cross-run experience evolution that allows the system to improve continuously from past mistakes. The paper released in May 2026 evaluated the system on an initial set of 25 machine-learning research topics and reported a 54.7% performance improvement over AI Scientist v2. Ablation studies also found that targeted human intervention at critical decision points often outperformed both complete autonomy and step-by-step supervision. Later public releases extended the experiment stage to specialized scientific agents for high-energy physics, biology, and other domains, and introduced ARC-Bench with 55 topics across machine learning, high-energy physics, quantum physics, biology, and statistics. Shi Qiu contributed as a co-first author, project leader, and core developer. By October 2026, the open-source repository had attracted 15,000 GitHub stars. AutoResearchClaw brings the team’s long-term research direction together in an extensible research platform: AI must do more than execute tasks—it must iterate, correct errors, and collaborate under evidence-based constraints.
 
 **重点标签 / Highlights**
 
-- 五大核心机制：辩论、自愈、可核验、人机协作、跨轮次演化  
-  *Five core mechanisms: debate, self-healing, verifiability, human-AI collaboration, and cross-run evolution*
-- 论文原始25个ML课题上较AI Scientist v2提升54.7%  
-  *54.7% performance improvement over AI Scientist v2 on the original 25 machine-learning research topics*
-- 最新版ARC-Bench覆盖5领域55课题；公开项目超过1.4万Stars  
-  *Latest ARC-Bench: 55 topics across five domains; the open-source project has more than 14,000 GitHub stars*
+- GitHub 1.5 万 Stars · 2026.10
+  *15K GitHub stars · October 2026*
+- 跨机器学习、物理、生物等领域的科研工作流
+  *Research workflows across machine learning, physics, and biology*
+- 多智能体辩论、自愈执行与经验演化
+  *Multi-agent debate, self-healing execution, and experience reuse*
+- 可核验报告与关键节点人机协作
+  *Verifiable reporting and targeted human collaboration*
 
-**关键数字 / Key Metrics**
+**研究数据（详情页） / Research Data (Detail Page)**
 
 - **54.7%** · 相对AI Scientist v2的性能提升 / performance improvement over AI Scientist v2
 - **55 / 5** · 最新版ARC-Bench课题 / 学科领域 / latest ARC-Bench topics / domains
-- **14K+** · GitHub Stars（截至2026年10月） / GitHub stars (October 2026)
+- **15K** · GitHub Stars（截至2026年10月） / GitHub stars (October 2026)
 
 **链接 / Links**
 
@@ -373,14 +377,14 @@ RSI-Exam takes AI Evaluation a step further: beyond static problem solving or on
 
 **重点标签 / Highlights**
 
-- 88个可执行研究任务，35公开、53私有，覆盖6个领域  
-  *88 executable research tasks: 35 public and 53 private, covering six domains*
-- 弱但有效的初始方法，多轮改进，隐藏集一次性验证  
-  *A weak but valid starting method, multiple rounds of improvement, and one-time verification on hidden data*
-- 兼顾方法优化与冻结模型的agent harness设计  
-  *Evaluates both improvements to direct methods and the design of agent harnesses for frozen models*
+- 独立隐藏测试检验方法改进
+  *Method improvements tested on independent hidden data*
+- 覆盖算法优化与 Agent Harness 设计
+  *Algorithm improvement and agent-harness design*
+- 专家出题、泄漏审计与真实轨迹复核
+  *Expert-designed tasks, leakage audits, and trajectory review*
 
-**关键数字 / Key Metrics**
+**研究数据（详情页） / Research Data (Detail Page)**
 
 - **88** · 可执行研究任务 / executable research tasks
 - **35 / 53** · 公开 / 私有任务 / public / private tasks

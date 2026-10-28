@@ -85,9 +85,7 @@ export function projectCard(project, lang) {
     <a class="visual-link" href="${url(lang, `research/${project.id}`)}" aria-label="${esc(title)}">${miniVisual(project, lang)}</a>
     <div class="project-card-body"><div class="project-meta"><span class="badge ${project.relationship === 'team_led' ? 'badge-led' : ''}">${relationship(project, lang)}</span><span>${project.publication[lang].includes('PRX') ? 'PRX Intelligence · 2026' : project.publication[lang].includes('NeurIPS') ? 'NeurIPS · 2025' : '2026'}</span></div>
     <h3><a href="${url(lang, `research/${project.id}`)}">${esc(title)} ${right}</a></h3><p class="project-teaser">${esc(project.teaser[lang])}</p>
-    ${metrics(project, lang, 2)}
-    ${project.metrics.length < 2 ? `<p class="card-highlight">${esc(project.highlights[1][lang])}</p>` : ''}
-    ${project.id === 'autoresearchclaw' ? `<p class="metric-scope">${lang === 'zh' ? '54.7% 增益基于原始 25 个机器学习课题；55 题为后续扩展版本。' : '54.7% gain: original 25 ML topics. The 55-topic release is a later extension.'}</p>` : ''}
+    <ul class="project-highlights">${project.highlights.map(highlight => `<li>${esc(highlight[lang])}</li>`).join('')}</ul>
     <div class="card-bottom">${projectLinks(project, lang)}<a class="text-link" href="${url(lang, `research/${project.id}`)}">${c.readProject} ${right}</a></div></div>
   </article>`;
 }

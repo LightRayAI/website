@@ -26,7 +26,7 @@ npm run preview              # Serve the current production build
 
 ## Content and structure
 
-- `team_projects_zh_en.json`: authoritative bilingual project data, read directly at build time. Keep this and `research_projects_bilingual.md` as supplied source documents.
+- `team_projects_zh_en.json`: authoritative bilingual project data, read directly at build time. Keep it synchronized with `research_projects_bilingual.md` when the user updates project copy or results. Overview cards render concise `highlights` without a section label; quantitative `metrics` are retained on detail pages. AutoResearchClaw's October 2026 star snapshot is 15K, updated at the user's request.
 - `src/content.mjs`: shared bilingual editorial copy, team profiles, source-derived workflow labels, and figure credits.
 - `src/data-business.mjs`: the Scientific Data Infrastructure positioning, four bilingual offerings, scientific task excerpts/equations, and three principles: problem formulation, executable research workflows, and scientific verification. The research-trajectory example describes a real scientist–agent question without its numerical results or conclusions; the DMRG example presents SOTA comparison as a research objective, not a claimed performance result.
 - `src/example-cards.mjs`: independent bilingual example panels and build-time KaTeX rendering. Cards show only the scientific setting, equation and question. Chinese panels are labeled “（翻译）”; each card can show its English original without changing the page language. Mathematical HTML/MathML, styles, fonts and license are served locally.

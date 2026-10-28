@@ -12,7 +12,7 @@
 
 - [x] Rewrite bilingual hero/thesis/principles and simplify the four example cards.
 - [x] Update existing interaction tests for the simplified behavior, run checks and inspect desktop/mobile rendering.
-- [ ] Commit, push, deploy and verify the public pages.
+- [x] Commit, push, deploy and verify the public pages.
 
 ## Verification
 
@@ -22,3 +22,10 @@
 - Independent review found no functional or scientific blockers; its minor README correction is applied.
 
 - Concurrent upstream changes `fd9d102` and `18c8be5` were integrated before publication: preserve the model-improvement family heading and the opening scientific-capability/generalization statement alongside the new research/data positioning.
+
+## Publication
+
+- Implementation `53ef3b2` includes the concurrent upstream changes and passed CI/deployment: https://github.com/LightRayAI/website/actions/runs/40748853926
+- Both live languages verified: prominent research/data thesis, expert-led human-in-the-loop wording, four scientific question cards with no evidence/delivery disclosures, and retained upstream generalization/model-improvement copy.
+- All three example interaction tests passed against the public site.
+- Final documentation-only update does not change the deployed artifact.

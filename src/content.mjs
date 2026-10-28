@@ -73,7 +73,7 @@ export const copy = {
         'We advance scientific discovery through intelligent research systems while developing the theoretical foundations, evaluation methodologies, and high-quality data infrastructure these systems require.',
       ],
       backgrounds: 'Our members’ academic backgrounds', collaborations: 'Scientific collaborations',
-      people: 'Core members', scientificTeam: 'Scientific team',
+      people: 'Core members', scientificTeam: 'Chief Scientist',
       shi: {
         name: 'Shi Qiu', otherName: '仇是', position: 'Ph.D. student in Computer Science', institution: 'University of North Carolina at Chapel Hill',
         bio: 'Shi Qiu is a Computer Science Ph.D. student at UNC–Chapel Hill, advised by Prof. Huaxiu Yao, and a graduate of Peking University’s School of Physics. His research focuses on AI agents, AI for Science, and self-evolving research systems that connect hypothesis generation, experiment execution, verification, and iterative improvement.',
@@ -191,7 +191,7 @@ export const copy = {
         '团队的专业积累横跨基础物理、科学计算、自主科研智能体和前沿模型评测，将严谨的科学方法与可扩展的 AI 系统相结合。团队成员参与贡献的开源项目累计获得超过 50,000 个 GitHub Stars，在包括 Physical Review Letters（PRL）在内的顶级科学期刊发表 30 余篇论文，并有多篇研究工作被 NeurIPS、ICLR、ICML 等顶级人工智能会议接收。',
         '我们致力于通过智能科研系统推进科学发现，同时发展下一代科学 AI 所需的理论基础、评测方法与高质量数据基础设施。',
       ],
-      backgrounds: '团队成员的学术背景', collaborations: '科研合作', people: '核心成员', scientificTeam: '科学团队',
+      backgrounds: '团队成员的学术背景', collaborations: '科研合作', people: '核心成员', scientificTeam: '首席科学家',
       shi: {
         name: '仇是', otherName: 'Shi Qiu', position: '计算机科学博士研究生', institution: '北卡罗来纳大学教堂山分校',
         bio: '仇是现于北卡罗来纳大学教堂山分校攻读计算机科学博士，师从 Huaxiu Yao 教授，本科毕业于北京大学物理学院。研究聚焦 AI Agents、AI for Science 与自进化科研智能体，探索贯通假设生成、实验执行、结果验证与持续改进的自主科研系统。',

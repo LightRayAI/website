@@ -34,3 +34,7 @@ Selected research summaries follow the original paper https://doi.org/10.1103/9m
 ## Bo Wang selected research
 
 The user selected these two 2025 PRL papers. Titles, authors, publication details, and summaries were checked against the original APS abstracts at https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.161601 and https://journals.aps.org/prl/abstract/10.1103/v72s-rv7y. Both list Bo Wang (王波), Zhejiang University, with contact address b_w@zju.edu.cn. The Yale profile at https://physics.yale.edu/posts/2026-09-10-welcome-bo-wang-postdoctoral-associate independently confirms the Zhejiang doctorate with Ellis Ye Yuan. Summaries describe joint work and do not infer individual author contributions.
+
+## Zhuo-Yang Song portrait
+
+The user requested Song’s portrait from https://physx.phybench.cn/maintainers. Its public page bundle maps Zhuoyang Song to https://physx.phybench.cn/assets/song-zhuoyang-ByTOa21V.jpg. The original image is saved unchanged as `public/images/zhuoyang-song.jpg`; CSS fits it within the compact team card. Desktop cards use a four-column grid, with two columns on tablets and one on narrow phones.

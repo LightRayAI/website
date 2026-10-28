@@ -253,7 +253,10 @@ h4 { font-size: 1rem; }
 .publication-actions .project-links { gap: 4px 13px; }
 .publication-actions .project-links a, .publication-actions .text-link { font-size: .69rem; }
 .publication-actions .text-link { gap: 8px; }
-.people-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 65px; padding-top: 40px; border-top: 1px solid var(--line); }
+.people-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 65px; padding-top: 40px; border-top: 1px solid var(--line); }
+.person-compact { min-width: 0; border: 1px solid var(--line); border-radius: 5px; padding: 18px; }
+.member-portrait { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 3px; margin-bottom: 20px; }
+.person-compact h3 span { display: block; margin-left: 0; }
 .person-heading { display: flex; gap: 17px; align-items: center; margin-bottom: 20px; }
 .initials { width: 48px; height: 48px; display: grid; place-items: center; color: #59708f; background: var(--tint); font-size: .85rem; border-radius: 3px; flex-shrink: 0; }
 .person-compact h3 { font-size: 1.16rem; line-height: 1.6; }
@@ -320,6 +323,7 @@ html[lang="zh-CN"] h2, html[lang="zh-CN"] h3 { line-height: 1.5; }
 html[lang="zh-CN"] .full-description { line-height: 2.1; }
 @media (min-width: 1600px) { .home-hero { padding-block: 110px 90px; } }
 @media (max-width: 1100px) {
+  .people-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .container { width: calc(100% - 64px); }
   .hero-bottom { gap: 40px; }
   .hero-index { flex-basis: 200px; padding-left: 18px; }

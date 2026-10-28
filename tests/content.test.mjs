@@ -79,15 +79,17 @@ test('team representative publications include authentic figures and direct sour
   }
 });
 
-test('data page presents four distinct offerings with three brief examples and a reserved trajectory card', () => {
+test('data page presents four distinct offerings with brief examples and a results-free trajectory excerpt', () => {
   for (const lang of ['en', 'zh']) {
     const $ = html(`${lang}/data`);
     assert.deepEqual($('[data-offering]').map((_, el) => $(el).attr('data-offering')).get(), ['reasoning', 'agentic', 'trajectories', 'rsi']);
-    assert.equal($('[data-task-example="ready"]').length, 3);
-    const reserved = $('[data-offering="trajectories"] [data-task-example]');
-    assert.equal(reserved.attr('data-task-example'), 'pending');
-    assert.ok(reserved.text().includes(lang === 'zh' ? '示例待补充' : 'Example forthcoming'));
-    assert.equal(reserved.find('a, details, .example-brief').length, 0);
+    assert.equal($('[data-task-example="ready"]').length, 4);
+    const trajectory = $(`[data-offering="trajectories"] [data-example-locale="${lang}"]`);
+    assert.ok(trajectory.find('.example-brief').text().includes('O(N)×O(2)'));
+    assert.equal(trajectory.find('.example-turns > li').length, 6);
+    assert.ok(trajectory.find('[data-role="scientist"]').length >= 5);
+    assert.ok(trajectory.find('.example-note').text().length > 10);
+    assert.doesNotMatch(trajectory.text(), /astra|N_c|\d\.\d|REPORT|\/Users\//);
     assert.ok($('[data-offering="reasoning"] .example-brief').text().includes('Majorana'));
     assert.ok($('[data-offering="rsi"] .example-brief').text().includes('DMRG'));
     assert.ok($('[data-offering="rsi"]').text().includes('SOTA'));
@@ -99,12 +101,12 @@ test('data page presents four distinct offerings with three brief examples and a
   }
 });
 
-test('competition achievements are collective and the team still shows two core members and the chief scientist', () => {
+test('competition achievements are collective, IPhO-only, and the team still shows two core members and the chief scientist', () => {
   for (const lang of ['en', 'zh']) {
     const $ = html(`${lang}/team`);
     const story = $('.team-prose').text();
     assert.ok(story.includes('IPhO'));
-    assert.ok(story.includes(lang === 'zh' ? '第四名' : 'fourth-place'));
+    assert.ok(!story.includes(lang === 'zh' ? '第四名' : 'fourth-place'));
     assert.equal($('.person-identity').length, 3);
     assert.ok(!$('.person-featured').text().includes('IPhO'));
     assert.ok(!$('main').text().includes('宋卓洋'));

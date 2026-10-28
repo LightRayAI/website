@@ -33,7 +33,7 @@ test('a Chinese example switches independently to English and preserves disclosu
 test('example controls work by keyboard and expanded translated equations fit mobile', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 740 });
   await page.goto('/website/en/data/');
-  for (const id of ['reasoning', 'agentic', 'rsi']) {
+  for (const id of ['reasoning', 'agentic', 'trajectories', 'rsi']) {
     const card = page.locator(`[data-offering="${id}"] [data-example-card]`);
     const toggle = card.locator('[data-example-language-toggle]');
     await expect(toggle).toHaveAccessibleName(/^中文 /);
@@ -47,10 +47,7 @@ test('example controls work by keyboard and expanded translated equations fit mo
     await expect(panel.locator('details')).toHaveAttribute('open', '');
     await expect(panel.locator('math')).not.toHaveCount(0);
   }
-  const placeholder = page.locator('[data-offering="trajectories"] [data-example-card]');
-  await placeholder.locator('[data-example-language-toggle]').click();
-  await expect(placeholder.locator('[data-example-locale="zh"]')).toContainText('示例待补充');
-  await expect(placeholder.locator('details, .example-brief')).toHaveCount(0);
+  await expect(page.locator('[data-offering="trajectories"] [data-example-locale="zh"] .example-turns > li')).toHaveCount(6);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
   expect((await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze()).violations).toEqual([]);
 });

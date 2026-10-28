@@ -40,7 +40,7 @@ A client-only SPA would need routing workarounds and hide content without JavaSc
 - [x] 1. Content and build foundation: write content/output contract tests; implement src/model.mjs, shared localization, build and preview scripts; preserve source documents.
 - [x] 2. Complete pages: implement home, data delivery pipeline, grouped/filterable research, six detail pages, team, shared navigation/footer, responsive CSS and progressive interactions. Fetch and attribute real assets.
 - [x] 3. Verify: run lint/build/content contracts and browser flows at desktop/mobile sizes; inspect screenshots and accessibility checks; fix observed issues.
-- [ ] 4. Deliver: document maintenance, configure GitHub Pages CI, commit and push; resolve repository visibility with the user, deploy and verify the live site and deep links.
+- [x] 4. Deliver: document maintenance, configure GitHub Pages CI, commit and push; resolve repository visibility with the user, deploy and verify the live site and deep links.
 
 ## Verification record
 
@@ -52,3 +52,13 @@ A client-only SPA would need routing workarounds and hide content without JavaSc
 - User explicitly approved converting the repository from private to public and deploying. Repository visibility updated and GitHub Pages configured for Actions.
 - Follow-up implemented: all six projects have original scientific figures; Shi Qiu's four representative publications have attributed thumbnails and direct Paper / GitHub / Project links. Full-image links preserve the original assets.
 - Updated verification: 5 content contracts and 16 browser tests passed; desktop/mobile image previews captured under ignored `.preview/`.
+
+## Deployment verification
+
+- Published implementation commit: `429898d`.
+- GitHub Actions build and deploy succeeded: https://github.com/LightRayAI/website/actions/runs/40607503127
+- Live site: https://lightrayai.github.io/website/
+- Public requests returned HTTP 200 for the root, both language homepages, data, research, both team pages, and representative deep project routes.
+- All seven published images matched their local SHA-256 checksums.
+- Four live browser tests passed: deep-page language navigation/persistence, combined filtering/query transfer, keyboard/mobile navigation, and 404 recovery.
+- This final documentation update does not change the deployed artifact.

@@ -8,6 +8,10 @@ mkdirSync('dist', { recursive: true });
 cpSync('public', 'dist', { recursive: true });
 cpSync('src/styles.css', 'dist/styles.css');
 cpSync('src/client.js', 'dist/client.js');
+mkdirSync('dist/vendor/katex', { recursive: true });
+cpSync('node_modules/katex/dist/katex.min.css', 'dist/vendor/katex/katex.min.css');
+cpSync('node_modules/katex/dist/fonts', 'dist/vendor/katex/fonts', { recursive: true });
+cpSync('node_modules/katex/LICENSE', 'dist/vendor/katex/LICENSE');
 const write = (path, content) => { mkdirSync(dirname(`dist/${path}`), { recursive: true }); writeFileSync(`dist/${path}`, content); };
 const routes = ['', 'data', 'research', 'team', ...projects.map(p => `research/${p.id}`)];
 for (const lang of ['en', 'zh']) {

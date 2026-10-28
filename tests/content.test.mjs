@@ -87,7 +87,7 @@ test('data page presents four distinct offerings with three brief examples and a
     const reserved = $('[data-offering="trajectories"] [data-task-example]');
     assert.equal(reserved.attr('data-task-example'), 'pending');
     assert.ok(reserved.text().includes(lang === 'zh' ? '示例待补充' : 'Example forthcoming'));
-    assert.equal(reserved.find('a, button, .example-brief').length, 0);
+    assert.equal(reserved.find('a, details, .example-brief').length, 0);
     assert.ok($('[data-offering="reasoning"] .example-brief').text().includes('Majorana'));
     assert.ok($('[data-offering="rsi"] .example-brief').text().includes('DMRG'));
     assert.ok($('[data-offering="rsi"]').text().includes('SOTA'));

@@ -82,6 +82,33 @@ if (research) {
   window.addEventListener('popstate', () => { restoreQuery(); updateFilters(false); });
 }
 
+for (const card of document.querySelectorAll('[data-example-card]')) {
+  const button = card.querySelector('[data-example-language-toggle]');
+  const note = card.querySelector('[data-example-language-note]');
+  const status = card.querySelector('[data-example-status]');
+  button.hidden = false;
+  button.addEventListener('click', () => {
+    const current = card.dataset.exampleLanguage;
+    const next = current === 'zh' ? 'en' : 'zh';
+    const oldPanel = card.querySelector(`[data-example-locale="${current}"]`);
+    const newPanel = card.querySelector(`[data-example-locale="${next}"]`);
+    const oldDetails = oldPanel.querySelector('details');
+    const newDetails = newPanel.querySelector('details');
+    if (oldDetails && newDetails) newDetails.open = oldDetails.open;
+    oldPanel.hidden = true;
+    newPanel.hidden = false;
+    card.dataset.exampleLanguage = next;
+    card.setAttribute('aria-labelledby', `example-${card.dataset.exampleId}-${next}-title`);
+    note.textContent = next === 'zh' ? '（翻译）' : 'English original';
+    note.lang = next === 'zh' ? 'zh-CN' : 'en';
+    const label = button.querySelector('[data-example-language-label]');
+    label.textContent = next === 'zh' ? 'English' : '中文';
+    label.lang = next === 'zh' ? 'en' : 'zh-CN';
+    button.querySelector('[data-example-language-description]').textContent = ` — ${next === 'zh' ? button.dataset.labelEn : button.dataset.labelZh}`;
+    status.textContent = next === 'zh' ? button.dataset.statusZh : button.dataset.statusEn;
+  });
+}
+
 const contactTrigger = document.querySelector('[data-contact-open]');
 const contactDialog = document.querySelector('#contact-dialog');
 if (contactTrigger && contactDialog) {

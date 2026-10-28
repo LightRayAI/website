@@ -1,4 +1,5 @@
 import { copy, figures, institutions } from './content.mjs';
+import { taskExample } from './example-cards.mjs';
 import { asset, assetVersion, esc, origin, projects, relationship, shortName, url } from './model.mjs';
 
 export const arrow = '<span aria-hidden="true">↗</span>';
@@ -25,6 +26,7 @@ export function layout({ lang, page = '', title, description, body, root = false
   <link rel="alternate" hreflang="en" href="${origin + url('en', page)}"><link rel="alternate" hreflang="zh-CN" href="${origin + url('zh', page)}"><link rel="alternate" hreflang="x-default" href="${origin + url('en', page)}">
   <meta property="og:type" content="website"><meta property="og:site_name" content="LightRay AI"><meta property="og:title" content="${esc(pageTitle)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${canonical}"><meta property="og:locale" content="${lang === 'zh' ? 'zh_CN' : 'en_US'}">
   <meta name="twitter:card" content="summary">
+  ${page === 'data' ? `<link rel="stylesheet" href="${asset('vendor/katex/katex.min.css')}">` : ''}
   <link rel="stylesheet" href="${asset('styles.css')}"><script src="${asset('client.js')}" defer></script>
   <script type="application/ld+json">${JSON.stringify(structured).replace(/</g, '\\u003c')}</script>
 </head>
@@ -62,12 +64,7 @@ export function metrics(project, lang, limit = 3) {
 }
 
 export function dataOffering(product, lang) {
-  const d = copy[lang].data;
-  const example = product.example;
-  const sample = example.pending
-    ? `<section class="task-example example-pending" data-task-example="pending" aria-labelledby="example-${product.id}"><p class="eyebrow">${d.exampleLabel}</p><h4 id="example-${product.id}">${esc(example.title)}</h4><div class="example-reserved"><span>${esc(example.status)}</span></div></section>`
-    : `<section class="task-example" data-task-example="ready" aria-labelledby="example-${product.id}"><p class="example-category">${esc(example.tag)}</p><h4 id="example-${product.id}">${esc(example.title)}</h4><p class="example-brief"><span class="example-label">${d.promptLabel}</span>${esc(example.brief)}</p><dl class="example-facts"><div><dt>${d.outputLabel}</dt><dd>${esc(example.output)}</dd></div><div><dt>${d.verificationLabel}</dt><dd>${esc(example.verification)}</dd></div>${example.goal ? `<div><dt>${d.goalLabel}</dt><dd>${esc(example.goal)}</dd></div>` : ''}</dl></section>`;
-  return `<article class="capability data-offering" id="${product.id}" data-offering="${product.id}"><div class="offering-meta"><span class="index-number">${product.number}</span><span>${esc(product.unit)}</span></div><h3>${esc(product.title)}</h3><p>${esc(product.text)}</p><ul class="check-list">${product.items.map(item => `<li>${esc(item)}</li>`).join('')}</ul>${sample}</article>`;
+  return `<article class="capability data-offering" id="${product.id}" data-offering="${product.id}"><div class="offering-meta"><span class="index-number">${product.number}</span><span>${esc(product.unit)}</span></div><h3>${esc(product.title)}</h3><p>${esc(product.text)}</p><ul class="check-list">${product.items.map(item => `<li>${esc(item)}</li>`).join('')}</ul>${taskExample(product, lang)}</article>`;
 }
 
 export function miniVisual(project, lang) {

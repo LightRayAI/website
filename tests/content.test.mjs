@@ -61,3 +61,20 @@ test('all generated local links, images and styles resolve under the deployment 
     assert.ok(!$('main').text().includes('圈图计算'));
   }
 });
+
+test('team representative publications include authentic figures and direct source links', () => {
+  for (const lang of ['en', 'zh']) {
+    const $ = html(`${lang}/team`);
+    assert.equal($('.publication-card').length, 4);
+    for (const id of ['phybench', 'prbench', 'collideragent', 'autoresearchclaw']) {
+      const project = published.find(p => p.id === id);
+      const card = $(`[data-publication="${id}"]`);
+      assert.equal(card.find('img').length, 1, `${id} needs its real research figure`);
+      assert.ok(card.find('img').attr('alt').length > 20);
+      const links = card.find('a').map((_, el) => $(el).attr('href')).get();
+      assert.ok(links.includes(project.links.paper), `${id} needs a direct paper link`);
+      if (project.links.github) assert.ok(links.includes(project.links.github));
+      assert.ok(links.includes(`/website/${lang}/research/${id}/`));
+    }
+  }
+});

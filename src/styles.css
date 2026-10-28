@@ -235,12 +235,21 @@ h4 { font-size: 1rem; }
 .interest-tags { margin: 0 0 22px; }
 .person-detail > p { font-size: .92rem; line-height: 1.9; margin-bottom: 18px; }
 .person-detail h4 { margin-top: 32px; }
-.publication-list { list-style: none; padding: 0; margin: 18px 0 0; }
-.publication-list li { padding: 16px 0; border-top: 1px solid var(--line); }
-.publication-list a { display: grid; grid-template-columns: 150px 1fr 18px; gap: 12px; align-items: baseline; font-size: .8rem; }
-.publication-list strong { font-weight: 600; color: var(--blue); }
-.publication-list a > span:not([aria-hidden]) { color: var(--muted); }
-.publication-list small { display: block; color: var(--muted); font-size: .67rem; margin-top: 6px; }
+.publication-list { margin-top: 22px; }
+.publication-card { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 24px; border-top: 1px solid var(--line); padding-block: 25px; }
+.publication-image { display: flex; align-items: center; justify-content: center; height: 132px; padding: 10px; background: var(--paper); border: 1px solid var(--line); border-radius: 4px; }
+.publication-image:hover { border-color: #91acd5; }
+.publication-image img { width: 100%; height: 100%; object-fit: contain; }
+.publication-card figcaption { margin-top: 5px; font-size: .61rem; }
+.publication-card figcaption a { color: var(--muted); }
+.publication-copy h5 { font-size: 1.03rem; line-height: 1.4; font-weight: 600; margin: 0 0 7px; letter-spacing: -.02em; }
+.publication-copy h5 a:hover { color: var(--blue); }
+.publication-copy > p { font-size: .78rem; line-height: 1.65; }
+.publication-venue { display: block; color: var(--muted); font-size: .66rem; margin-top: 8px; }
+.publication-actions { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px 20px; }
+.publication-actions .project-links { gap: 4px 13px; }
+.publication-actions .project-links a, .publication-actions .text-link { font-size: .69rem; }
+.publication-actions .text-link { gap: 8px; }
 .people-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 65px; padding-top: 40px; border-top: 1px solid var(--line); }
 .person-heading { display: flex; gap: 17px; align-items: center; margin-bottom: 20px; }
 .initials { width: 48px; height: 48px; display: grid; place-items: center; color: #59708f; background: var(--tint); font-size: .85rem; border-radius: 3px; flex-shrink: 0; }
@@ -317,9 +326,7 @@ html[lang="zh-CN"] .full-description { line-height: 2.1; }
   .split-intro { gap: 60px; }
   .person-featured { grid-template-columns: 245px 1fr; gap: 40px; }
   .project-detail-layout { gap: 40px; grid-template-columns: 175px minmax(0, 1fr); }
-  .publication-list a { grid-template-columns: 1fr 18px; }
-  .publication-list a > span:not([aria-hidden]) { grid-row: 2; }
-  .publication-list a > span[aria-hidden] { grid-column: 2; grid-row: 1; }
+  .publication-card { grid-template-columns: 145px minmax(0, 1fr); gap: 20px; }
   .impact-item { padding-inline: 22px; }
 }
 @media (max-width: 800px) {
@@ -382,6 +389,8 @@ html[lang="zh-CN"] .full-description { line-height: 2.1; }
   .person-featured { grid-template-columns: 210px 1fr; gap: 30px; }
   .portrait { width: 200px; height: 200px; }
   .person-identity h3 { font-size: 1.4rem; }
+  .publication-card { grid-template-columns: 1fr; gap: 15px; }
+  .publication-image { height: 170px; }
   .affiliations { gap: 35px; }
   .project-detail-layout { grid-template-columns: 1fr; gap: 35px; padding-block: 35px 55px; }
   .detail-sidebar { position: static; border-bottom: 1px solid var(--line); padding-bottom: 25px; }
@@ -446,7 +455,8 @@ html[lang="zh-CN"] .full-description { line-height: 2.1; }
   .person-featured { grid-template-columns: 1fr; gap: 35px; }
   .portrait { width: 210px; height: 210px; }
   .person-identity h3 { font-size: 1.6rem; }
-  .publication-list a { grid-template-columns: 1fr 18px; }
+  .publication-card { grid-template-columns: 1fr; gap: 12px; }
+  .publication-image { height: 190px; }
   .people-grid { gap: 35px; margin-top: 40px; }
   .project-hero { padding-block: 30px 40px; }
   .project-hero h1 { font-size: clamp(2rem, 8vw, 2.8rem); }

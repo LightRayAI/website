@@ -48,4 +48,7 @@ A client-only SPA would need routing workarounds and hide content without JavaSc
 - `npm run test:e2e`: 16 browser tests passed, including 9 axe scans, two-language responsive checks at 320/390/1440px, filters, navigation, static reading, and 404 recovery.
 - Screenshots inspected for desktop home/team and mobile home.
 - Source documents preserved; credentials never copied into tracked files or output.
-- Independent read-only review requested before publication. Deployment remains subject only to repository visibility approval.
+- Independent read-only review completed without required fixes; additional breakpoint/no-JavaScript probes passed.
+- User explicitly approved converting the repository from private to public and deploying. Repository visibility updated and GitHub Pages configured for Actions.
+- Follow-up implemented: all six projects have original scientific figures; Shi Qiu's four representative publications have attributed thumbnails and direct Paper / GitHub / Project links. Full-image links preserve the original assets.
+- Updated verification: 5 content contracts and 16 browser tests passed; desktop/mobile image previews captured under ignored `.preview/`.

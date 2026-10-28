@@ -51,6 +51,12 @@ export function projectLinks(project, lang, includeRelated = false) {
   return `<div class="project-links">${Object.entries(labels).filter(([key]) => project.links[key]).map(([key, label]) => ext(project.links[key], label)).join('')}${includeRelated ? project.links.related.map((link, i) => ext(link, `${c.detail.related} ${i + 1}`)).join('') : ''}</div>`;
 }
 
+export function publicationCard(project, lang) {
+  const c = copy[lang];
+  const f = figures[project.id];
+  return `<article class="publication-card" data-publication="${project.id}"><figure><a class="publication-image" href="${asset(`images/${f.file}`)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(shortName(project, lang))} · ${c.detail.openFigure}"><img src="${asset(`images/${f.file}`)}" alt="${esc(f.alt[lang])}" loading="lazy" decoding="async" width="600" height="370"></a><figcaption>${ext(f.source, c.figureCredit)}</figcaption></figure><div class="publication-copy"><h5><a href="${url(lang, `research/${project.id}`)}">${esc(shortName(project, lang))}</a></h5><p>${esc(project.title[lang].split(/[|｜]/)[1].trim())}</p><span class="publication-venue">${esc(project.publication[lang])}</span><div class="publication-actions">${projectLinks(project, lang)}<a class="text-link" href="${url(lang, `research/${project.id}`)}">${c.readProject} ${right}</a></div></div></article>`;
+}
+
 export function metrics(project, lang, limit = 3) {
   return `<dl class="project-metrics">${project.metrics.slice(0, limit).map(m => `<div><dt>${esc(m.value)}</dt><dd>${esc(m.label[lang])}</dd></div>`).join('')}</dl>`;
 }

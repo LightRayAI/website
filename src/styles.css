@@ -431,6 +431,7 @@ html[lang="zh-CN"] .full-description { line-height: 2.1; }
   .section-heading { flex-direction: column; align-items: flex-start; gap: 20px; }
   .section-heading .text-link { margin-bottom: 0; }
   .section-heading h2 { font-size: 1.9rem; }
+  html[lang="zh-CN"] .data-approach .section-heading h2 { font-size: clamp(1.5rem, 7.8vw, 1.9rem); }
   .track-grid { grid-template-columns: 1fr; gap: 32px; }
   .track-top { margin-bottom: 16px; }
   .track-card h3 { font-size: 1.3rem; }

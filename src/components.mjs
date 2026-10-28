@@ -7,7 +7,7 @@ export const right = '<span aria-hidden="true">→</span>';
 export const mark = '<svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M6 25 18 5M13 27 25 7M4 17 10 7" stroke="currentColor" stroke-width="3"/></svg>';
 export const ext = (href, text, className = '') => `<a class="${className}" href="${esc(href)}" target="_blank" rel="noopener noreferrer">${esc(text)} ${arrow}</a>`;
 export const button = (href, text, secondary = false) => `<a class="button${secondary ? ' button-secondary' : ''}" href="${esc(href)}">${esc(text)} ${right}</a>`;
-export const sectionHead = (eyebrow, title, extra = '') => `<div class="section-heading"><div><p class="eyebrow">${esc(eyebrow)}</p><h2>${esc(title)}</h2></div>${extra}</div>`;
+export const sectionHead = (eyebrow, title, extra = '') => `<div class="section-heading"><div><p class="eyebrow">${esc(eyebrow)}</p><h2>${title.split('\n').map(esc).join('<br>')}</h2></div>${extra}</div>`;
 
 export function layout({ lang, page = '', title, description, body, root = false }) {
   const c = copy[lang];

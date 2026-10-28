@@ -82,8 +82,7 @@ export const copy = {
       wang: {
         name: 'Bo Wang', otherName: '王波', position: 'Postdoctoral Associate', institution: 'Yale University',
         interests: ['Theoretical Physics', 'AI for Science', 'Science for AI'],
-        bio: 'Dr. Bo Wang is a Postdoctoral Associate at Yale University. He received his Ph.D. from the School of Physics at Zhejiang University. His earlier research focused primarily on theoretical physics. More recently, he has made a number of advances in physics through AI for Science, with research spanning condensed matter theory, quantum algorithms, and related areas.',
-        contributions: 'In Science for AI, his work focuses on scientific data for AI agents.',
+        bio: 'Dr. Bo Wang is a Postdoctoral Associate at Yale University. He received his Ph.D. from the School of Physics at Zhejiang University. His earlier research focused primarily on theoretical physics. More recently, he has made a number of advances in physics through AI for Science, with research spanning condensed matter theory, quantum algorithms, and related areas. In Science for AI, his work focuses on scientific data for AI agents, and he guides the team in building an efficient feedback loop between scientific research and data production.',
       },
       contactTitle: 'Research benefits from shared expertise.', contactText: 'Connect with us about scientific research, agent systems, or high-quality scientific data.', contactCta: 'Get in touch',
     },
@@ -183,8 +182,7 @@ export const copy = {
       wang: {
         name: '王波', otherName: 'Bo Wang', position: '博士后研究员（Postdoctoral Associate）', institution: '耶鲁大学',
         interests: ['理论物理', 'AI for Science', 'Science for AI'],
-        bio: '王波博士现任耶鲁大学博士后研究员，博士毕业于浙江大学物理学院。他过去的研究主要集中于理论物理，近期通过 AI for Science 在物理学研究中取得了多项新突破，研究方向涵盖凝聚态理论、量子算法等。',
-        contributions: '在 Science for AI 方面，他主要研究面向智能体的科学数据。',
+        bio: '王波博士现任耶鲁大学博士后研究员，博士毕业于浙江大学物理学院。他过去的研究主要集中于理论物理，近期通过 AI for Science 在物理学研究中取得了多项新突破，研究方向涵盖凝聚态理论、量子算法等。在 Science for AI 方面，他主要研究面向智能体的科学数据，指导团队构建了高效的科研-数据生产闭环。',
       },
       contactTitle: '让不同的专长，共同推进科学。', contactText: '欢迎就科学研究、智能体系统与高质量科学数据展开交流与合作。', contactCta: '联系交流',
     },

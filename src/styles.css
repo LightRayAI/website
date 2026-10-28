@@ -192,15 +192,6 @@ h4 { font-size: 1rem; }
 .example-facts { display: grid; gap: 15px; margin-top: 0; padding-top: 15px; border-top: 1px solid var(--line); }
 .example-facts dt { color: var(--ink); font-size: .7rem; font-weight: 600; margin-bottom: 5px; }
 .example-facts dd { color: var(--muted); font-size: .77rem; line-height: 1.85; }
-.example-trajectory { margin-top: 18px; }
-.example-turns { list-style: none; counter-reset: turn; display: grid; gap: 12px; margin: 0; padding: 0; }
-.example-turns li { counter-increment: turn; position: relative; padding-left: 28px; border-left: 1px solid var(--line); }
-.example-turns li::before { content: counter(turn); position: absolute; left: -10px; top: 1px; width: 20px; height: 20px; display: grid; place-items: center; background: var(--paper); border: 1px solid var(--line); border-radius: 50%; color: var(--muted); font-size: .62rem; }
-.example-turns p { color: #435670; font-size: .78rem; line-height: 1.8; }
-.example-turns p + p { margin-top: 4px; }
-.turn-role { display: inline-block; margin-right: 8px; color: var(--blue); font-size: .66rem; font-weight: 600; }
-.example-turns [data-role="scientist"] .turn-role { color: var(--ink); }
-.example-note { margin-top: 14px; color: var(--muted); font-size: .7rem; font-style: italic; }
 .example-pending { min-height: 330px; display: flex; flex-direction: column; background: white; border-style: dashed; }
 .example-pending .eyebrow { font-size: .65rem; margin-bottom: 12px; }
 .example-reserved { display: grid; flex: 1; place-items: center; min-height: 160px; color: var(--muted); font-size: .78rem; }

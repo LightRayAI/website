@@ -3,7 +3,7 @@
 const equations = {
   reasoning: String.raw`\begin{gathered}\{\gamma_a,\gamma_b\}=2\delta_{ab},\qquad a,b=1,\ldots,8,\\[4pt]H=\sum_{a<b<c<d}J_{abcd}\gamma_a\gamma_b\gamma_c\gamma_d,\\[4pt]\sum_{a<b<c<d}J_{abcd}^{\,2}=\mathcal J^2,\qquad \Delta=E_1-E_0.\end{gathered}`,
   agentic: String.raw`\begin{gathered}\Phi_p(r)=\Phi_{\rm ext}(r)+M\int p(J)\\[-1pt]\qquad\times\left\langle W_0\!\left(r,r_{\Phi_p}(J,\theta)\right)\right\rangle_\theta\,dJ,\\[4pt]\tau=t/N,\qquad J=(J_R,L).\end{gathered}`,
-  trajectories: String.raw`\begin{gathered}\mathcal L=\tfrac12\sum_{a=1}^{2}(\partial\boldsymbol\phi_a)^2+\tfrac{u}{4!}\Big(\sum_a\boldsymbol\phi_a^2\Big)^2\\[4pt]\quad+\tfrac{v}{4!}\sum_{a,b}\Big[(\boldsymbol\phi_a\!\cdot\!\boldsymbol\phi_b)^2-\boldsymbol\phi_a^2\,\boldsymbol\phi_b^2\Big],\qquad \boldsymbol\phi_a\in\mathbb R^N.\end{gathered}`,
+  trajectories: String.raw`\begin{gathered}\mathcal L=\tfrac12\sum_{a=1}^{2}(\partial\boldsymbol\phi_a)^2+\tfrac{u}{4!}\Big(\sum_a\boldsymbol\phi_a^2\Big)^2\\[4pt]+\tfrac{v}{4!}\sum_{a,b}\Big[(\boldsymbol\phi_a\!\cdot\!\boldsymbol\phi_b)^2-\boldsymbol\phi_a^2\,\boldsymbol\phi_b^2\Big],\\[4pt]\boldsymbol\phi_a\in\mathbb R^N.\end{gathered}`,
   rsi: String.raw`\begin{gathered}H=\!\sum_{(i,j)\in\mathcal B}J_{ij}\,\mathbf S_i\!\cdot\!\mathbf S_j,\quad J_{ij}>0,\\[4pt]S\in\left\{\tfrac12,1\right\},\qquad \Delta=E_1-E_0.\end{gathered}`,
 };
 export const dataBusiness = {
@@ -20,7 +20,7 @@ export const dataBusiness = {
     ],
     capabilities: 'FOUR DATA FAMILIES', capabilitiesTitle: 'From scientific reasoning to sustained improvement.',
     capabilitiesIntro: 'Each family has a distinct learning signal: a derivation, an executable workflow, an expert–agent interaction, or an improved research method.',
-    exampleLabel: 'Task excerpt', promptLabel: 'Scientific setting', questionLabel: 'Your task', outputLabel: 'Delivery contents', verificationLabel: 'Acceptance criteria', goalLabel: 'Optimization objective', turnsLabel: 'Turn by turn', roles: { scientist: 'Scientist', agent: 'AI agent', review: 'Independent review' }, milestonesLabel: 'Key evidence', detailsLabel: 'Evidence, acceptance & delivery', originalLabel: 'English original', translatedLabel: '（翻译）', switchToEnglish: 'Read this example in English', switchToChinese: 'Read this example in Chinese', switchedToEnglish: 'This example is now in English.', switchedToChinese: 'This example is now in Chinese.',
+    exampleLabel: 'Task excerpt', promptLabel: 'Scientific setting', questionLabel: 'Your task', outputLabel: 'Delivery contents', verificationLabel: 'Acceptance criteria', goalLabel: 'Optimization objective', milestonesLabel: 'Key evidence', detailsLabel: 'Evidence, acceptance & delivery', originalLabel: 'English original', translatedLabel: '（翻译）', switchToEnglish: 'Read this example in English', switchToChinese: 'Read this example in Chinese', switchedToEnglish: 'This example is now in English.', switchedToChinese: 'This example is now in Chinese.',
     products: [
       {
         id: 'reasoning', number: '01', title: 'Frontier Scientific Reasoning', unit: 'A complete scientific derivation',
@@ -59,19 +59,10 @@ export const dataBusiness = {
           brief: 'Stacked triangular antiferromagnets and helimagnets order through two orthogonal N-component vectors, described by an O(N)×O(2) Landau–Ginzburg–Wilson theory. For the physical cases N = 2 and 3, methods have disagreed for more than two decades on whether the transition is continuous: fixed-dimension perturbation theory finds a fixed point that other approaches do not support.',
           equation: equations.trajectories,
           questionLabel: 'Research question',
-          question: 'Can high-order perturbation theory combined with large fuzzy-sphere calculations decide whether this fixed point is genuine, and is the problem worth a sustained effort?',
-          turns: [
-            [['scientist', 'Asks what perturbative data at very high loop order would actually settle, pointing to the team’s existing notes.'], ['agent', 'Reads earlier diagnostics and code, then reframes the goal: not sharper exponents, but a criterion for when a fixed-dimension fixed point can be trusted.']],
-            [['scientist', 'Asks for an independent second opinion.'], ['review', 'A separate model critiques the argument; the agent checks the disputed definitions in the code and reconciles both accounts.']],
-            [['scientist', 'What is the twenty-year controversy? Were recent papers checked? What would count as success?'], ['agent', 'Reads recent perturbative, Monte Carlo, bootstrap and fuzzy-sphere work, then states concrete success criteria.']],
-            [['scientist', '“I only care whether we can solve it completely. Should I do it?”'], ['agent', 'With the reviewer, weighs reachable system sizes, calibration risk and competing groups, and proposes a bounded pilot with preregistered go/no-go gates.']],
-            [['scientist', 'Authorizes a ten-hour autonomous run with three sub-agents, new tools and the external reviewer.'], ['agent', 'Verifies installations against checksums and reference spectra, then coordinates three parallel lines: fuzzy-sphere exact diagonalization, high-order perturbative series, and RG and semiclassical predictions.']],
-            [['review', 'Two preregistered improvements fail and are recorded as failures. An audit finds that some scan points tracked the wrong eigenstate; the affected interpretations are withdrawn and recomputed.'], ['agent', 'Delivers a report separating validated data from open claims and leaves three decisions to the scientist.']],
-          ],
+          question: 'Can high-order perturbation theory combined with large fuzzy-sphere calculations decide whether this fixed point is genuine?',
           milestones: 'Cited literature checks, saved reviewer reports, preregistered stop criteria, and a time-stamped coordination log linking each decision to its evidence.',
-          output: 'The full multi-turn transcript with every tool call and observation, sub-agent traces, reviewer reports, intermediate code and figures, and expert annotations. This trajectory spans eight scientist turns, three sub-agents and about 1,160 tool calls.',
+          output: 'The full multi-turn transcript with every tool call and observation, sub-agent traces, reviewer reports, intermediate code and figures, and expert annotations. This trajectory spans eighteen scientist turns, three sub-agents and about 1,160 tool calls.',
           verification: 'Each claim in the final report must trace to logged evidence. Objections, failed attempts and retractions remain in the record. Scientists mark the turns where their guidance changed the research plan.',
-          note: 'Numerical results and scientific conclusions are withheld from this excerpt.',
         },
       },
       {
@@ -79,7 +70,7 @@ export const dataBusiness = {
         text: 'Difficult scientific problems for recursive self-improvement. Agents start from a working method, repeatedly propose and test changes, and retain or revert them based on evidence. Evaluation measures the resulting method, alongside the full improvement process.',
         items: ['Executable baselines, explicit objectives, and fixed resource budgets', 'Versioned experiments, code changes, feedback, and rollback decisions', 'Independent re-execution and comparisons with strong reference methods'],
         example: {
-          tag: 'RSI task design · Quantum many-body computation', title: 'Iteratively improving a DMRG solver',
+          tag: 'RSI task design · Quantum chemistry', title: 'Iteratively improving a DMRG solver',
           brief: 'Start from a working finite-system DMRG solver for antiferromagnetic spin-½ and spin-1 Heisenberg chains. The setting includes open and periodic boundaries; the full task also specifies softened edge bonds. The solver must return ground-state and excited-state energies, gaps, reduced-density-matrix eigenvalues, bond strengths, or local magnetizations as requested.',
           equation: equations.rsi,
           question: 'Improve the NumPy/SciPy implementation over multiple research rounds. Propose changes to retained states, sweep scheduling, or numerical execution; run controlled experiments and retain or revert each change using its evidence. Preserve the observable definitions and report accuracy, convergence, runtime, and resource cost under fixed comparison conditions.',
@@ -106,7 +97,7 @@ export const dataBusiness = {
     ],
     capabilities: '四类数据与环境', capabilitiesTitle: '从长程科学推理，到持续科研改进。',
     capabilitiesIntro: '围绕四种不同的学习信号组织交付：完整推导、可执行科研流程、专家与智能体的多轮协作，以及得到改进的科学方法。',
-    exampleLabel: '题面节选', promptLabel: '科学设定', questionLabel: '求解任务', outputLabel: '交付内容', verificationLabel: '验收标准', goalLabel: '优化目标', turnsLabel: '逐轮交互', roles: { scientist: '科学家', agent: 'AI 智能体', review: '独立复审' }, milestonesLabel: '关键中间依据', detailsLabel: '关键依据、验收与交付', originalLabel: 'English original', translatedLabel: '（翻译）', switchToEnglish: '查看此示例的英文原文', switchToChinese: '查看此示例的中文译文', switchedToEnglish: '当前示例已切换为英文原文。', switchedToChinese: '当前示例已切换为中文译文。',
+    exampleLabel: '题面节选', promptLabel: '科学设定', questionLabel: '求解任务', outputLabel: '交付内容', verificationLabel: '验收标准', goalLabel: '优化目标', milestonesLabel: '关键中间依据', detailsLabel: '关键依据、验收与交付', originalLabel: 'English original', translatedLabel: '（翻译）', switchToEnglish: '查看此示例的英文原文', switchToChinese: '查看此示例的中文译文', switchedToEnglish: '当前示例已切换为英文原文。', switchedToChinese: '当前示例已切换为中文译文。',
     products: [
       {
         id: 'reasoning', number: '01', title: '前沿科学长程推理数据', unit: '完整的科学推导',
@@ -145,19 +136,10 @@ export const dataBusiness = {
           brief: '层状三角格子反铁磁体与螺旋磁体的序参量是两个相互正交的 N 维矢量，对应 O(N)×O(2) 的 Landau–Ginzburg–Wilson 理论。对物理上的 N = 2、3，相变是否连续已争论二十多年：固定维数微扰论给出一个不动点，其他方法却不支持它的存在。',
           equation: equations.trajectories,
           questionLabel: '研究问题',
-          question: '高阶微扰论与大尺寸 fuzzy sphere 计算相结合，能否判定这个不动点的真伪？这个问题是否值得长期投入？',
-          turns: [
-            [['scientist', '询问极高圈数的微扰数据究竟能回答什么，并指向团队已有的研究笔记。'], ['agent', '阅读此前的诊断结果与代码，重新界定目标：关键不是更精确的临界指数，而是判断固定维数不动点何时可信的判据。']],
-            [['scientist', '要求引入独立的第二意见。'], ['review', '另一模型独立审查论证；智能体回到代码核对有分歧的定义，并统一两方的说法。']],
-            [['scientist', '“二十多年的争议是什么？查过近期论文吗？做到什么算成功？”'], ['agent', '检索并阅读微扰论、蒙特卡罗、bootstrap 与 fuzzy sphere 的近期工作，给出具体的成功判据。']],
-            [['scientist', '“我只关心能不能彻底解决。值得做吗？”'], ['agent', '与复审方一起评估可达系统尺寸、标定风险与竞争情况，建议先做设有预登记止损判据的有限期试点。']],
-            [['scientist', '授权十小时自主研究：三个子智能体、安装新工具，并配外部复审。'], ['agent', '用校验和与参考能谱核验安装，随后协调三条并行线：fuzzy sphere 精确对角化、高阶微扰级数、RG 与半经典预言。']],
-            [['review', '两项预登记的改进方案未通过，按失败如实记录；审计发现部分扫描点跟踪了错误的本征态，相关解读被撤回并重算。'], ['agent', '提交报告，区分已验证的数据与尚未成立的说法，并把三项决策留给科学家。']],
-          ],
+          question: '高阶微扰论与大尺寸 fuzzy sphere 计算相结合，能否判定这个不动点的真伪？',
           milestones: '附出处的文献核查、存档的复审报告、预登记的止损判据，以及把每项决策与证据对应起来的带时间戳协调日志。',
-          output: '完整多轮记录（含每次工具调用与执行观察）、子智能体轨迹、复审报告、中间代码与图表，以及专家标注。本条轨迹包含 8 轮科学家指导、3 个子智能体、约 1,160 次工具调用。',
+          output: '完整多轮记录（含每次工具调用与执行观察）、子智能体轨迹、复审报告、中间代码与图表，以及专家标注。本条轨迹包含 18 轮科学家指导、3 个子智能体、约 1,160 次工具调用。',
           verification: '最终报告中的每条结论都须能追溯到日志证据；质疑、失败尝试与撤回保留在记录中。科学家标出其指导改变研究计划的轮次。',
-          note: '本节选不公开数值结果与科学结论。',
         },
       },
       {
@@ -165,7 +147,7 @@ export const dataBusiness = {
         text: '围绕高难度科学问题，从一个可运行的方法出发，让智能体反复提出改进、开展实验、分析反馈并保留或回退方案，同时评估最终方法和完整的多轮改进过程。',
         items: ['可执行基线、明确优化目标与固定资源预算', '版本化实验、代码变更、反馈与回退决策', '独立重执行，并与强参考方法进行对照'],
         example: {
-          tag: 'RSI 任务设计 · 量子多体计算', title: 'DMRG 求解器的多轮迭代优化',
+          tag: 'RSI 任务设计 · 量子化学', title: 'DMRG 求解器的多轮迭代优化',
           brief: '从反铁磁自旋 ½ 与自旋 1 海森堡链的可运行有限系统 DMRG 求解器出发。考虑开放与周期边界，完整任务另有软化端点耦合的规定。求解器应按请求返回基态和激发态能量、能隙、约化密度矩阵本征值、键强度或局域磁化。',
           equation: equations.rsi,
           question: '围绕 NumPy/SciPy 实现进行多轮研究：提出保留态数、扫掠安排或数值执行方式的改进，开展受控实验，并根据证据保留或回退每项变更。保持观测量定义一致，在固定对照条件下报告精度、收敛性、运行时间与资源开销。',

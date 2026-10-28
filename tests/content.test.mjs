@@ -79,16 +79,13 @@ test('team representative publications include authentic figures and direct sour
   }
 });
 
-test('data page presents four distinct offerings with brief examples and a results-free trajectory excerpt', () => {
+test('data page presents four distinct offerings with brief examples and a results-free trajectory example', () => {
   for (const lang of ['en', 'zh']) {
     const $ = html(`${lang}/data`);
     assert.deepEqual($('[data-offering]').map((_, el) => $(el).attr('data-offering')).get(), ['reasoning', 'agentic', 'trajectories', 'rsi']);
     assert.equal($('[data-task-example="ready"]').length, 4);
     const trajectory = $(`[data-offering="trajectories"] [data-example-locale="${lang}"]`);
     assert.ok(trajectory.find('.example-brief').text().includes('O(N)×O(2)'));
-    assert.equal(trajectory.find('.example-turns > li').length, 6);
-    assert.ok(trajectory.find('[data-role="scientist"]').length >= 5);
-    assert.ok(trajectory.find('.example-note').text().length > 10);
     assert.doesNotMatch(trajectory.text(), /astra|N_c|\d\.\d|REPORT|\/Users\//);
     assert.ok($('[data-offering="reasoning"] .example-brief').text().includes('Majorana'));
     assert.ok($('[data-offering="rsi"] .example-brief').text().includes('DMRG'));

@@ -47,7 +47,6 @@ test('example controls work by keyboard and expanded translated equations fit mo
     await expect(panel.locator('details')).toHaveAttribute('open', '');
     await expect(panel.locator('math')).not.toHaveCount(0);
   }
-  await expect(page.locator('[data-offering="trajectories"] [data-example-locale="zh"] .example-turns > li')).toHaveCount(6);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true);
   expect((await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21aa']).analyze()).violations).toEqual([]);
 });

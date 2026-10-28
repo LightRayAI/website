@@ -28,7 +28,7 @@ npm run preview              # Serve the current production build
 
 - `team_projects_zh_en.json`: authoritative bilingual project data, read directly at build time. Keep this and `research_projects_bilingual.md` as supplied source documents.
 - `src/content.mjs`: shared bilingual editorial copy, team profiles, source-derived workflow labels, and figure credits.
-- `src/data-business.mjs`: the four bilingual scientific-data offerings, scientific task excerpts/equations, expert-production principles, and task-specific acceptance/delivery notes. The research-trajectory example is a turn-by-turn excerpt of a real scientist–agent session that withholds numerical results and conclusions; the DMRG example describes a multi-round optimization design and SOTA comparison objective, not a claimed performance result.
+- `src/data-business.mjs`: the four bilingual scientific-data offerings, scientific task excerpts/equations, expert-production principles, and task-specific acceptance/delivery notes. The research-trajectory example describes a real scientist–agent session without its numerical results or conclusions; the DMRG example describes a multi-round optimization design and SOTA comparison objective, not a claimed performance result.
 - `src/example-cards.mjs`: independent bilingual example panels, native acceptance/delivery disclosures, and build-time KaTeX rendering. Chinese panels are labeled “（翻译）”; each card can show its English original without changing the page language. Mathematical HTML/MathML, styles, fonts and license are served locally.
 - `src/model.mjs`: source loading, publication eligibility, ordering, URLs, and HTML escaping.
 - `src/components.mjs`: navigation, footer, cards, metrics, and shared sections.

@@ -4,6 +4,7 @@ Retrieved October 27, 2026. Images are served locally to avoid fragile hotlinks.
 
 | Asset | Source | Attribution / usage |
 | --- | --- | --- |
+| `public/images/bo-wang.jpg` | Photo supplied directly by Bo Wang | Original photo, used as his team portrait at his explicit request. |
 | `public/images/shi-qiu.png` | https://stephenqsstarthomas.github.io/images/android-chrome-512x512.png | Shi Qiu's personal website portrait, reused at his explicit request. Profile source: https://stephenqsstarthomas.github.io/ |
 | `public/images/collideragent.svg` | https://arxiv.org/html/2603.14553v1/collider_agent.svg | Qiu et al., *An End-to-end Architecture for Collider Physics and Beyond*, Figure 1. Paper lists CC BY 4.0. Original unmodified figure; source linked in the project page. |
 | `public/images/autoresearchclaw.png` | https://arxiv.org/html/2605.20025v1/figures/main_figure.png | Liu, Qiu et al., *AutoResearchClaw*, Figure 1. Original unmodified research figure, included as an attributed illustration of the author's research at the user's request. |

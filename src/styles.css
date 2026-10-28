@@ -480,3 +480,12 @@ html[lang="zh-CN"] .full-description { line-height: 2.1; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+.contact-dialog { margin: auto; width: min(440px, calc(100% - 32px)); padding: 32px; border: 1px solid var(--line); border-radius: 8px; background: white; color: var(--ink); }
+.contact-dialog::backdrop { background: rgb(16 30 50 / 45%); }
+.contact-dialog h2 { font-size: 1.4rem; }
+.contact-details { margin-block: 24px; }
+.contact-details > div + div { margin-top: 18px; }
+.contact-details dt { color: var(--muted); font-size: .8rem; margin-bottom: 4px; }
+.contact-details dd { margin: 0; overflow-wrap: anywhere; }
+.contact-details a { color: var(--blue); }

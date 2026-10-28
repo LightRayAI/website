@@ -20,7 +20,7 @@ export function dataPage(lang) {
   <section class="pipeline-section section"><div class="container">${sectionHead(d.pipelineLabel, d.pipelineTitle)}<ol class="pipeline">${d.pipeline.map(([title, text], i) => `<li><span class="pipeline-number">${String(i + 1).padStart(2, '0')}</span><h3>${title}</h3><p>${text}</p></li>`).join('')}</ol></div></section>
   <section class="section"><div class="container split-intro delivery"><div><p class="eyebrow">${lang === 'zh' ? '交付内容' : 'DELIVERABLES'}</p><h2>${d.deliverables}</h2><p>${d.deliverablesText}</p></div><dl class="delivery-list">${d.deliveryItems.map(([title, text]) => `<div><dt>${title}</dt><dd>${text}</dd></div>`).join('')}</dl></div></section>
   <section class="section-sm foundation"><div class="container"><h2>${d.foundation}</h2><p>${d.foundationText}</p><div class="foundation-links">${['phybench', 'prbench', 'collideragent', 'rsi_exam'].map(id => { const p = projects.find(p => p.id === id); return `<a href="${url(lang, `research/${id}`)}">${shortName(p, lang)} ${arrow}</a>`; }).join('')}</div></div></section>
-  ${contactBand(lang, d.contactTitle, d.contactText, d.contactCta)}`;
+  ${contactBand(lang, d.contactTitle, d.contactText, d.contactCta, true)}`;
   return layout({ lang, page: 'data', title: c.nav[1], description: d.intro, body });
 }
 

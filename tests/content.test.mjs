@@ -52,7 +52,7 @@ test('all generated local links, images and styles resolve under the deployment 
     assert.equal($('h1').length, 1, `${file}: exactly one heading`);
     for (const el of $('[href], [src]').toArray()) {
       const url = $(el).attr('href') || $(el).attr('src');
-      if (!url || /^(https?:|mailto:|data:|#)/.test(url)) continue;
+      if (!url || /^(https?:|mailto:|tel:|data:|#)/.test(url)) continue;
       const path = url.split(/[?#]/)[0];
       const dest = path.startsWith('/website/') ? resolve('dist', path.slice(9)) : resolve(dirname(file), path);
       assert.ok(existsSync(dest), `${file}: broken local link ${url}`);

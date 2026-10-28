@@ -99,3 +99,25 @@ test('404 offers functional localized recovery links', async ({ page }) => {
   await page.getByRole('link', { name: '返回中文首页' }).click();
   await expect(page).toHaveURL(/\/zh\/$/);
 });
+
+for (const lang of ['en', 'zh']) {
+  test(`${lang} data contact dialog shows phone and email and restores focus`, async ({ page }) => {
+    await page.goto(`/website/${lang}/data/`);
+    const trigger = page.locator('[data-contact-open]');
+    const dialog = page.getByRole('dialog');
+    await trigger.click();
+    await expect(dialog).toBeVisible();
+    await expect(dialog.getByRole('link', { name: '15058009729' })).toHaveAttribute('href', 'tel:+8615058009729');
+    await expect(dialog.getByRole('link', { name: 'boyuuwang@gmail.com' })).toHaveAttribute('href', 'mailto:boyuuwang@gmail.com');
+    expect((await new AxeBuilder({ page }).analyze()).violations).toEqual([]);
+    await page.keyboard.press('Escape');
+    await expect(dialog).not.toBeVisible();
+    await expect(trigger).toBeFocused();
+    await page.setViewportSize({ width: 320, height: 700 });
+    await trigger.click();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+    await dialog.getByRole('button', { name: lang === 'zh' ? '关闭' : 'Close', exact: true }).click();
+    await expect(dialog).not.toBeVisible();
+    await expect(trigger).toBeFocused();
+  });
+}

@@ -81,3 +81,15 @@ if (research) {
   });
   window.addEventListener('popstate', () => { restoreQuery(); updateFilters(false); });
 }
+
+const contactTrigger = document.querySelector('[data-contact-open]');
+const contactDialog = document.querySelector('#data-contact-dialog');
+if (contactTrigger && contactDialog) {
+  contactTrigger.hidden = false;
+  contactTrigger.addEventListener('click', () => contactDialog.showModal());
+  contactDialog.addEventListener('click', event => {
+    const rect = contactDialog.getBoundingClientRect();
+    if (event.target === contactDialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) contactDialog.close();
+  });
+  contactDialog.addEventListener('close', () => contactTrigger.focus());
+}

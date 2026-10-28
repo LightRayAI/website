@@ -42,3 +42,7 @@ The user requested Song’s portrait from https://physx.phybench.cn/maintainers.
 ## Data collaboration and delivery
 
 The user directly supplied the deep collaborations with ByteDance and Alibaba and delivery of more than 1,000 long-horizon scientific reasoning data items and Agentic Science Tasks. The displayed 1,000+ is their combined total, not a per-partner or per-category count. No contract values, dates, endorsements, or corporate logos are inferred. The Chinese product name is 科研智能体任务.
+
+## Partner logos
+
+At the user’s request, the data page uses ByteDance logos embedded in its official homepages https://www.bytedance.com/en/ and https://www.bytedance.com/zh/. Original files are saved unchanged; CSS renders the white marks in a dark monochrome tone for the light background. Alibaba English and Chinese logos come from https://home.alibabagroup.com/en-US/resource-logos, using its original files `ae99cd49-2667-464e-b9db-b39cee0126e1.png` and `d7eaad8d-b2b1-4f5f-ad09-9338bfe8efc5.png` under https://ali-home-data.oss-cn-hangzhou.aliyuncs.com/ecms-files/886024452/. Source: www.alibabagroup.com. Logos identify the collaborations supplied by the user.

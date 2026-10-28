@@ -28,9 +28,9 @@ export const copy = {
       { title: 'AI Evaluation', subtitle: 'Measure what systems can really do.', description: 'Evaluate scientific reasoning, faithful paper reproduction, and improvement that holds up on unseen tasks.', detail: 'PHYBench → PRBench → RSI-Exam: from reasoning to reproduction to recursive self-improvement.' },
     ],
     data: {
-      eyebrow: 'DATA BUSINESS', title: 'Scientific depth.\nProduction rigor.',
-      intro: 'High-quality scientific data and executable environments for frontier-model post-training. We bring domain experts, coding agents, and automated evaluation together in a reproducible production workflow.',
-      deliveryProof: { label: 'COLLABORATION & DELIVERY', title: 'Scientific data, delivered.', text: 'We work closely with ByteDance and Alibaba to deliver long-horizon scientific reasoning data and Agentic Science Tasks.', partners: ['ByteDance', 'Alibaba'], metric: '1,000+', metricLabel: 'Data items and tasks delivered', metricDetail: 'Combined total across long-horizon scientific reasoning data and Agentic Science Tasks.' },
+      eyebrow: 'DATA BUSINESS', title: 'Scientific data.\nResearch-ready tasks.',
+      intro: 'Expert-designed reasoning data, executable research tasks, and verifiable environments for frontier-model post-training.',
+      deliveryProof: { label: 'Close collaborations', partners: ['ByteDance', 'Alibaba'], metric: '1,000+', metricLabel: 'Scientific data items and tasks delivered', metricDetail: 'Long-horizon reasoning · Agentic Science Tasks' },
       capabilities: 'What we build', capabilitiesTitle: 'From long-form reasoning to agentic research.',
       products: [
         { number: '01', title: 'Long-horizon scientific reasoning', text: 'Expert-designed problems paired with complete derivations, intermediate checkpoints, and granular scoring rubrics.', items: ['Detailed reasoning and reference solutions', 'Checkpoints for intermediate scientific validity', 'Rubrics that distinguish partial progress from correctness'] },
@@ -149,8 +149,8 @@ export const copy = {
       { title: 'AI Evaluation', subtitle: '衡量真实的科研能力。', description: '严格评估科学推理、真实论文复现，以及能够在未见数据上持续有效的方法改进。', detail: 'PHYBench → PRBench → RSI-Exam：从物理推理、论文复现，走向递归自我改进。' },
     ],
     data: {
-      eyebrow: '数据业务', title: '科学深度，\n交付精度。', intro: '面向前沿模型后训练的高质量科学数据与可执行环境。以领域专家、科研智能体和自动化评测环境为基础，将严谨的科学方法转化为可复现、可扩展的数据生产流程。',
-      deliveryProof: { label: '合作与交付', title: '让科学数据走向实际应用。', text: '我们与字节跳动、阿里巴巴深度合作，持续交付长程科学推理数据与科研智能体任务。', partners: ['字节跳动', '阿里巴巴'], metric: '1,000+', metricLabel: '累计交付数据与任务', metricDetail: '涵盖长程科学推理数据与科研智能体任务，两类合计。' },
+      eyebrow: '数据业务', title: '面向科研智能的\n高质量数据与任务。', intro: '融合领域专家的科学判断与可执行验证，为前沿模型后训练提供长程科学推理数据、科研智能体任务及配套环境。',
+      deliveryProof: { label: '深度合作', partners: ['字节跳动', '阿里巴巴'], metric: '1,000+', metricLabel: '累计交付科学数据与任务', metricDetail: '长程科学推理 · 科研智能体任务' },
       capabilities: '核心能力', capabilitiesTitle: '从长程科学推理，到科研智能体任务。',
       products: [
         { number: '01', title: '长程科学推理数据', text: '由领域专家设计科学问题，提供完整推导、中间检查点和细致评分标准。', items: ['完整推理过程与参考答案', '验证关键中间步骤的科学正确性', '区分部分进展与最终正确性的评分细则'] },

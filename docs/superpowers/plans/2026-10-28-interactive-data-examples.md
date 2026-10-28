@@ -22,7 +22,7 @@
 
 - [x] 1. Add failing browser coverage for independent language changes, disclosure state, keyboard/mobile behavior and no-JavaScript reading.
 - [x] 2. Expand the grounded task copy; render equations, language panels and disclosures; add small client-side language controls and responsive styles; remove redundant bottom sections.
-- [ ] 3. Run lint/build/content/browser checks, inspect screenshots, request focused review, then commit/push/deploy and verify the live cards.
+- [x] 3. Run lint/build/content/browser checks, inspect screenshots, request focused review, then commit/push/deploy and verify the live cards.
 
 ## Review focus
 
@@ -36,3 +36,10 @@ Mixed-language cards need correct `lang` and accessibility labels; disclosures m
 - Desktop and mobile screenshots inspected; formula fonts loaded with no failed asset requests. Removed workflow/delivery sections are absent.
 - Independent review identified a mismatch between the language controls' visible labels, accessible names and `lang`. Fixed with separately language-tagged visible text and page-language screen-reader descriptions; regression assertions verified both initial and switched states.
 - Generated ID/ARIA-reference checks passed in both languages.
+
+## Published verification
+
+- Published code: `0558903`. Build and Pages deployment succeeded: https://github.com/LightRayAI/website/actions/runs/40744219708
+- All three new browser tests passed against the public site: independent card language/disclosure state, mobile keyboard/accessibility, and static reading without JavaScript.
+- Both live data pages have four cards, eight language panels, three scientific equation blocks per language, and native acceptance/delivery disclosures. The standalone workflow and delivery sections are absent.
+- Published KaTeX CSS and font files returned HTTP 200. This final record does not alter the deployed artifact.

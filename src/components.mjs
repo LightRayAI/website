@@ -1,5 +1,5 @@
 import { copy, figures, institutions } from './content.mjs';
-import { asset, esc, origin, projects, relationship, shortName, url } from './model.mjs';
+import { asset, assetVersion, esc, origin, projects, relationship, shortName, url } from './model.mjs';
 
 export const arrow = '<span aria-hidden="true">↗</span>';
 export const right = '<span aria-hidden="true">→</span>';
@@ -28,7 +28,7 @@ export function layout({ lang, page = '', title, description, body, root = false
   <link rel="stylesheet" href="${asset('styles.css')}"><script src="${asset('client.js')}" defer></script>
   <script type="application/ld+json">${JSON.stringify(structured).replace(/</g, '\\u003c')}</script>
 </head>
-<body data-lang="${lang}"${root ? ' data-root="true"' : ''}>
+<body data-build="${assetVersion}" data-version-url="${asset('version.json')}" data-lang="${lang}"${root ? ' data-root="true"' : ''}>
   <a class="skip-link" href="#main">${c.skip}</a>
   <header class="site-header"><div class="container header-inner">
     <a class="brand" href="${url(lang)}" aria-label="LightRay AI · ${c.nav[0]}">${mark}<span>LightRay<span class="brand-ai"> AI</span></span></a>

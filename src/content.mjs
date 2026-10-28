@@ -89,7 +89,7 @@ export const copy = {
     },
     detail: { back: 'All research', overview: 'Research overview', highlights: 'Key findings & contributions', methods: 'How it works', results: 'Reported results', credits: 'Team contribution', sources: 'Publication & resources', related: 'Related sources', connections: 'Connected research', figure: 'Research figure', openFigure: 'View full figure', schematic: 'Source-derived workflow schematic', fullPaper: 'Read the paper for the complete methods and experimental details.', },
     paper: 'Paper', github: 'GitHub', project: 'Project', journal: 'Journal / proceedings', readProject: 'Explore project',
-    contact: 'Research & data inquiries', contactLink: 'Get in touch', footer: 'Scientific intelligence, built on evidence.', rights: 'LightRay AI', updated: 'Research snapshot · October 2026',
+    contact: 'Research & data inquiries', contactLink: 'Get in touch', footer: 'General intelligence, built on science.', rights: 'LightRay AI', updated: 'Research snapshot · October 2026',
     notFound: 'This page could not be found.', notFoundText: 'Explore our research, or return to the homepage.', backHome: 'Return home',
     figureCredit: 'Source', originalFigure: 'Original research figure; labels follow the paper.',
     scopes: {
@@ -190,7 +190,7 @@ export const copy = {
     },
     detail: { back: '全部研究', overview: '研究概述', highlights: '核心成果与贡献', methods: '研究方法与流程', results: '代表性结果', credits: '团队贡献', sources: '论文与项目资源', related: '相关资料', connections: '相关研究', figure: '科研图示', openFigure: '查看完整图示', schematic: '依据项目资料整理的工作流示意图', fullPaper: '完整研究方法与实验细节请参阅论文。', },
     paper: '论文', github: 'GitHub', project: '项目主页', journal: '期刊 / 会议论文', readProject: '查看项目',
-    contact: '科研与数据合作', contactLink: '联系交流', footer: '以证据为基石，构建科学智能。', rights: 'LightRay AI', updated: '科研资料更新于 2026 年 10 月',
+    contact: '科研与数据合作', contactLink: '联系交流', footer: '以科学为基石，构建通用智能。', rights: 'LightRay AI', updated: '科研资料更新于 2026 年 10 月',
     notFound: '未找到该页面。', notFoundText: '你可以浏览科学研究，或返回首页。', backHome: '返回首页', figureCredit: '图示来源', originalFigure: '原始论文图示；图中文字保留原文。',
     scopes: {
       collideragent: '按提供的最新项目资料，已完成 10 篇代表性论文的端到端复现。',

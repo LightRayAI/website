@@ -9,7 +9,7 @@ const equations = {
 export const dataBusiness = {
   en: {
     eyebrow: 'DATA BUSINESS', title: 'Scientific depth.\nMeasured progress.',
-    intro: 'We are an active scientific research team building data and environments for frontier-model post-training. We map what models can reason through, execute, and improve, then turn the gaps into demanding scientific tasks. Domain experts guide the entire process, from the research question to the final verifier.',
+    intro: 'Stronger scientific capability significantly improves a model’s ability to generalize. We are an active scientific research team building data and environments for frontier-model post-training. We map what models can reason through, execute, and improve, then turn the gaps into demanding scientific tasks. Domain experts guide the entire process, from the research question to the final verifier.',
     deliveryProof: { label: 'Close collaborations', partners: ['ByteDance', 'Alibaba'], metric: '1,000+', metricLabel: 'Scientific data items and tasks delivered' },
     principlesLabel: 'SCIENTIFIC EXPERTISE', principlesTitle: 'Know the science. Understand the capability gap.',
     principles: [
@@ -86,7 +86,7 @@ export const dataBusiness = {
   },
   zh: {
     eyebrow: '数据业务', title: '科学深度，\n模型进步。',
-    intro: '我们来自活跃于科学前沿的研究团队，为前沿模型后训练构建高质量数据与科研环境。从科学推理、研究执行到持续改进，我们理解并构建模型的能力地图（capability map），据此设计真正高难度、长程的科学任务。领域专家贯穿从研究选题到最终验证器的完整生产流程。',
+    intro: '科学能力的增强对于模型的泛化能力具有显著作用。我们来自活跃于科学前沿的研究团队，为前沿模型后训练构建高质量数据与科研环境。从科学推理、研究执行到持续改进，我们理解并构建模型的能力地图（capability map），据此设计真正高难度、长程的科学任务。领域专家贯穿从研究选题到最终验证器的完整生产流程。',
     deliveryProof: { label: '深度合作', partners: ['字节跳动', '阿里巴巴'], metric: '1,000+', metricLabel: '累计交付科学数据与任务' },
     principlesLabel: '科研能力与数据方法', principlesTitle: '理解科学前沿，定位模型的下一步。',
     principles: [

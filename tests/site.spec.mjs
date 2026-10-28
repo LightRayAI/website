@@ -52,7 +52,7 @@ test('mobile navigation supports keyboard dismissal and returns focus', async ({
   await toggle.click();
   await page.locator('#main-nav').getByRole('link', { name: 'Data Business' }).click();
   await expect(page).toHaveURL(/\/en\/data\/$/);
-  await expect(page.getByRole('heading', { name: /Scientific depth/ })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Frontier research/ })).toBeVisible();
 });
 
 test('static content and localization remain available without JavaScript', async ({ browser }) => {
@@ -135,14 +135,14 @@ test('deployment update refreshes cached pages without losing query or hash or l
   await expect(page).toHaveURL(/source=test&v=newrelease2026#main$/);
   const before = navigations;
   await page.evaluate(() => window.dispatchEvent(new Event('focus')));
-  await expect.poll(() => page.locator('h1').innerText()).toContain('科学深度');
+  await expect.poll(() => page.locator('h1').innerText()).toContain('前沿科研');
   expect(navigations).toBe(before);
 });
 
 test('deployment check tolerates network failures and preserves open contact dialogs', async ({ page }) => {
   await page.route('**/version.json?*', route => route.abort());
   await page.goto('/website/en/data/');
-  await expect(page.locator('h1')).toContainText('Scientific depth');
+  await expect(page.locator('h1')).toContainText('Frontier research');
   await page.locator('[data-contact-open]').click();
   await page.route('**/version.json?*', route => route.fulfill({ json: { version: 'nextrelease2026' } }));
   await page.evaluate(() => window.dispatchEvent(new Event('focus')));

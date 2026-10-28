@@ -160,6 +160,7 @@ h4 { font-size: 1rem; }
 .page-hero { padding: 75px 0 65px; background: var(--paper); border-bottom: 1px solid var(--line); }
 .page-hero h1 { font-size: clamp(2.7rem, 5vw, 4.2rem); margin: 26px 0; font-weight: 550; }
 .page-hero .lead { max-width: 780px; }
+.hero-thesis { max-width: 900px; color: var(--ink); font-size: clamp(1.06rem, 1.7vw, 1.3rem); line-height: 1.75; font-weight: 550; margin-bottom: 18px; }
 .capability-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 45px 70px; }
 .capability { border-top: 1px solid var(--line); padding-top: 21px; }
 .capability h3 { margin: 18px 0; }
@@ -184,14 +185,7 @@ h4 { font-size: 1rem; }
 .example-equation { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding: 12px 0; margin-block: 12px; font-size: .9rem; }
 .example-equation .katex-display { margin: .5em 0; }
 .example-equation .katex-display > .katex { text-align: left; }
-.example-details { margin-top: 21px; border-top: 1px solid var(--line); }
-.example-details summary { cursor: pointer; padding-block: 13px 5px; font-size: .76rem; color: var(--blue); line-height: 1.7; min-height: 44px; }
-.example-details summary::marker { color: var(--blue); }
-.example-details[open] summary { padding-bottom: 12px; }
 .example-label { display: block; color: var(--ink); font-weight: 600; font-size: .7rem; margin-bottom: 7px; }
-.example-facts { display: grid; gap: 15px; margin-top: 0; padding-top: 15px; border-top: 1px solid var(--line); }
-.example-facts dt { color: var(--ink); font-size: .7rem; font-weight: 600; margin-bottom: 5px; }
-.example-facts dd { color: var(--muted); font-size: .77rem; line-height: 1.85; }
 .example-pending { min-height: 330px; display: flex; flex-direction: column; background: white; border-style: dashed; }
 .example-pending .eyebrow { font-size: .65rem; margin-bottom: 12px; }
 .example-reserved { display: grid; flex: 1; place-items: center; min-height: 160px; color: var(--muted); font-size: .78rem; }
@@ -454,6 +448,7 @@ html[lang="zh-CN"] .full-description { line-height: 2.1; }
   .project-grid-single .state { width: 54px; height: 54px; }
   .page-hero { padding-block: 47px; }
   .page-hero h1 { font-size: 2.6rem; }
+  html[lang="zh-CN"] .page-hero.with-thesis h1 { font-size: clamp(1.65rem, 7.6vw, 2.05rem); }
   .page-hero .lead { font-size: .94rem; }
   .team-intro .small-label { margin-top: 38px; }
   .institution-list { gap: 16px 20px; }

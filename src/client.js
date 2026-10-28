@@ -92,9 +92,6 @@ for (const card of document.querySelectorAll('[data-example-card]')) {
     const next = current === 'zh' ? 'en' : 'zh';
     const oldPanel = card.querySelector(`[data-example-locale="${current}"]`);
     const newPanel = card.querySelector(`[data-example-locale="${next}"]`);
-    const oldDetails = oldPanel.querySelector('details');
-    const newDetails = newPanel.querySelector('details');
-    if (oldDetails && newDetails) newDetails.open = oldDetails.open;
     oldPanel.hidden = true;
     newPanel.hidden = false;
     card.dataset.exampleLanguage = next;

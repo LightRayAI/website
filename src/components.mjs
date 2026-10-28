@@ -103,8 +103,8 @@ export function institutionList(lang) {
   return `<ul class="institution-list">${institutions.map(i => `<li>${esc(i[lang])}</li>`).join('')}</ul>`;
 }
 
-export function pageHero(eyebrow, title, intro) {
-  return `<section class="page-hero"><div class="container"><p class="eyebrow"><span class="blue-dot" aria-hidden="true"></span>${esc(eyebrow)}</p><h1>${title.split('\n').map(esc).join('<br>')}</h1><p class="lead">${esc(intro)}</p></div></section>`;
+export function pageHero(eyebrow, title, intro, thesis = '') {
+  return `<section class="page-hero${thesis ? ' with-thesis' : ''}"><div class="container"><p class="eyebrow"><span class="blue-dot" aria-hidden="true"></span>${esc(eyebrow)}</p><h1>${title.split('\n').map(esc).join('<br>')}</h1>${thesis ? `<p class="hero-thesis">${esc(thesis)}</p>` : ''}<p class="lead">${esc(intro)}</p></div></section>`;
 }
 
 export function researchJourney(lang) {

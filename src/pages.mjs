@@ -15,7 +15,7 @@ export function homePage(lang, root = false) {
 
 export function dataPage(lang) {
   const c = copy[lang], d = c.data;
-  const body = `${pageHero(d.eyebrow, d.title, d.intro)}
+  const body = `${pageHero(d.eyebrow, d.title, d.intro, d.thesis)}
   <section class="section data-approach"><div class="container">${sectionHead(d.principlesLabel, d.principlesTitle)}<div class="data-principles">${d.principles.map(([title, text], i) => `<article><span class="index-number">0${i + 1}</span><div><h3>${esc(title)}</h3><p>${esc(text)}</p></div></article>`).join('')}</div></div></section>
   <section class="data-partnerships"><div class="container"><div class="data-proof"><div class="data-partners"><p class="small-label">${d.deliveryProof.label}</p><ul class="delivery-partners">${d.deliveryProof.partners.map((name, i) => `<li><img class="partner-logo${i === 0 ? ' partner-bytedance' : ''}" src="${asset(`images/${i === 0 ? 'bytedance' : 'alibaba'}-${lang}.${i === 0 && lang === 'en' ? 'svg' : 'png'}`)}" alt="${name}" width="180" height="36"></li>`).join('')}</ul></div><div class="delivery-proof-metric"><strong>${d.deliveryProof.metric}</strong><div><p class="delivery-proof-label">${d.deliveryProof.metricLabel}</p></div></div></div></div></section>
   <section class="section"><div class="container">${sectionHead(d.capabilities, d.capabilitiesTitle)}<p class="section-intro">${esc(d.capabilitiesIntro)}</p><div class="capability-grid">${d.products.map(p => dataOffering(p, lang)).join('')}</div></div></section>

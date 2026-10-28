@@ -28,8 +28,8 @@ npm run preview              # Serve the current production build
 
 - `team_projects_zh_en.json`: authoritative bilingual project data, read directly at build time. Keep this and `research_projects_bilingual.md` as supplied source documents.
 - `src/content.mjs`: shared bilingual editorial copy, team profiles, source-derived workflow labels, and figure credits.
-- `src/data-business.mjs`: the four bilingual scientific-data offerings, scientific task excerpts/equations, expert-production principles, and task-specific acceptance/delivery notes. The research-trajectory example describes a real scientist–agent session without its numerical results or conclusions; the DMRG example describes a multi-round optimization design and SOTA comparison objective, not a claimed performance result.
-- `src/example-cards.mjs`: independent bilingual example panels, native acceptance/delivery disclosures, and build-time KaTeX rendering. Chinese panels are labeled “（翻译）”; each card can show its English original without changing the page language. Mathematical HTML/MathML, styles, fonts and license are served locally.
+- `src/data-business.mjs`: the research-driven data positioning, four bilingual offerings, scientific task excerpts/equations, and expert-led human-in-the-loop principles. The research-trajectory example describes a real scientist–agent question without its numerical results or conclusions; the DMRG example presents SOTA comparison as a research objective, not a claimed performance result.
+- `src/example-cards.mjs`: independent bilingual example panels and build-time KaTeX rendering. Cards show only the scientific setting, equation and question. Chinese panels are labeled “（翻译）”; each card can show its English original without changing the page language. Mathematical HTML/MathML, styles, fonts and license are served locally.
 - `src/model.mjs`: source loading, publication eligibility, ordering, URLs, and HTML escaping.
 - `src/components.mjs`: navigation, footer, cards, metrics, and shared sections.
 - `src/pages.mjs`: the four primary pages and project details.
@@ -41,7 +41,7 @@ Projects are ordered by research track, then their supplied `order`. A project i
 
 The user's October 2026 instruction supplies the newer mission, navigation order, team-wide impact figures, and data-business brief. These take precedence over older layout suggestions in the source documents. Shi Qiu's profile and portrait reference https://stephenqsstarthomas.github.io/. Team-wide metrics are not individual accomplishments. Project statistics keep their original reporting scope and dates.
 
-All pages are rendered in both languages. The global language switch retains the corresponding page, and research filters retain their query parameters. JavaScript enhances navigation, filtering and independent example-card language changes. Native example disclosures preserve their open state when a card changes language. Without JavaScript, the selected page language, scientific notation, native disclosures, links and global language navigation remain usable. The root defaults to English and respects a previously selected Chinese preference when browser storage is available.
+All pages are rendered in both languages. The global language switch retains the corresponding page, and research filters retain their query parameters. JavaScript enhances navigation, filtering and independent example-card language changes. Without JavaScript, the selected page language, scientific notation, links and global language navigation remain usable. The root defaults to English and respects a previously selected Chinese preference when browser storage is available.
 
 ## Deployment
 

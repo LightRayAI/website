@@ -30,7 +30,7 @@ export const copy = {
     data: {
       eyebrow: 'DATA BUSINESS', title: 'Scientific data.\nResearch-ready tasks.',
       intro: 'Expert-designed reasoning data, executable research tasks, and verifiable environments for frontier-model post-training.',
-      deliveryProof: { label: 'Close collaborations', partners: ['ByteDance', 'Alibaba'], metric: '1,000+', metricLabel: 'Scientific data items and tasks delivered', metricDetail: 'Long-horizon reasoning · Agentic Science Tasks' },
+      deliveryProof: { label: 'Close collaborations', partners: ['ByteDance', 'Alibaba'], metric: '1,000+', metricLabel: 'Scientific data items and tasks delivered' },
       capabilities: 'What we build', capabilitiesTitle: 'From long-form reasoning to agentic research.',
       products: [
         { number: '01', title: 'Long-horizon scientific reasoning', text: 'Expert-designed problems paired with complete derivations, intermediate checkpoints, and granular scoring rubrics.', items: ['Detailed reasoning and reference solutions', 'Checkpoints for intermediate scientific validity', 'Rubrics that distinguish partial progress from correctness'] },
@@ -150,7 +150,7 @@ export const copy = {
     ],
     data: {
       eyebrow: '数据业务', title: '面向科研智能的\n高质量数据与任务。', intro: '融合领域专家的科学判断与可执行验证，为前沿模型后训练提供长程科学推理数据、科研智能体任务及配套环境。',
-      deliveryProof: { label: '深度合作', partners: ['字节跳动', '阿里巴巴'], metric: '1,000+', metricLabel: '累计交付科学数据与任务', metricDetail: '长程科学推理 · 科研智能体任务' },
+      deliveryProof: { label: '深度合作', partners: ['字节跳动', '阿里巴巴'], metric: '1,000+', metricLabel: '累计交付科学数据与任务' },
       capabilities: '核心能力', capabilitiesTitle: '从长程科学推理，到科研智能体任务。',
       products: [
         { number: '01', title: '长程科学推理数据', text: '由领域专家设计科学问题，提供完整推导、中间检查点和细致评分标准。', items: ['完整推理过程与参考答案', '验证关键中间步骤的科学正确性', '区分部分进展与最终正确性的评分细则'] },

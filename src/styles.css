@@ -165,7 +165,8 @@ h4 { font-size: 1rem; }
 .capability { border-top: 1px solid var(--line); padding-top: 21px; }
 .capability h3 { margin: 18px 0; }
 .capability p { font-size: .9rem; }
-.data-principles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 65px; }
+.data-principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.data-approach .section-heading h2, .data-intro h2 { text-wrap: balance; }
 .data-principles article { display: flex; gap: 20px; border-top: 1px solid var(--line); padding-top: 22px; }
 .data-principles .index-number { flex-shrink: 0; padding-top: 2px; }
 .data-principles h3 { font-size: 1.04rem; line-height: 1.5; margin-bottom: 10px; }
@@ -383,7 +384,7 @@ html[lang="zh-CN"] .full-description { line-height: 2.1; }
   .project-visual { height: 180px; min-height: 180px; }
   .project-metrics { gap: 18px; }
   .capability-grid { gap: 35px; }
-  .data-principles { gap: 28px 35px; }
+  .data-principles { grid-template-columns: 1fr; gap: 28px; }
   .data-principles article { gap: 13px; }
   .contact-inner { gap: 30px; align-items: flex-start; flex-direction: column; }
   .contact-inner h2 { font-size: 1.8rem; }

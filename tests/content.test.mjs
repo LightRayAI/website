@@ -92,7 +92,7 @@ test('data page presents four distinct offerings with brief examples and a resul
     assert.ok($('[data-offering="rsi"]').text().includes('SOTA'));
     assert.ok($('[data-offering="agentic"]').text().includes('PRBench'));
     assert.ok($('[data-offering="agentic"]').text().includes('Terminal-Bench-Science'));
-    assert.equal($('.data-principles article').length, 4);
+    assert.equal($('.data-principles article').length, 3);
     assert.ok(!$('main').text().includes('/home/shiqiu/'));
     assert.ok(!$('main').text().includes('answer.json'));
   }

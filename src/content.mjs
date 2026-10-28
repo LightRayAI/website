@@ -4,13 +4,13 @@ import { dataBusiness } from './data-business.mjs';
 // Project facts and full descriptions are always read from the root JSON.
 export const copy = {
   en: {
-    nav: ['Home', 'Data Business', 'Scientific Research', 'Team'],
+    nav: ['Home', 'Scientific Data', 'Scientific Research', 'Team'],
     skip: 'Skip to content', menu: 'Open navigation', close: 'Close navigation',
     language: 'Read this page in Chinese', langLabel: '中文',
     mission: ['Advance Science with AI.', 'Understand AI through Science.'],
     eyebrow: 'SCIENTIFIC INTELLIGENCE, GROUNDED IN EVIDENCE',
     intro: 'We build AI systems that solve complex scientific problems, carry out research autonomously, and improve through experience. Scientific data, research agents, and fundamental theory form the foundation of our work.',
-    dataCta: 'Explore our data capabilities', researchCta: 'Explore our research',
+    dataCta: 'Explore scientific data', researchCta: 'Explore our research',
     homeResearchTitle: 'From scientific questions to working systems.',
     homeResearchText: 'AI for Science is our core pursuit. Physics of AI provides fundamental insight; rigorous evaluation makes progress measurable.',
     impact: 'Collective impact', impactNote: 'Across our team’s contributions · October 2026',
@@ -20,8 +20,8 @@ export const copy = {
       ['NeurIPS · ICLR · ICML', 'Research at leading AI conferences', 'Multiple accepted papers authored by our team members.'],
     ],
     selected: 'Selected research', selectedTitle: 'Agents that do the science.', viewAll: 'View all research',
-    dataBandTag: 'DATA BUSINESS', dataBandTitle: 'Better scientific AI starts with better scientific data.',
-    dataBandText: 'Expert-designed reasoning, executable research tasks, and rigorous verification environments for frontier-model post-training.',
+    dataBandTag: 'SCIENTIFIC DATA INFRASTRUCTURE', dataBandTitle: 'The work of discovery, made learnable.',
+    dataBandText: 'Reasoning data, executable research environments, and records of scientist–AI collaboration, developed through our scientific work for model training and evaluation.',
     teamBandTag: 'PEOPLE & COLLABORATION', teamBandTitle: 'Across disciplines. Across institutions.',
     teamBandText: 'From IPhO gold-medal talent to doctoral and postdoctoral researchers and senior scientists, our team connects deep scientific training with advanced AI systems.', teamCta: 'Meet the team',
     tracks: [
@@ -101,12 +101,12 @@ export const copy = {
     },
   },
   zh: {
-    nav: ['首页', '数据业务', '科学研究', '团队'],
+    nav: ['首页', '科学数据', '科学研究', '团队'],
     skip: '跳转到主要内容', menu: '打开导航', close: '关闭导航', language: '以英文阅读当前页面', langLabel: 'EN',
     mission: ['以 AI 推进科学，', '以科学理解 AI。'],
     eyebrow: '以证据为基石的科学智能',
     intro: '我们致力于构建能够真正解决复杂科学问题、自主执行科研流程并持续自我改进的 AI 系统，将科学数据、科研智能体与基础理论融为一体。',
-    dataCta: '探索数据业务', researchCta: '探索科学研究',
+    dataCta: '探索科学数据', researchCta: '探索科学研究',
     homeResearchTitle: '从科学问题，到真正运行的科研系统。', homeResearchText: '以 AI for Science 为核心主业，以 Physics of AI 探索基础规律，以严格评测衡量真实进步。',
     impact: '团队整体影响力', impactNote: '团队成员共同贡献 · 截至 2026 年 10 月',
     impacts: [
@@ -115,8 +115,8 @@ export const copy = {
       ['NeurIPS · ICLR · ICML', '顶级 AI 会议研究成果', '团队成员多篇论文被国际顶级人工智能会议接收。'],
     ],
     selected: '代表性研究', selectedTitle: '让智能体真正执行科学研究。', viewAll: '查看全部研究',
-    dataBandTag: '数据业务', dataBandTitle: '更好的科学智能，始于更好的科学数据。',
-    dataBandText: '为前沿模型后训练构建专家设计的科学推理数据、可执行科研任务与严谨的验证环境。',
+    dataBandTag: '科学数据基础设施', dataBandTitle: '将科学探索的过程，转化为智能的学习经验。',
+    dataBandText: '从真实研究中构建推理数据、可执行科研环境与多轮协作轨迹，服务科学 AI 的训练和评测。',
     teamBandTag: '人才与合作', teamBandTitle: '跨越学科，连接机构。', teamBandText: '从国际物理奥赛金牌获得者，到博士、博士后研究者与资深科学家，将深厚的科学训练与先进 AI 系统相结合。', teamCta: '认识我们的团队',
     tracks: [
       { title: 'AI for Science', subtitle: '构建能够发现的系统。', description: '打造专业科研智能体与端到端自主科研系统，让规划、执行、验证和持续改进形成闭环。', detail: '从 ColliderAgent 的专业科研执行，到 AutoResearchClaw 的跨领域迭代科研。' },

@@ -50,9 +50,9 @@ test('mobile navigation supports keyboard dismissal and returns focus', async ({
   await expect(toggle).toHaveAttribute('aria-expanded', 'false');
   await expect(toggle).toBeFocused();
   await toggle.click();
-  await page.locator('#main-nav').getByRole('link', { name: 'Data Business' }).click();
+  await page.locator('#main-nav').getByRole('link', { name: 'Scientific Data' }).click();
   await expect(page).toHaveURL(/\/en\/data\/$/);
-  await expect(page.getByRole('heading', { name: /Frontier research/ })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /The work of discovery/ })).toBeVisible();
 });
 
 test('static content and localization remain available without JavaScript', async ({ browser }) => {
@@ -135,14 +135,14 @@ test('deployment update refreshes cached pages without losing query or hash or l
   await expect(page).toHaveURL(/source=test&v=newrelease2026#main$/);
   const before = navigations;
   await page.evaluate(() => window.dispatchEvent(new Event('focus')));
-  await expect.poll(() => page.locator('h1').innerText()).toContain('前沿科研');
+  await expect.poll(() => page.locator('h1').innerText()).toContain('科学探索');
   expect(navigations).toBe(before);
 });
 
 test('deployment check tolerates network failures and preserves open contact dialogs', async ({ page }) => {
   await page.route('**/version.json?*', route => route.abort());
   await page.goto('/website/en/data/');
-  await expect(page.locator('h1')).toContainText('Frontier research');
+  await expect(page.locator('h1')).toContainText('The work of discovery');
   await page.locator('[data-contact-open]').click();
   await page.route('**/version.json?*', route => route.fulfill({ json: { version: 'nextrelease2026' } }));
   await page.evaluate(() => window.dispatchEvent(new Event('focus')));

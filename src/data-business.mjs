@@ -8,25 +8,24 @@ const equations = {
 };
 export const dataBusiness = {
   en: {
-    eyebrow: 'DATA BUSINESS', title: 'Frontier research. Frontier data.\nAdvancing together.',
-    thesis: 'We believe frontier data for long-horizon scientific work must be deeply grounded in real research.',
-    intro: 'Stronger scientific capability significantly improves a model’s ability to generalize. We develop scientific data as we advance research. New questions, pivotal derivations, experimental feedback, and methodological breakthroughs become demanding tasks, complete research trajectories, and reliable evaluation criteria. Our data carries the assumptions, tools, and evidence of the work it comes from. As our research progresses, we continually improve the scientific depth and training value of our data.',
+    eyebrow: 'SCIENTIFIC DATA INFRASTRUCTURE', title: 'The work of discovery,\nmade learnable.',
+    thesis: 'Research-grade data, executable environments, and verification systems for training and evaluating scientific AI.',
+    intro: 'Research involves deciding which questions are worth asking, translating theory into computation, revising a hypothesis when experiments disagree, and establishing whether a result holds. We turn that experience into reasoning data, executable research tasks, and records of scientist–AI collaboration. The material retains the methods, constraints, and scientific judgment of the original work.',
     deliveryProof: { label: 'Close collaborations', partners: ['ByteDance', 'Alibaba'], metric: '1,000+', metricLabel: 'Scientific data items and tasks delivered' },
-    principlesLabel: 'RESEARCH AT THE CORE', principlesTitle: 'The research behind the data makes the difference.',
+    principlesLabel: 'Expert-led Human-in-the-Loop Production', principlesTitle: 'Built by the researchers behind the questions.',
     principles: [
-      ['Research progress shapes data development', 'New scientific questions reveal new capability demands. Advances in methods provide stronger reference approaches, while real failures expose unresolved weaknesses. These findings continuously inform our tasks, trajectories, and evaluation objectives.'],
-      ['Capability maps grounded in real research', 'We examine how models handle derivation, scientific tools, numerical computation, and error correction within complete research workflows. This locates the bottlenecks in long-horizon execution and turns them into targeted learning opportunities.'],
-      ['Expert-led Human-in-the-Loop Production', 'Domain scientists guide problem selection, derivations, experiment design, and interpretation, while coding agents assist implementation and repeated execution. Experts remain involved from the research objective and scientific context through independent checks and verifier review.'],
-      ['The structure of real scientific work', 'Tasks retain the constraints and dependencies of research. Tool use, experimental feedback, and revisions remain connected to earlier assumptions and results. This keeps the training signal aligned with the work we want scientific AI to perform.'],
+      ['Problem formulation', 'We draw on our research to identify questions that matter, state their assumptions, and specify what a solution must establish. Model trials inform a capability map of where reasoning or execution breaks down.'],
+      ['Executable research workflows', 'We turn research methods into tasks an agent can execute, with a defined working state, scientific software, and dependencies between stages. Experiments, debugging, and revisions remain part of the record.'],
+      ['Scientific verification', 'We establish what a valid result must satisfy, using theory, independent calculations, and domain expertise. Reference solutions, numerical tolerances, and executable checks are reviewed alongside sources of error and valid alternative approaches.'],
     ],
     capabilities: 'FOUR DATA FAMILIES', capabilitiesTitle: 'From scientific reasoning to sustained model improvement.',
-    capabilitiesIntro: 'Four forms of the same scientific work: the reasoning behind a result, the workflow that produces it, the collaboration that advances it, and the method that improves through experimentation.',
+    capabilitiesIntro: 'The data takes different forms depending on what a model needs to learn: a derivation, a sequence of scientific computations, a research collaboration, or repeated improvement of a method.',
     exampleLabel: 'Task excerpt', questionLabel: 'Your task', originalLabel: 'English original', translatedLabel: '（翻译）', switchToEnglish: 'Read this example in English', switchToChinese: 'Read this example in Chinese', switchedToEnglish: 'This example is now in English.', switchedToChinese: 'This example is now in Chinese.',
     products: [
       {
         id: 'reasoning', number: '01', title: 'Frontier Scientific Reasoning', unit: 'A complete scientific derivation',
-        text: 'Long-horizon reasoning data built around the central arguments of frontier physics papers and other advanced scientific work. Experts reconstruct the reasoning, make assumptions explicit, and develop new, well-posed questions.',
-        items: ['Full expert derivations and reference answers', 'Key intermediate results and fine-grained acceptance criteria', 'Symbolic and numerical cross-checks; model-based difficulty calibration'],
+        text: 'We develop tasks requiring sustained, multi-step scientific reasoning from research papers and questions that arise in our own work. Each task states the assumptions and target, with an expert derivation and checks on the intermediate results.',
+        items: ['Expert derivations and reference answers', 'Intermediate results with explicit assumptions', 'Symbolic and numerical verification'],
         example: {
           tag: 'CritPt-style · Quantum many-body physics', title: 'The optimal gap of eight Majorana modes',
           brief: 'Eight Majorana operators act irreducibly on the full sixteen-dimensional Fock space. In a fixed Majorana basis, allow only real quartic interactions, fix the squared norm of all coupling coefficients, and require a nondegenerate ground state. Define the excitation gap using the complete spectrum, including both fermion-parity sectors.',
@@ -36,8 +35,8 @@ export const dataBusiness = {
       },
       {
         id: 'agentic', number: '02', title: 'Agentic Science RL Environments', unit: 'An executable research workflow',
-        text: 'RL-ready environments for complete, research-level scientific workflows. Building on PRBench’s reproduction and verification approach, we design for Terminal-Bench-Science-level workflow complexity, with domain tools, strict verifiers, and detailed point-by-point rewards.',
-        items: ['Scientific context, working software, and a clear output contract', 'Expert-checked reference results and independently reviewed verifiers', 'Observable-specific tolerances, scoring weights, and partial credit'],
+        text: 'Research tasks with a working scientific software environment and an executable verifier. The design draws on PRBench’s paper-reproduction setting and targets workflows of comparable complexity to Terminal-Bench-Science, with feedback tied to specific scientific outputs.',
+        items: ['Scientific context, domain software, and an output specification', 'Independently checked references and verifiers', 'Per-observable tolerances, scoring weights, and partial credit'],
         example: {
           tag: 'Agentic science · Gravitational dynamics', title: 'Collective feedback in a self-consistent disk',
           brief: 'Consider equal-mass particles moving in a plane with softened gravitational interactions in the axisymmetric and quadrupolar harmonics. The full task supplies the interaction kernels and initial phase-space distribution. The external potential is fixed so the initial total mean potential is ln r; as the action distribution evolves, the mean field must remain self-consistent.',
@@ -47,8 +46,8 @@ export const dataBusiness = {
       },
       {
         id: 'trajectories', number: '03', title: 'Scientist–AI Research Trajectories', unit: 'A multi-turn scientific collaboration',
-        text: 'Interactions between domain scientists and AI agents working toward research advances across disciplines. The data connects expert guidance, agent decisions, complete tool calls, experimental evidence, and revisions over multiple turns.',
-        items: ['Expert feedback at substantive research decisions', 'Complete tool calls, execution observations, and intermediate artifacts', 'Preserved failed attempts, corrections, and changes of direction'],
+        text: 'Records of scientists and AI agents working through a research problem together. Conversations are kept with their tool calls, experimental observations, and intermediate artifacts, so a change of plan can be understood in light of the evidence available at the time.',
+        items: ['Expert guidance on research decisions', 'Complete tool calls, observations, and intermediate artifacts', 'Failed attempts, corrections, and changes of direction'],
         example: {
           tag: 'Scientist–AI collaboration · Statistical field theory', categoryLabel: 'Trajectory excerpt', title: 'Chiral criticality in O(N)×O(2) frustrated magnets',
           brief: 'Stacked triangular antiferromagnets and helimagnets order through two orthogonal N-component vectors, described by an O(N)×O(2) Landau–Ginzburg–Wilson theory. For the physical cases N = 2 and 3, methods have disagreed for more than two decades on whether the transition is continuous: fixed-dimension perturbation theory finds a fixed point that other approaches do not support.',
@@ -59,8 +58,8 @@ export const dataBusiness = {
       },
       {
         id: 'rsi', number: '04', title: 'RSI Research Challenges', unit: 'An improved scientific method',
-        text: 'Difficult scientific problems for recursive self-improvement. Agents start from a working method, repeatedly propose and test changes, and retain or revert them based on evidence. Evaluation measures the resulting method, alongside the full improvement process.',
-        items: ['Executable baselines, explicit objectives, and fixed resource budgets', 'Versioned experiments, code changes, feedback, and rollback decisions', 'Independent re-execution and comparisons with strong reference methods'],
+        text: 'Tasks in which an agent improves a working scientific method through repeated experiments. The agent can change an implementation, test a hypothesis, keep a useful modification, or revert an unsuccessful one. We evaluate the final method together with the experimental record.',
+        items: ['Executable baselines, explicit objectives, and resource budgets', 'Experiments, metrics, and keep-or-revert decisions recorded by version', 'Independent re-execution and comparison with reference methods'],
         example: {
           tag: 'RSI task design · Quantum chemistry', title: 'Iteratively improving a DMRG solver',
           brief: 'Start from a working finite-system DMRG solver for antiferromagnetic spin-½ and spin-1 Heisenberg chains. The setting includes open and periodic boundaries; the full task also specifies softened edge bonds. The solver must return ground-state and excited-state energies, gaps, reduced-density-matrix eigenvalues, bond strengths, or local magnetizations as requested.',
@@ -69,29 +68,28 @@ export const dataBusiness = {
         },
       },
     ],
-    foundation: 'A research program that continually informs our data', foundationText: 'PHYBench, PRBench, ColliderAgent, and RSI-Exam connect scientific reasoning, research execution, and self-improvement. Research exposes new capability limits; evaluation helps identify the next questions. These findings feed back into the data and environments we build.',
-    contactTitle: 'Which scientific capability comes next?', contactText: 'Talk with us about your target domains, model capability gaps, and requirements for scientific data or executable environments.', contactCta: 'Discuss a data collaboration',
+    foundation: 'Related research', foundationText: 'Our work on PHYBench and PRBench informs task construction and scientific evaluation. ColliderAgent provides experience with research software and execution; RSI-Exam addresses how improvements should be measured.',
+    contactTitle: 'Scientific data collaborations', contactText: 'Tell us about the scientific domain, the capabilities you want to develop, and the data or research environment you need.', contactCta: 'Discuss a collaboration',
   },
   zh: {
-    eyebrow: '数据业务', title: '前沿科研与前沿数据，\n同源共进。',
-    thesis: '我们相信，真正的前沿长程数据，必须与真实科研深度绑定。',
-    intro: '科学能力的增强对于模型的泛化能力具有显著作用。我们在推进科研的过程中构建数据。研究中的新问题、关键推导、实验反馈与方法突破，持续转化为高难度任务、完整科研轨迹和可靠评测标准。数据保留其所源自研究的假设、工具与证据链；随着科研推进，我们持续提升数据的科学深度与训练价值。',
+    eyebrow: '科学数据基础设施', title: '将科学探索的过程，\n转化为智能的学习经验。',
+    thesis: '面向科学 AI 训练与评测的研究级数据、可执行环境和验证体系。',
+    intro: '科学研究积累着模型理解复杂世界所需的经验：如何提出值得研究的问题，如何连接理论与计算，如何依据实验修正判断，以及如何确认一个结果成立。我们将这些经验构建为长程推理数据、可执行科研环境与多轮研究轨迹，让科研中的方法、约束与判断进入模型训练。',
     deliveryProof: { label: '深度合作', partners: ['字节跳动', '阿里巴巴'], metric: '1,000+', metricLabel: '累计交付科学数据与任务' },
-    principlesLabel: '以科研为核心', principlesTitle: '数据的深度，来自持续推进的研究。',
+    principlesLabel: '专家主导的人机协同生产', principlesTitle: '研究问题的提出者，也是训练任务的构建者。',
     principles: [
-      ['科研进展驱动数据演进', '新课题带来新的能力要求，方法进展提供更高质量的参考路径，真实失败揭示尚未解决的短板。这些研究发现持续进入我们的题目、轨迹和评测目标。'],
-      ['基于真实研究的能力地图', '在完整科研流程中考察模型的推导、专业工具调用、数值计算与纠错能力，定位长程研究链中真正受限的环节，并将这些缺口转化为有针对性的训练任务。'],
-      ['专家主导的人机协同生产', '领域科学家指导选题、推导、实验设计与结果解释，Coding Agent 辅助实现与重复执行。从研究目标和科学上下文，到独立核验与验证器复审，关键科学判断始终由专家把关。'],
-      ['保留真实科研的长程结构', '题目保留研究中的关键约束与前后依赖，工具调用、实验反馈和方案修订连接此前的假设与结果。训练信号因此与科学 AI 未来参与研究的实际工作方式保持一致。'],
+      ['问题定义', '选题来自团队的研究工作。我们判断问题的科学意义，明确其假设、条件与求解目标，再结合模型试跑建立能力地图，定位值得训练的薄弱环节。'],
+      ['科研过程的形式化', '把论文方法和研究流程落实为可运行的任务：定义工作状态，配置专业工具，保留各步骤之间的依赖，以及实验、调试和修订的记录。'],
+      ['科学验证', '依据理论、独立计算和领域经验确定结果应满足的条件，再将其落实为参考解、数值容差和验证器。正确性、误差来源和合理替代解法都需要经过科学复核。'],
     ],
     capabilities: '四类数据与环境', capabilitiesTitle: '从长程科学推理，到持续模型改进。',
-    capabilitiesIntro: '同一科研过程的四种表达：结论背后的推理，产出结果的工作流，推进研究的多轮协作，以及在实验中持续改进的方法。',
+    capabilitiesIntro: '根据模型需要学习的能力，分别提供完整推导、科学计算流程、科研协作记录与多轮方法改进任务。',
     exampleLabel: '题面节选', questionLabel: '求解任务', originalLabel: 'English original', translatedLabel: '（翻译）', switchToEnglish: '查看此示例的英文原文', switchToChinese: '查看此示例的中文译文', switchedToEnglish: '当前示例已切换为英文原文。', switchedToChinese: '当前示例已切换为中文译文。',
     products: [
       {
         id: 'reasoning', number: '01', title: '前沿科学长程推理数据', unit: '完整的科学推导',
-        text: '围绕前沿物理论文及其他高阶科学研究的核心思维链，重建完整推导、明确关键假设，并构造新的、定义良好的科学问题。将专家研究过程转化为可学习、可核验的长程推理数据。',
-        items: ['完整专家推导与参考答案', '关键中间结果与细粒度验收标准', '符号与数值交叉核验，结合模型试跑校准难度'],
+        text: '从研究论文与实际课题中提炼需要长程推理的问题，明确前提假设和求解目标，配套专家推导、关键中间结果与核验依据。',
+        items: ['专家推导与参考答案', '前提明确的关键中间结果', '符号与数值交叉验证'],
         example: {
           tag: 'CritPt 类型 · 量子多体物理', title: '八 Majorana 模式的最优能隙',
           brief: '八个 Majorana 算符不可约地作用于完整的十六维 Fock 空间。在固定的 Majorana 基底下，只允许实系数四体相互作用，固定全部耦合系数的平方和，并要求基态非简并。激发能隙由完整能谱定义，必须同时包含两个费米子宇称扇区。',
@@ -101,8 +99,8 @@ export const dataBusiness = {
       },
       {
         id: 'agentic', number: '02', title: '科研 Agent 强化学习环境', unit: '可执行的完整科研流程',
-        text: '面向前沿研究级别的完整科学工作流，构建可适配强化学习的 Agentic 环境。沿用 PRBench 的论文复现与核验方法，以 Terminal-Bench-Science 级别的工作流复杂度为设计目标，配备专业工具、严格验证器与逐点评分细则。',
-        items: ['自洽科学背景、真实软件环境与明确输出要求', '专家核验的参考结果与独立复审的验证器', '按观测量定义容差、分值与部分得分规则'],
+        text: '在真实科学软件环境中开展完整科研任务，并以可执行验证器核验结果。任务设计基于 PRBench 的论文复现经验，面向 Terminal-Bench-Science 级别的工作流复杂度，为各项科学产物定义明确反馈。',
+        items: ['科学背景、专业软件与输出规范', '独立核验的参考结果和验证器', '逐项容差、评分权重与部分得分规则'],
         example: {
           tag: '科研 Agent · 引力动力学', title: '自洽引力圆盘中的集体反馈',
           brief: '考虑平面内运动的等质量粒子，采用轴对称与四极谐波分量的软化引力相互作用。完整题目给定相互作用核与初始相空间分布，固定外势，使初始总平均势为 ln r；作用量分布演化时，平均引力场必须保持自洽。',
@@ -112,8 +110,8 @@ export const dataBusiness = {
       },
       {
         id: 'trajectories', number: '03', title: '科学家—AI 多轮科研轨迹', unit: '多轮科学协作过程',
-        text: '记录多领域科学家与 AI 智能体共同推进前沿研究的多轮交互，将专家指导、智能体决策、完整工具调用、实验反馈与方案修订连接为连续的科研过程。',
-        items: ['关键科研决策节点的专家反馈', '完整工具调用、执行观察与中间产物', '保留失败尝试、纠错与研究方向调整'],
+        text: '记录科学家与 AI 智能体共同推进一项研究的过程。对话、工具调用、实验观察和中间产物相互对应，使每次判断、修正与转向都能追溯到当时掌握的证据。',
+        items: ['关键研究决策中的专家指导', '完整工具调用、实验观察与中间产物', '失败尝试、纠错与研究转向'],
         example: {
           tag: '科学家—AI 协作 · 统计场论', categoryLabel: '轨迹节选', title: 'O(N)×O(2) 阻挫磁体的手征临界性',
           brief: '层状三角格子反铁磁体与螺旋磁体的序参量是两个相互正交的 N 维矢量，对应 O(N)×O(2) 的 Landau–Ginzburg–Wilson 理论。对物理上的 N = 2、3，相变是否连续已争论二十多年：固定维数微扰论给出一个不动点，其他方法却不支持它的存在。',
@@ -124,8 +122,8 @@ export const dataBusiness = {
       },
       {
         id: 'rsi', number: '04', title: '科研递归自我改进（RSI）', unit: '得到改进的科学方法',
-        text: '围绕高难度科学问题，从一个可运行的方法出发，让智能体反复提出改进、开展实验、分析反馈并保留或回退方案，同时评估最终方法和完整的多轮改进过程。',
-        items: ['可执行基线、明确优化目标与固定资源预算', '版本化实验、代码变更、反馈与回退决策', '独立重执行，并与强参考方法进行对照'],
+        text: '给定可运行的科学方法和计算预算，让智能体通过多轮实验改进实现、检验假设，并保留有效改动或回退失败方案。评测同时考察最终方法与实验记录。',
+        items: ['可执行基线、明确目标与资源预算', '逐版本记录的实验、指标与保留或回退决策', '独立重执行与参考方法对照'],
         example: {
           tag: 'RSI 任务设计 · 量子化学', title: 'DMRG 求解器的多轮迭代优化',
           brief: '从反铁磁自旋 ½ 与自旋 1 海森堡链的可运行有限系统 DMRG 求解器出发。考虑开放与周期边界，完整任务另有软化端点耦合的规定。求解器应按请求返回基态和激发态能量、能隙、约化密度矩阵本征值、键强度或局域磁化。',
@@ -134,7 +132,7 @@ export const dataBusiness = {
         },
       },
     ],
-    foundation: '科研进展，持续进入数据。', foundationText: 'PHYBench、PRBench、ColliderAgent 与 RSI-Exam 连接了科学推理、科研执行和持续自我改进。研究暴露新的能力边界，评测帮助定位下一步问题；这些积累持续进入我们构建的数据与科研环境。',
-    contactTitle: '下一步，要提升哪一种科学能力？', contactText: '欢迎交流目标学科、模型能力缺口，以及科学数据与可执行环境的具体需求。', contactCta: '洽谈数据合作',
+    foundation: '相关研究', foundationText: 'PHYBench 与 PRBench 的研究支撑任务构建和科学评测；ColliderAgent 提供专业科研软件与执行流程的实践，RSI-Exam 则研究如何衡量方法改进。',
+    contactTitle: '科学数据合作', contactText: '欢迎就目标学科、模型能力和所需的数据或科研环境，与我们交流。', contactCta: '联系团队',
   },
 };

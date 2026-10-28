@@ -14,7 +14,7 @@
 
 - [x] Rewrite the source highlights and render them on shared project cards.
 - [x] Rewrite the relevant homepage copy in both languages; verify content, responsive rendering and interactions.
-- [ ] Review, commit, push, deploy and verify the public homepage and research page.
+- [x] Review, commit, push, deploy and verify the public homepage and research page.
 
 ## Verification
 
@@ -22,3 +22,11 @@
 - Generated homepage and research cards match every source highlight and contain no metric strips, numerical-scope footnotes or visible Highlights label.
 - Source integrity comparison confirmed full descriptions and experimental metrics unchanged except the user-authorized AutoResearchClaw star update; attribution, links, ordering and scientific figures remain unchanged.
 - Desktop/mobile cards and bilingual homepage previews inspected. Independent review found no required fixes.
+
+## Published verification
+
+- Implementation `58826c2` passed GitHub Actions build and deployment: https://github.com/LightRayAI/website/actions/runs/40779774962
+- Both live language homepages and research pages returned HTTP 200, render 3–4 source-backed bullets per card without metric strips, and show the authorized AutoResearchClaw 15K snapshot.
+- PHYBench includes all four requested recognitions, and the overview teaser no longer leads with the 500-problem count.
+- Homepage narrative and brand mission verified; live compound filtering and language-query transfer passed.
+- This final documentation record does not change the deployed artifact.

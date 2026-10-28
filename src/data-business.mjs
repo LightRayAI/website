@@ -18,7 +18,7 @@ export const dataBusiness = {
       ['Experts throughout production', 'Scientists select topics and supervise construction, then independently verify the science and review the verifier, tolerances, and scoring rubric. Model trials and trajectory review calibrate difficulty before a version is released.'],
       ['Coherent context, reproducible feedback', 'Definitions, assumptions, boundary conditions, and provenance travel with the task. Versioned environments, reference checks, and clearly specified acceptance criteria make results reproducible and allow valid alternative solutions.'],
     ],
-    capabilities: 'FOUR DATA FAMILIES', capabilitiesTitle: 'From scientific reasoning to sustained improvement.',
+    capabilities: 'FOUR DATA FAMILIES', capabilitiesTitle: 'From scientific reasoning to sustained model improvement.',
     capabilitiesIntro: 'Each family has a distinct learning signal: a derivation, an executable workflow, an expert–agent interaction, or an improved research method.',
     exampleLabel: 'Task excerpt', promptLabel: 'Scientific setting', questionLabel: 'Your task', outputLabel: 'Delivery contents', verificationLabel: 'Acceptance criteria', goalLabel: 'Optimization objective', milestonesLabel: 'Key evidence', detailsLabel: 'Evidence, acceptance & delivery', originalLabel: 'English original', translatedLabel: '（翻译）', switchToEnglish: 'Read this example in English', switchToChinese: 'Read this example in Chinese', switchedToEnglish: 'This example is now in English.', switchedToChinese: 'This example is now in Chinese.',
     products: [
@@ -95,7 +95,7 @@ export const dataBusiness = {
       ['专家贯穿完整生产流程', '专家确定主题、监督构建，再独立核验科学内容，复审验证器、容差和逐点评分细则；发布前结合模型试跑与轨迹审阅校准难度。'],
       ['自洽上下文与可复现反馈', '定义、假设、边界条件和来源记录随题交付；通过版本化环境、参考核验与明确验收标准，保障结果可复现，并容纳合理的替代解法。'],
     ],
-    capabilities: '四类数据与环境', capabilitiesTitle: '从长程科学推理，到持续科研改进。',
+    capabilities: '四类数据与环境', capabilitiesTitle: '从长程科学推理，到持续模型改进。',
     capabilitiesIntro: '围绕四种不同的学习信号组织交付：完整推导、可执行科研流程、专家与智能体的多轮协作，以及得到改进的科学方法。',
     exampleLabel: '题面节选', promptLabel: '科学设定', questionLabel: '求解任务', outputLabel: '交付内容', verificationLabel: '验收标准', goalLabel: '优化目标', milestonesLabel: '关键中间依据', detailsLabel: '关键依据、验收与交付', originalLabel: 'English original', translatedLabel: '（翻译）', switchToEnglish: '查看此示例的英文原文', switchToChinese: '查看此示例的中文译文', switchedToEnglish: '当前示例已切换为英文原文。', switchedToChinese: '当前示例已切换为中文译文。',
     products: [

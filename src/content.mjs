@@ -37,6 +37,7 @@ export const copy = {
         { number: '02', title: 'Challenging scientific tasks', text: 'Difficult physics tasks of the kind exemplified by CritPt, grounded in domain expertise and carefully verified answers.', items: ['Expert-led task design and difficulty review', 'Mathematical and numerical answer verification', 'Clear assumptions, provenance, and acceptance criteria'] },
         { number: '03', title: 'Agentic Science Tasks', text: 'Research tasks that run in real scientific software environments, with tool use and executable verifiers.', items: ['Reproducible environments and domain toolchains', 'Executable reference workflows and validation', 'Task instructions, dependencies, and scoring logic'] },
         { number: '04', title: 'Training & evaluation environments', text: 'Data and environments supporting reinforcement learning, capability development, and rigorous scientific evaluation.', items: ['Verifiable feedback and structured reward signals', 'Separate development and held-out evaluation', 'Auditable trajectories and failure analysis'] },
+        { number: '05', title: 'RSI for Science', text: 'Scientific data and tasks for recursive self-improvement (RSI), enabling agents to iteratively refine algorithms, code, and research workflows through experimental feedback.', items: ['Scientific optimization tasks with baselines and reproducible environments', 'Multi-round improvement trajectories with execution results and feedback', 'Held-out evaluation of accuracy, efficiency, and generalization'] },
       ],
       pipelineLabel: 'THE PRODUCTION WORKFLOW', pipelineTitle: 'Expert judgment, at every critical step.',
       pipeline: [
@@ -157,6 +158,7 @@ export const copy = {
         { number: '02', title: '高难度科学任务', text: '构建 CritPt 等类型的高难度物理任务，以领域知识支撑任务设计，以严谨验证保障答案质量。', items: ['专家主导的问题设计与难度审核', '数学表达式与数值结果交叉验证', '明确科学假设、来源与验收标准'] },
         { number: '03', title: '科研智能体任务', text: '让科研任务在真实科学软件环境中运行，配备工具调用接口与可执行验证器。', items: ['可复现的环境与专业工具链', '可执行参考流程与结果验证', '完整任务说明、依赖与评分逻辑'] },
         { number: '04', title: '训练与评测环境', text: '构建面向模型强化学习、能力提升和严格科学评测的数据与环境体系。', items: ['可验证反馈与结构化奖励信号', '开发数据与保留评测数据分离', '可审计执行轨迹与失败分析'] },
+        { number: '05', title: 'RSI 科学数据', text: '面向递归自我改进（RSI）构建科学数据与任务，支持智能体根据实验反馈，持续改进科学算法、代码与科研流程。', items: ['配备基准方案与可复现环境的科学优化任务', '包含执行结果与反馈的多轮改进轨迹', '通过独立测试评估准确性、计算效率与泛化能力'] },
       ],
       pipelineLabel: '完整生产流程', pipelineTitle: '让专家判断贯穿每个关键环节。',
       pipeline: [

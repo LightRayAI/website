@@ -36,7 +36,7 @@ export function layout({ lang, page = '', title, description, body, root = false
     <div class="header-controls"><a class="language-switch" data-language-switch href="${url(otherLang, page)}" hreflang="${otherLang === 'zh' ? 'zh-CN' : 'en'}" lang="${otherLang}" aria-label="${c.language}"><span aria-hidden="true">◎</span> ${c.langLabel}</a><button class="menu-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="${c.menu}" data-open-label="${c.menu}" data-close-label="${c.close}"><span></span><span></span></button></div>
   </div></header>
   <main id="main" tabindex="-1">${body}</main>
-  <footer class="site-footer"><div class="container"><div class="footer-main"><div><a class="brand" href="${url(lang)}">${mark}<span>LightRay<span class="brand-ai"> AI</span></span></a><p>${c.footer}</p></div><nav aria-label="${lang === 'zh' ? '页脚导航' : 'Footer navigation'}">${paths.map((p, i) => `<a href="${url(lang, p)}">${c.nav[i]}</a>`).join('')}</nav><div class="footer-contact"><span class="eyebrow">${c.contact}</span><a href="mailto:stephenshiqiu@gmail.com">stephenshiqiu@gmail.com ${arrow}</a>${ext('https://github.com/LightRayAI', 'GitHub')}</div></div><div class="footer-bottom"><span>© 2026 ${c.rights}</span><span>${c.updated}</span></div></div></footer>
+  <footer class="site-footer"><div class="container"><div class="footer-main"><div><a class="brand" href="${url(lang)}">${mark}<span>LightRay<span class="brand-ai"> AI</span></span></a><p>${c.footer}</p></div><nav aria-label="${lang === 'zh' ? '页脚导航' : 'Footer navigation'}">${paths.map((p, i) => `<a href="${url(lang, p)}">${c.nav[i]}</a>`).join('')}</nav><div class="footer-contact"><span class="eyebrow">${c.contact}</span><a href="mailto:boyuuwang@gmail.com">boyuuwang@gmail.com ${arrow}</a>${ext('https://github.com/LightRayAI', 'GitHub')}</div></div><div class="footer-bottom"><span>© 2026 ${c.rights}</span><span>${c.updated}</span></div></div></footer>
 </body></html>`;
 }
 
@@ -86,10 +86,10 @@ export function projectCard(project, lang) {
   </article>`;
 }
 
-export function contactBand(lang, title, text, cta, dataContact = false) {
+export function contactBand(lang, title, text, cta) {
   const details = `<dl class="contact-details"><div><dt>${lang === 'zh' ? '手机号' : 'Phone'}</dt><dd><a href="tel:+8615058009729">15058009729</a></dd></div><div><dt>${lang === 'zh' ? '邮箱' : 'Email'}</dt><dd><a href="mailto:boyuuwang@gmail.com">boyuuwang@gmail.com</a></dd></div></dl>`;
-  const action = dataContact ? `<button class="button" type="button" data-contact-open aria-haspopup="dialog" aria-controls="data-contact-dialog" hidden>${esc(cta)} ${arrow}</button><noscript>${details}</noscript>` : button('mailto:stephenshiqiu@gmail.com', cta);
-  const dialog = dataContact ? `<dialog class="contact-dialog" id="data-contact-dialog" aria-labelledby="data-contact-title"><h2 id="data-contact-title">${lang === 'zh' ? '洽谈数据合作' : 'Discuss data collaboration'}</h2>${details}<form method="dialog"><button class="button button-secondary" autofocus>${lang === 'zh' ? '关闭' : 'Close'}</button></form></dialog>` : '';
+  const action = `<button class="button" type="button" data-contact-open aria-haspopup="dialog" aria-controls="contact-dialog" hidden>${esc(cta)} ${arrow}</button><noscript>${details}</noscript>`;
+  const dialog = `<dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title"><h2 id="contact-title">${lang === 'zh' ? '王波的联系方式' : 'Contact Bo Wang'}</h2>${details}<form method="dialog"><button class="button button-secondary" autofocus>${lang === 'zh' ? '关闭' : 'Close'}</button></form></dialog>`;
   return `<section class="contact-band section"><div class="container contact-inner"><div><p class="eyebrow">${copy[lang].contact}</p><h2>${esc(title)}</h2><p>${esc(text)}</p></div>${action}</div>${dialog}</section>`;
 }
 

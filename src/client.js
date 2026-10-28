@@ -83,7 +83,7 @@ if (research) {
 }
 
 const contactTrigger = document.querySelector('[data-contact-open]');
-const contactDialog = document.querySelector('#data-contact-dialog');
+const contactDialog = document.querySelector('#contact-dialog');
 if (contactTrigger && contactDialog) {
   contactTrigger.hidden = false;
   contactTrigger.addEventListener('click', () => contactDialog.showModal());

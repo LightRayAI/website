@@ -52,7 +52,7 @@ test('mobile navigation supports keyboard dismissal and returns focus', async ({
   await toggle.click();
   await page.locator('#main-nav').getByRole('link', { name: 'Data Business' }).click();
   await expect(page).toHaveURL(/\/en\/data\/$/);
-  await expect(page.getByRole('heading', { name: /Scientific data/ })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /Scientific depth/ })).toBeVisible();
 });
 
 test('static content and localization remain available without JavaScript', async ({ browser }) => {

@@ -30,3 +30,7 @@ The user supplied the team role Chief Scientist. Academic appointments and resea
 The user requested the official portrait, saved unchanged as `public/images/huaxing-zhu.png`, from https://faculty.pku.edu.cn/_resources/group1/M00/00/39/cxv0BGV39pqAVhQ-AAKBu3u2YxM026.png.
 
 Selected research summaries follow the original paper https://doi.org/10.1103/9ml8-xkfc and the Peking University report https://news.pku.edu.cn/info/2881/2603841.htm. These summaries describe collaborative work, not sole-author achievements.
+
+## Bo Wang selected research
+
+The user selected these two 2025 PRL papers. Titles, authors, publication details, and summaries were checked against the original APS abstracts at https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.161601 and https://journals.aps.org/prl/abstract/10.1103/v72s-rv7y. Both list Bo Wang (王波), Zhejiang University, with contact address b_w@zju.edu.cn. The Yale profile at https://physics.yale.edu/posts/2026-09-10-welcome-bo-wang-postdoctoral-associate independently confirms the Zhejiang doctorate with Ellis Ye Yuan. Summaries describe joint work and do not infer individual author contributions.

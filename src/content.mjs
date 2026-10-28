@@ -94,6 +94,11 @@ export const copy = {
         name: 'Bo Wang', otherName: '王波', position: 'Postdoctoral Associate', institution: 'Yale University',
         interests: ['Theoretical Physics', 'AI for Science', 'Science for AI'],
         bio: 'Dr. Bo Wang is a Postdoctoral Associate at Yale University. He received his Ph.D. from the School of Physics at Zhejiang University. His earlier research focused primarily on theoretical physics. More recently, he has made a number of advances in physics through AI for Science, with research spanning condensed matter theory, quantum algorithms, and related areas. In Science for AI, his work focuses on scientific data for AI agents, and he guides the team in building an efficient feedback loop between scientific research and data production.',
+        highlights: 'Selected research',
+        works: [
+          { title: 'Five-point Kaluza–Klein correlators and hidden 8D symmetry', text: 'With collaborators, derived a unified formula for all tree-level five-point correlators with arbitrary Kaluza–Klein charges in AdS₅ × S³, establishing hidden eight-dimensional symmetry at five points.', url: 'https://doi.org/10.1103/PhysRevLett.134.161601', venue: 'Physical Review Letters 134, 161601 · 2025' },
+          { title: 'Kaluza–Klein AdS Virasoro–Shapiro amplitude near flat space', text: 'With collaborators, determined the first curvature correction to the AdS Virasoro–Shapiro amplitude for arbitrary Kaluza–Klein charges, obtaining a unified worldsheet integral formula and predicting an infinite family of Wilson coefficients.', url: 'https://doi.org/10.1103/v72s-rv7y', venue: 'Physical Review Letters 135, 041603 · 2025' },
+        ],
       },
       contactTitle: 'Research benefits from shared expertise.', contactText: 'Connect with us about scientific research, agent systems, or high-quality scientific data.', contactCta: 'Get in touch',
     },
@@ -205,6 +210,11 @@ export const copy = {
         name: '王波', otherName: 'Bo Wang', position: '博士后研究员（Postdoctoral Associate）', institution: '耶鲁大学',
         interests: ['理论物理', 'AI for Science', 'Science for AI'],
         bio: '王波博士现任耶鲁大学博士后研究员，博士毕业于浙江大学物理学院。他过去的研究主要集中于理论物理，近期通过 AI for Science 在物理学研究中取得了多项新突破，研究方向涵盖凝聚态理论、量子算法等。在 Science for AI 方面，他主要研究面向智能体的科学数据，指导团队构建了高效的科研-数据生产闭环。',
+        highlights: '代表性研究',
+        works: [
+          { title: '五点 Kaluza–Klein 关联函数与隐藏八维对称性', text: '与合作者求得 AdS₅ × S³ 中任意 Kaluza–Klein 荷的全部树级五点关联函数的统一公式，在五点层面证实了隐藏八维对称性。', url: 'https://doi.org/10.1103/PhysRevLett.134.161601', venue: 'Physical Review Letters 134, 161601 · 2025' },
+          { title: '近平直空间的 Kaluza–Klein AdS Virasoro–Shapiro 振幅', text: '与合作者确定任意 Kaluza–Klein 荷下 AdS Virasoro–Shapiro 振幅的首阶曲率修正，得到统一的世界面积分公式，并预言无穷多个 Wilson 系数。', url: 'https://doi.org/10.1103/v72s-rv7y', venue: 'Physical Review Letters 135, 041603 · 2025' },
+        ],
       },
       contactTitle: '让不同的专长，共同推进科学。', contactText: '欢迎就科学研究、智能体系统与高质量科学数据展开交流与合作。', contactCta: '联系交流',
     },

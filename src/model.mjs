@@ -7,7 +7,7 @@ export const projects = source.projects
 export const base = (process.env.BASE_PATH || '/website').replace(/\/$/, '');
 export const origin = 'https://lightrayai.github.io';
 export const url = (lang, page = '') => `${base}/${lang}/${page ? `${page}/` : ''}`;
-export const assetVersion = Date.now().toString(36);
+const assetVersion = Date.now().toString(36);
 export const asset = path => `${base}/${path}${['styles.css', 'client.js'].includes(path) ? `?v=${assetVersion}` : ''}`;
 export const esc = text => String(text ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 export const shortName = (project, lang) => project.title[lang].split(/[|｜]/)[0].trim();

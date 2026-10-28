@@ -502,7 +502,7 @@ html[lang="zh-CN"] .full-description { line-height: 2.1; }
 .scientist-research h5 a:hover { color: var(--blue); }
 .scientist-research p { font-size: .88rem; line-height: 1.85; }
 
-.data-proof { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 0; padding: 36px 0; }
+.data-proof { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-top: 0; padding: 36px 0; border-bottom: 1px solid var(--line); }
 .delivery-partners { display: flex; flex-wrap: wrap; align-items: center; gap: 32px; list-style: none; padding: 0; margin: 20px 0 0; }
 .partner-logo { width: 170px; height: 34px; object-fit: contain; object-position: left center; }
 .partner-bytedance { filter: brightness(0); opacity: .82; }

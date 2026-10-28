@@ -22,3 +22,11 @@ The English/Chinese editorial copy on the website is original composition ground
 The user's follow-up specifically requested a figure-rich publication preview and authorized original paper/GitHub image retrieval. All six published projects now have original figures; the four representative works in Shi Qiu's profile include thumbnail figures, full-image links, figure-source attribution, and direct Paper / GitHub / Project links where provided.
 
 Bo Wang supplied his biography, Yale position, Zhejiang University education, research interests, and Google Scholar link directly. His profile uses the same layout as Shi Qiu’s; representative projects will be added when he supplies them.
+
+## HuaXing Zhu profile
+
+The user supplied the team role Chief Scientist. Academic appointments and research interests follow https://faculty.pku.edu.cn/zhuhx/zh_CN/index.htm and https://konformal.github.io/. The 2024 National Science Fund for Distinguished Young Scholars is listed at https://faculty.pku.edu.cn/zhuhx/zh_CN/xsry/51583/list/ and https://www.phy.pku.edu.cn/jzyg/rcjh/qnkxjjxm_Al__ygjjcqnkxjjxm_hdz1/1.htm.
+
+The user requested the official portrait, saved unchanged as `public/images/huaxing-zhu.png`, from https://faculty.pku.edu.cn/_resources/group1/M00/00/39/cxv0BGV39pqAVhQ-AAKBu3u2YxM026.png.
+
+Selected research summaries follow the original paper https://doi.org/10.1103/9ml8-xkfc and the Peking University report https://news.pku.edu.cn/info/2881/2603841.htm. These summaries describe collaborative work, not sole-author achievements.

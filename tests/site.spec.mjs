@@ -76,6 +76,7 @@ for (const lang of ['en', 'zh']) {
       for (const route of routes) {
         const response = await page.goto(`/website/${lang}/${route}`);
         expect(response.status()).toBe(200);
+        for (const image of await page.locator('img').all()) await image.scrollIntoViewIfNeeded();
         await page.locator('footer').scrollIntoViewIfNeeded();
         await expect.poll(() => page.locator('img').evaluateAll(imgs => imgs.every(img => img.complete && img.naturalWidth > 0))).toBe(true);
         expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1), `${lang}/${route} overflows at ${width}px`).toBe(true);

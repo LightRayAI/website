@@ -71,12 +71,23 @@ export const copy = {
         'We advance scientific discovery through intelligent research systems while developing the theoretical foundations, evaluation methodologies, and high-quality data infrastructure these systems require.',
       ],
       backgrounds: 'Our members’ academic backgrounds', collaborations: 'Scientific collaborations',
-      people: 'People & research contributions',
+      people: 'Core members', scientificTeam: 'Scientific team',
       shi: {
         name: 'Shi Qiu', otherName: '仇是', position: 'Ph.D. student in Computer Science', institution: 'University of North Carolina at Chapel Hill',
         bio: 'Shi Qiu is a Computer Science Ph.D. student at UNC–Chapel Hill, advised by Prof. Huaxiu Yao, and a graduate of Peking University’s School of Physics. His research focuses on AI agents, AI for Science, and self-evolving research systems that connect hypothesis generation, experiment execution, verification, and iterative improvement.',
         contributions: 'He initiated and led PHYBench, is first author of PRBench and ColliderAgent, and contributes to AutoResearchClaw as a co-first author, core developer, and project leader.',
         interests: ['AI Agents', 'AI for Science', 'Self-evolving research'], publications: 'Representative research', homepage: 'Personal homepage',
+      },
+      zhu: {
+        name: 'HuaXing Zhu', otherName: '朱华星', position: 'Chief Scientist', institution: 'Boya Distinguished Professor · Peking University',
+        interests: ['Quantum Field Theory', 'Collider Physics', 'Physics of AI'],
+        bio: 'HuaXing Zhu is a Boya Distinguished Professor at the School of Physics, Peking University, and a recipient of the 2024 National Science Fund for Distinguished Young Scholars. He earned his B.Sc. and Ph.D. at Peking University, followed by postdoctoral research at SLAC and MIT and a faculty position at Zhejiang University. His research spans quantum field theory, strong interactions, particle physics, and the physics of artificial intelligence, with a particular focus on energy correlators and high-energy scattering at colliders.',
+        honors: 'He received the 2020 Qiushi Outstanding Young Scholar Award and the 2023 Asian Young Scientist Fellowship, and serves on the editorial board of the Journal of High Energy Physics.',
+        highlights: 'Selected research', homepage: 'Personal homepage', faculty: 'Peking University profile',
+        works: [
+          { title: 'Energy correlations beyond confinement', text: 'With collaborators, connected the light-ray operator product expansion to dihadron fragmentation functions and predicted quantum scaling in energy correlators beyond the confinement transition.', url: 'https://doi.org/10.1103/9ml8-xkfc', venue: 'Physical Review Letters · 2026' },
+          { title: 'Charge correlations at the edge of infrared safety', text: 'With collaborators, established leading-power safety and a factorization framework for charge-charge correlations in the back-to-back limit, enabling precise theoretical predictions.', url: 'https://news.pku.edu.cn/info/2881/2603841.htm', venue: 'Physical Review Letters · 2026' },
+        ],
       },
       song: { name: 'Zhuo-Yang Song', otherName: '宋卓洋', area: 'Physics of AI', bio: 'Leads the detailed-balance study of LLM-driven agents, published in PRX Intelligence. The work uses state transitions and effective potentials to study macroscopic generative dynamics.', link: 'Explore Detailed Balance' },
       wang: {
@@ -171,12 +182,23 @@ export const copy = {
         '团队的专业积累横跨基础物理、科学计算、自主科研智能体和前沿模型评测，将严谨的科学方法与可扩展的 AI 系统相结合。团队成员参与贡献的开源项目累计获得超过 50,000 个 GitHub Stars，在包括 Physical Review Letters（PRL）在内的顶级科学期刊发表 30 余篇论文，并有多篇研究工作被 NeurIPS、ICLR、ICML 等顶级人工智能会议接收。',
         '我们致力于通过智能科研系统推进科学发现，同时发展下一代科学 AI 所需的理论基础、评测方法与高质量数据基础设施。',
       ],
-      backgrounds: '团队成员的学术背景', collaborations: '科研合作', people: '成员与科研贡献',
+      backgrounds: '团队成员的学术背景', collaborations: '科研合作', people: '核心成员', scientificTeam: '科学团队',
       shi: {
         name: '仇是', otherName: 'Shi Qiu', position: '计算机科学博士研究生', institution: '北卡罗来纳大学教堂山分校',
         bio: '仇是现于北卡罗来纳大学教堂山分校攻读计算机科学博士，师从 Huaxiu Yao 教授，本科毕业于北京大学物理学院。研究聚焦 AI Agents、AI for Science 与自进化科研智能体，探索贯通假设生成、实验执行、结果验证与持续改进的自主科研系统。',
         contributions: '他发起并牵头 PHYBench，是 PRBench 与 ColliderAgent 的第一作者，并作为共同第一作者、核心研发与牵头成员参与 AutoResearchClaw。',
         interests: ['AI 智能体', 'AI for Science', '自进化科研'], publications: '代表性科研成果', homepage: '个人学术主页',
+      },
+      zhu: {
+        name: '朱华星', otherName: 'HuaXing Zhu', position: '首席科学家', institution: '北京大学物理学院 · 博雅特聘教授',
+        interests: ['量子场论', '对撞机物理', '人工智能的物理学'],
+        bio: '朱华星，北京大学物理学院博雅特聘教授，2024 年国家杰出青年科学基金获得者。本科及博士毕业于北京大学，曾在斯坦福直线加速器中心（SLAC）和麻省理工学院从事博士后研究，并任浙江大学研究员。他的研究涵盖量子场论、强相互作用与粒子物理，以及人工智能的物理学，重点关注能量关联函数与对撞机高能散射。',
+        honors: '曾获 2020 年求是杰出青年学者奖、2023 年亚洲青年科学家基金，现任《高能物理杂志》（JHEP）编委。',
+        highlights: '代表性研究', homepage: '个人主页', faculty: '北大教师主页',
+        works: [
+          { title: '跨越禁闭相变的能量关联', text: '与合作者建立光线算符乘积展开与双强子碎裂函数的联系，预言能量关联在禁闭相变之后的量子标度律。', url: 'https://doi.org/10.1103/9ml8-xkfc', venue: 'Physical Review Letters · 2026' },
+          { title: '红外安全边缘的电荷关联', text: '与合作者提出背对背极限下电荷关联的“领头幂次安全”机制，建立因子化框架，使这一观测量能够得到精确的理论预言。', url: 'https://news.pku.edu.cn/info/2881/2603841.htm', venue: 'Physical Review Letters · 2026' },
+        ],
       },
       song: { name: '宋卓洋', otherName: 'Zhuo-Yang Song', area: 'Physics of AI', bio: '主导大模型智能体细致平衡研究，成果发表于 PRX Intelligence。通过状态转移与有效势函数，探索智能体生成过程的宏观动力学。', link: '查看细致平衡研究' },
       wang: {

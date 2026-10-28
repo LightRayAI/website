@@ -491,3 +491,9 @@ html[lang="zh-CN"] .full-description { line-height: 2.1; }
 .contact-details dt { color: var(--muted); font-size: .8rem; margin-bottom: 4px; }
 .contact-details dd { margin: 0; overflow-wrap: anywhere; }
 .contact-details a { color: var(--blue); }
+
+.scientific-team { border-top: 1px solid var(--line); }
+.scientist-research article { border-top: 1px solid var(--line); padding-block: 22px; }
+.scientist-research h5 { margin: 8px 0 10px; font-size: 1.03rem; font-weight: 600; }
+.scientist-research h5 a:hover { color: var(--blue); }
+.scientist-research p { font-size: .88rem; line-height: 1.85; }

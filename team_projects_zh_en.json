@@ -1,0 +1,580 @@
+{
+  "site": {
+    "mission": {
+      "zh": "以物理理解AI，以AI推进科学，用严格评测定义能力。",
+      "en": "Understand AI through physics. Advance science with AI. Measure capabilities through rigorous evaluation."
+    },
+    "tracks": [
+      {
+        "id": 1,
+        "name": {
+          "zh": "AI for Science",
+          "en": "AI for Science"
+        }
+      },
+      {
+        "id": 2,
+        "name": {
+          "zh": "Physics of AI",
+          "en": "Physics of AI"
+        }
+      },
+      {
+        "id": 3,
+        "name": {
+          "zh": "AI Evaluation",
+          "en": "AI Evaluation"
+        }
+      }
+    ],
+    "relationships": [
+      {
+        "id": "team_led",
+        "label": {
+          "zh": "团队直接归属",
+          "en": "Team-led"
+        }
+      },
+      {
+        "id": "core_contribution",
+        "label": {
+          "zh": "核心贡献",
+          "en": "Core contribution"
+        }
+      }
+    ],
+    "layout": [
+      {
+        "id": "hero",
+        "title": {
+          "zh": "首屏：研究使命 + 三条主线",
+          "en": "Hero: Mission and Three Research Tracks"
+        },
+        "description": {
+          "zh": "主标题建议『以物理理解AI，以AI推进科学，用严格评测定义能力』；副标题解释三个研究方向的内在闭环，而非简单拼列论文。三方向以可切换Tab/锚点呈现；背景采用真实科研图像、论文图而非无关AI素材。",
+          "en": "Use “Understand AI through physics. Advance science with AI. Measure progress with rigorous evaluation.” as the hero message. The subtitle should explain how the three research tracks form an integrated program rather than simply listing papers. Present the tracks as tabs or anchor links, using authentic research imagery and figures from papers instead of generic AI visuals."
+        }
+      },
+      {
+        "id": "projects",
+        "title": {
+          "zh": "项目区：研究方向筛选 + 贡献关系二级筛选",
+          "en": "Projects: Filter by Track and Contribution"
+        },
+        "description": {
+          "zh": "一级标签为AI for Science（1）、Physics of AI（2）、AI Evaluation（3）；二级标签为『团队直接归属 / Team-led』与『核心贡献 / Core contribution』。两者不要用相同的措辞表示所有权。可以优先展示四个直接归属项目，随后展示三个核心贡献项目，并允许按方向筛选。",
+          "en": "Use AI for Science (1), Physics of AI (2), and AI Evaluation (3) as primary filters, and Team-led versus Core Contribution as a separate filter. These two contribution relationships should not be presented as identical ownership claims. Display the four team-led projects first, followed by the three core-contribution projects, while allowing filtering by research track."
+        }
+      },
+      {
+        "id": "cards",
+        "title": {
+          "zh": "卡片：首页轻量，详情页充分",
+          "en": "Cards: Concise Overview, Complete Detail Pages"
+        },
+        "description": {
+          "zh": "每张卡首页显示标题、单句价值主张、2—3个关键数字、一张有物理含义的图、论文/GitHub链接；点击进入详情展开完整中英文正文、方法、核心结果、作者贡献、资料链接。静态数据与动态指标分开，GitHub Stars加日期。",
+          "en": "On each overview card, show the title, a one-sentence value proposition, two or three key figures where available, a scientifically meaningful visual, and paper/GitHub links. Clicking through should reveal the complete bilingual description, methods, main results, contributor credits, and references. Keep stable facts separate from changing statistics, and date-stamp GitHub star counts."
+        }
+      },
+      {
+        "id": "narrative",
+        "title": {
+          "zh": "建立跨项目研究叙事",
+          "en": "Connect the Projects into a Research Narrative"
+        },
+        "description": {
+          "zh": "可在三方向下方放一条能力演化线：PHYBench（物理推理）→ PRBench（科研复现）→ RSI-Exam（自主改进）；另一条建设线：ColliderAgent（专业科研执行）→ AutoResearchClaw（跨领域迭代科研）；Physics of AI的细致平衡作为底层理论线索。",
+          "en": "Below the three tracks, introduce a progression in evaluation capabilities: PHYBench (physics reasoning) → PRBench (research-paper reproduction) → RSI-Exam (autonomous improvement). Alongside it, show a progression in research-agent development: ColliderAgent (domain-specialized research execution) → AutoResearchClaw (cross-domain iterative research). The detailed-balance project in Physics of AI provides a complementary theoretical thread."
+        }
+      },
+      {
+        "id": "visuals",
+        "title": {
+          "zh": "视觉与编辑标准",
+          "en": "Visual Design and Localization"
+        },
+        "description": {
+          "zh": "图像优先使用项目自有图、真实工作流图、评测可视化；素材应包含alt文本与来源署名。关键数字要标明测试年份/模型/分母，勿将后续55题规模与论文25题增益混用；外部合作、引用与团队主导使用不同徽标。中英切换应覆盖标题、段落、指标和按钮。王波圈图卡保持待补齐，前端隐藏空字段。",
+          "en": "Prefer original project figures, real workflow diagrams, and benchmark visualizations. Include alt text and image credits. Present key figures with the appropriate evaluation year, model, and scope; the 55-topic extended benchmark and the 25-topic paper result belong to different releases. Visually distinguish collaborations, references, and team-led work. Language switching must cover titles, descriptions, highlights, metrics, and buttons. Hide empty fields in the Bo Wang loop-diagram card until content is provided."
+        }
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "phybench",
+      "order": 1,
+      "track": 3,
+      "relationship": "team_led",
+      "title": {
+        "zh": "PHYBench｜物理推理评测基准",
+        "en": "PHYBench | Physics Reasoning Benchmark"
+      },
+      "publication": {
+        "zh": "NeurIPS 2025 Datasets & Benchmarks Track (2025)",
+        "en": "NeurIPS 2025 Datasets & Benchmarks Track (2025)"
+      },
+      "credits": {
+        "zh": "",
+        "en": ""
+      },
+      "teaser": {
+        "zh": "以500道高质量竞赛级物理题与先进的评分系统，重新刻画大模型的物理推理能力。",
+        "en": "A benchmark of 500 high-quality, competition-level physics problems and an advanced scoring system that redefines how large language models are evaluated on physics reasoning."
+      },
+      "description": {
+        "zh": "2025年5月，团队联合北京大学物理学院178名同学推出 PHYBench，将物理学作为检验前沿模型深层推理能力的试金石。基准包含500道经过人工设计与质量筛选的原创物理题，覆盖力学、电磁学、热学、光学和近现代物理，难度从高中、大学课程延伸至物理竞赛。与选择题或单一数值答案不同，PHYBench强调物理学中自然使用的数学表达式答案，并提出 Expression Edit Distance（EED）分数，在严格正确性之外提供分级反馈；原论文报告其相对二元评分提高了204%的样本效率。初始评测中，Gemini 2.5 Pro正确率为36.9%，仍明显低于人类专家的61.9%。项目发布后最高获得Huggingface Trending Dataset 第三名，Alphaxiv历史浏览量最高论文前三十，并入选 NeurIPS 2025 Datasets & Benchmarks Track，并被斯坦福大学《2026 AI Index Report》收录。发布后，团队成员进一步与字节跳动、Kimi等产业团队围绕物理基准更新、表达式复核和高质量评测数据积累实践经验。2026年初，Seed 2.1 Pro 等国产模型也在后续 PHYBench 评测中越过项目最初报告的人类正确率参考线，显示出物理推理能力的迅速提升。PHYBench代表着一条持续演化的评测研究主线——从高质量物理题目、细粒度数学评分，走向结合符号工具、模型裁判与人类专家复核的更可靠科学评测。",
+        "en": "In May 2025, our team launched PHYBench together with 178 students from Peking University’s School of Physics, using physics as a touchstone for the deep reasoning capabilities of frontier models. The benchmark contains 500 original physics problems, each designed and carefully curated by humans. Covering mechanics, electromagnetism, thermodynamics, optics, and modern physics, the problems span high-school and undergraduate curricula through Physics Olympiad-level challenges. Unlike multiple-choice questions or tasks requiring a single numerical answer, PHYBench emphasizes mathematical expressions—the natural language of physics—and introduces the Expression Edit Distance (EED) score to provide graded feedback in addition to strict correctness. The original paper reports a 204% improvement in sample efficiency over binary scoring. In the initial evaluation, Gemini 2.5 Pro achieved only 36.9% accuracy, substantially below the 61.9% achieved by human experts. Following its release, PHYBench reached No. 3 on Hugging Face Trending Datasets, ranked among the 30 most-viewed papers in alphaXiv history, was accepted to the NeurIPS 2025 Datasets & Benchmarks Track, and was featured in Stanford University’s 2026 AI Index Report. Team members subsequently gained substantial industry experience through collaborations with ByteDance, Kimi, and other industry teams on improving physics benchmarks, double-checking mathematical expressions, and building high-quality evaluation data. In early 2026, Chinese models such as Seed 2.1 Pro surpassed the human-accuracy reference line reported in the original PHYBench study in subsequent evaluations, reflecting the rapid advancement of physical reasoning in large models. PHYBench represents an evolving research program in scientific evaluation: from high-quality physics problems and fine-grained mathematical scoring toward more reliable assessments combining symbolic tools, model-based judges, and expert human review."
+      },
+      "highlights": [
+        {
+          "zh": "500道高质量原创物理题，覆盖多个难度层级与物理子领域",
+          "en": "500 high-quality original physics problems across multiple subfields and difficulty levels"
+        },
+        {
+          "zh": "EED提供细粒度表达式反馈；204%的样本效率提升",
+          "en": "EED provides fine-grained expression-level feedback, with a 204% gain in sample efficiency"
+        },
+        {
+          "zh": "NeurIPS 2025 Datasets & Benchmarks Track；Stanford HAI 2026 AI Index收录",
+          "en": "Accepted to the NeurIPS 2025 Datasets & Benchmarks Track; featured in Stanford HAI’s 2026 AI Index Report"
+        }
+      ],
+      "metrics": [
+        {
+          "value": "500",
+          "label": {
+            "zh": "高质量原创物理题",
+            "en": "original physics problems"
+          }
+        },
+        {
+          "value": "204%",
+          "label": {
+            "zh": "样本效率提升",
+            "en": "sample-efficiency improvement"
+          }
+        },
+        {
+          "value": "36.9% / 61.9%",
+          "label": {
+            "zh": "初始模型 / 人类专家正确率",
+            "en": "initial model / human-expert accuracy"
+          }
+        }
+      ],
+      "links": {
+        "paper": "https://arxiv.org/abs/2504.16074",
+        "journal": "https://papers.nips.cc/paper_files/paper/2025/hash/01e793f8cf5689aa0ea46a1b01071bea-Abstract-Datasets_and_Benchmarks_Track.html",
+        "website": "https://www.phybench.cn/",
+        "github": "",
+        "related": [
+          "https://arxiv.org/abs/2609.13009",
+          "https://hai.stanford.edu/assets/files/ai_index_report_2026.pdf"
+        ]
+      },
+      "visual_brief": {
+        "zh": "PHYBench海报",
+        "en": "PHYBench poster"
+      }
+    },
+    {
+      "id": "collideragent",
+      "order": 2,
+      "track": 1,
+      "relationship": "team_led",
+      "title": {
+        "zh": "ColliderAgent｜高能对撞机科研智能体",
+        "en": "ColliderAgent | Collider-Physics Research Agent"
+      },
+      "publication": {
+        "zh": "arXiv preprint (2026)",
+        "en": "arXiv preprint (2026)"
+      },
+      "credits": {
+        "zh": "",
+        "en": ""
+      },
+      "teaser": {
+        "zh": "从拉格朗日量到探测器模拟与排除限，让自然语言驱动完整对撞机唯象学工作流。",
+        "en": "From Lagrangians to detector simulations and exclusion limits, a complete collider-phenomenology workflow driven by natural language."
+      },
+      "description": {
+        "zh": "ColliderAgent 致力于让 AI 真正执行而非仅仅描述高能物理研究。作为一个以 skills 为核心的分层多智能体框架，它将物理推理与数值执行解耦：研究者以自然语言和标准拉格朗日量、物理符号提出目标，智能体负责规划研究步骤、生成模型并衔接领域工具；统一后端 Magnus 负责管理实际的科学软件执行。系统贯通 FeynRules 理论模型构建及校验、UFO导出、MadGraph5事件生成、Pythia8粒子簇射、Delphes探测器模拟与MadAnalysis5分析，最终生成运动学分布、截断流和新物理参数排除区域。框架提供跨主流CLI代理的技能接口，其中 Claude Code 可使用完整的专用子智能体编排，其余支持 skills 的代理可复用领域工具模块。研究团队报告完成了10篇代表性高能物理论文的端到端复现，涉及轻夸克模型、类轴子粒子、有效场论高维算符、从部分子到探测器的模拟及参数扫描。其意义不仅是节省复杂软件配置时间，更是将需要跨工具、跨阶段协调和物理验证的科研流程转变为可重复执行的智能体工作流。该项目标志着团队 AI for Science 从评估走向实际科研自动化的代表性成果。",
+        "en": "ColliderAgent aims to make AI actually conduct high-energy physics research rather than merely describe it. As a skills-centered, hierarchical multi-agent framework, it decouples physics reasoning from numerical execution: researchers specify goals using natural language, standard Lagrangians, and physics notation; agents plan research steps, construct models, and connect domain tools; and a unified execution backend, Magnus, manages the actual scientific software. The system integrates FeynRules for theoretical model construction and validation, UFO export, MadGraph5 for event generation, Pythia8 for parton showers, Delphes for detector simulation, and MadAnalysis5 for analysis, ultimately producing kinematic distributions, cut-flow results, and exclusion regions in new-physics parameter spaces. The framework offers skills-based interfaces across mainstream CLI agents. Claude Code supports full orchestration of specialized sub-agents, while other skills-compatible agents can reuse its domain-tool modules. The research team has achieved end-to-end reproduction of 10 representative high-energy physics papers, covering leptoquark models, axion-like particles, higher-dimensional operators in effective field theory, parton-to-detector simulation, and parameter scans. Its significance goes beyond saving time on complicated software setup: ColliderAgent turns physics-constrained research processes requiring coordination and verification across tools and stages into reproducible, agent-executable workflows. It is a representative milestone in the team’s AI for Science research, moving from the evaluation of scientific AI toward the automation of real scientific research."
+      },
+      "highlights": [
+        {
+          "zh": "统一自然语言入口，贯通理论建模、事件生成、探测器模拟与数据分析",
+          "en": "A unified natural-language interface spanning theoretical modeling, event generation, detector simulation, and data analysis"
+        },
+        {
+          "zh": "Skills式工具接口与 Magnus 执行后端，降低领域软件编排成本",
+          "en": "Skills-based tool interfaces and the Magnus execution backend reduce the complexity of orchestrating scientific software"
+        },
+        {
+          "zh": "10篇代表性高能物理论文端到端复现",
+          "en": "End-to-end reproduction of 10 representative high-energy physics papers"
+        }
+      ],
+      "metrics": [
+        {
+          "value": "10",
+          "label": {
+            "zh": "端到端复现的代表性论文",
+            "en": "representative papers reproduced end to end"
+          }
+        }
+      ],
+      "links": {
+        "paper": "https://arxiv.org/abs/2603.14553",
+        "journal": "",
+        "website": "",
+        "github": "https://github.com/HET-AGI/ColliderAgent",
+        "related": []
+      },
+      "visual_brief": {
+        "zh": "论文配图",
+        "en": "Figures from the research paper"
+      }
+    },
+    {
+      "id": "detailed_balance",
+      "order": 3,
+      "track": 2,
+      "relationship": "team_led",
+      "title": {
+        "zh": "细致平衡｜LLM Agent的宏观动力学",
+        "en": "Detailed Balance | Macroscopic Dynamics of LLM Agents"
+      },
+      "publication": {
+        "zh": "PRX Intelligence 1, 023008 (2026)",
+        "en": "PRX Intelligence 1, 023008 (2026)"
+      },
+      "credits": {
+        "zh": "",
+        "en": ""
+      },
+      "teaser": {
+        "zh": "把统计物理的细致平衡与最小作用量方法引入大模型智能体生成过程。",
+        "en": "Bringing detailed balance and the principle of least action from statistical physics into the generative processes of LLM agents."
+      },
+      "description": {
+        "zh": "由宋卓洋主导的这项研究提出了一个直击 Physics of AI 核心的问题：复杂智能体的行为是否存在独立于具体模型架构和提示工程的宏观规律？论文不再只研究 token 级概率，而是将智能体保留的信息、候选方案或表达式视为粗粒化“状态”，将大模型的连续生成与修改视为状态之间的随机转移。作者通过测量正反向转移概率，并结合最小作用量原理重建描述生成偏好的有效势函数，发现若干受测生成过程呈现出与统计物理细致平衡条件相一致的统计特征。这项结果在受约束的词语生成，以及具有较长推理链的符号回归智能体等任务上得到实验检验，并通过状态转移环路等分析进一步评估。研究揭示：看似复杂的生成偏好，有望被压缩为更简洁的“势能景观”与转移规律，从而为解释智能体的探索—收敛行为、诊断局部困陷和优化科研智能体策略提供新的理论工具。该工作并非宣称所有大模型在所有任务中都严格处于热平衡，而是在明确的状态定义和实验条件下建立可测量、可证伪的有效描述。论文于2026年10月27日正式发表于美国物理学会期刊 PRX Intelligence（第1卷023008），体现了团队从“用AI研究物理”进一步走向“用物理理解AI”的研究布局。",
+        "en": "Led by Zhuo-Yang Song, this research addresses a fundamental question in Physics of AI: can the behavior of complex agents exhibit macroscopic laws that are independent of particular model architectures and prompt-engineering choices? Instead of examining only token-level probabilities, the paper treats information retained by agents, candidate solutions, or symbolic expressions as coarse-grained “states,” and views successive rounds of LLM generation and revision as stochastic transitions between those states. By measuring forward and reverse transition probabilities and using the principle of least action to reconstruct an effective potential governing generative preferences, the authors find statistical signatures consistent with the detailed-balance condition of statistical physics in several tested generative processes. These findings are experimentally examined in constrained word-generation tasks and symbolic-regression agents with longer reasoning chains, and further evaluated through analyses of loops in the state-transition graph. The research suggests that seemingly complex generative preferences may be compressed into a simpler “potential landscape” and transition rules, offering new theoretical tools for explaining exploration and convergence, diagnosing local trapping, and optimizing scientific-agent strategies. The work does not claim that every large language model is in strict thermodynamic equilibrium across all tasks; rather, it establishes a measurable, falsifiable effective description under explicitly defined states and experimental conditions. Formally published on October 27, 2026 in the American Physical Society journal PRX Intelligence (Vol. 1, 023008), the paper reflects the team’s expanding direction: not only using AI to study physics, but also using physics to understand AI."
+      },
+      "highlights": [
+        {
+          "zh": "以智能体状态转移代替token层级描述，研究宏观生成动力学",
+          "en": "Studies macroscopic generative dynamics through agent-state transitions rather than token-level descriptions"
+        },
+        {
+          "zh": "最小作用量与有效势函数，将复杂生成偏好转化为可检验的动力学关系",
+          "en": "Uses least action and an effective potential to turn complex generative preferences into testable dynamical relations"
+        },
+        {
+          "zh": "2026年10月27日发表于PRX Intelligence",
+          "en": "Published in PRX Intelligence on October 27, 2026"
+        }
+      ],
+      "metrics": [
+        {
+          "value": "PRX Intelligence",
+          "label": {
+            "zh": "正式发表期刊",
+            "en": "publishing journal"
+          }
+        },
+        {
+          "value": "2026.10.27",
+          "label": {
+            "zh": "正式发表日期",
+            "en": "publication date"
+          }
+        }
+      ],
+      "links": {
+        "paper": "https://arxiv.org/abs/2512.10047",
+        "journal": "https://journals.aps.org/prxintelligence/abstract/10.1103/kwx6-clqd",
+        "website": "",
+        "github": "https://github.com/SonnyNondegeneracy/detialed-balance-llm",
+        "related": [
+          "https://doi.org/10.1103/kwx6-clqd"
+        ]
+      },
+      "visual_brief": {
+        "zh": "建议使用状态转移图与effective potential landscape（地形图）；可用论文图示",
+        "en": "A state-transition graph and an effective-potential landscape, preferably using figures from the paper"
+      }
+    },
+    {
+      "id": "loop_diagrams",
+      "order": 4,
+      "track": 1,
+      "relationship": "team_led",
+      "title": {
+        "zh": "圈图计算（王波）",
+        "en": "Loop-Diagram Calculations (Bo Wang)"
+      },
+      "publication": {
+        "zh": "",
+        "en": ""
+      },
+      "credits": {
+        "zh": "王波（Bo Wang）",
+        "en": "Bo Wang"
+      },
+      "teaser": {
+        "zh": "",
+        "en": ""
+      },
+      "description": {
+        "zh": "",
+        "en": ""
+      },
+      "highlights": [],
+      "metrics": [],
+      "links": {
+        "paper": "",
+        "journal": "",
+        "website": "",
+        "github": "",
+        "related": []
+      },
+      "visual_brief": {
+        "zh": "",
+        "en": ""
+      }
+    },
+    {
+      "id": "prbench",
+      "order": 5,
+      "track": 3,
+      "relationship": "core_contribution",
+      "title": {
+        "zh": "PRBench｜真实物理论文复现基准",
+        "en": "PRBench | Benchmark for Physics-Paper Reproduction"
+      },
+      "publication": {
+        "zh": "arXiv preprint (2026)",
+        "en": "arXiv preprint (2026)"
+      },
+      "credits": {
+        "zh": "仇是为论文第一作者；来自北京大学物理学院20余个课题组的共同建设",
+        "en": "Shi Qiu is the first author; the benchmark was jointly developed with more than 20 research groups at Peking University’s School of Physics."
+      },
+      "teaser": {
+        "zh": "让AI从阅读论文走到运行代码、复现数据：以真实科研成败衡量Agent能力。",
+        "en": "From reading papers to running code and reproducing data: evaluate agents by their ability to carry out real scientific research."
+      },
+      "description": {
+        "zh": "PRBench 将科学智能体评测从“能否回答一个物理问题”推进到“能否独立复现一篇真实论文”。2026年3月公开的基准由北京大学物理学院20余个课题组的领域专家共同建设，包含11个物理子领域的30个精心选取的文献复现任务。评测仅向agent提供任务说明和原始论文，将其置于隔离沙箱中，要求它独立理解物理方法、从零实现计算程序、调试数值模拟，并产出与论文定量一致的结果；每个任务均配置人工端到端核验过的标准结果和细化评分标准。其关键贡献在于把“物理概念理解”与“科研执行可靠性”分开度量：评测覆盖方法理解、代码实现、数据复现和任务完成等环节，暴露出模型会解释公式但无法稳定实现与验证的差距。在论文报告的基线实验中，最强的Codex（GPT-5.3-Codex）平均综合分为34%，所有受测agent的严格端到端完整复现通过率均为0；典型失败包括公式写错、数值模拟无法调通，以及未真实计算却生成貌似合理的结果。PRBench 因而为自主科学研究设立了比问答正确率更扎实的能力标准。团队在这一方向积累的沙箱环境、任务标准化及自动核验经验，也与2026年8月发布的 Terminal-Bench-Science 等后续科学工作流评测形成了清晰的方法论呼应。",
+        "en": "PRBench advances scientific-agent evaluation from “Can an AI answer a physics question?” to “Can an agent independently reproduce a real research paper?” Released in March 2026, the benchmark was built with domain experts from more than 20 research groups at Peking University’s School of Physics. It contains 30 carefully selected paper-reproduction tasks across 11 physics subfields. Each agent receives only a task description and the original paper, then works in an isolated sandbox to independently understand the physics methodology, implement the computational program from scratch, debug numerical simulations, and produce results that quantitatively agree with the paper. Every task comes with reference results verified end to end by human experts and a detailed scoring rubric. PRBench’s key contribution is to measure “conceptual understanding of physics” separately from “reliability in scientific execution.” It evaluates methodological understanding, code implementation, data reproduction, and task completion, exposing the gap between models’ ability to explain equations and their ability to implement and verify those equations reliably. In the baseline experiments reported in the paper, the strongest agent, Codex (GPT-5.3-Codex), achieved an average overall score of just 34%, and the strict end-to-end complete-reproduction pass rate was 0% for every tested agent. Typical failures included incorrect formula implementations, unsuccessful debugging of numerical simulations, and plausible-looking results generated without actual computation. PRBench therefore sets a more substantive standard for autonomous scientific research than question-answer accuracy alone. The team’s experience in sandbox environments, task standardization, and automated verification also resonates methodologically with later science-workflow benchmarks such as Terminal-Bench-Science, released in August 2026."
+      },
+      "highlights": [
+        {
+          "zh": "30个经过端到端验证的真实论文复现任务，覆盖11个物理领域",
+          "en": "30 end-to-end-validated tasks reproducing real papers across 11 physics subfields"
+        },
+        {
+          "zh": "20余个北大物理学院课题组共同贡献标准任务",
+          "en": "Contributions from more than 20 research groups at Peking University’s School of Physics"
+        },
+        {
+          "zh": "最强受测agent综合得分34%，严格完整复现成功率0%",
+          "en": "Best tested agent: 34% overall score; 0% strict complete-reproduction success rate"
+        }
+      ],
+      "metrics": [
+        {
+          "value": "30 / 11",
+          "label": {
+            "zh": "任务 / 物理子领域",
+            "en": "tasks / physics subfields"
+          }
+        },
+        {
+          "value": "34%",
+          "label": {
+            "zh": "最佳受测Agent综合得分",
+            "en": "best agent’s overall score"
+          }
+        },
+        {
+          "value": "0%",
+          "label": {
+            "zh": "严格端到端完整复现成功率",
+            "en": "strict complete-reproduction success rate"
+          }
+        }
+      ],
+      "links": {
+        "paper": "https://arxiv.org/abs/2603.27646",
+        "journal": "",
+        "website": "",
+        "github": "",
+        "related": [
+          "https://www.terminal-bench-science.ai/announcement"
+        ]
+      },
+      "visual_brief": {
+        "zh": "建议放置真实复现工作流：Paper + Task → Sandbox Code → Simulation → Numerical Output → Expert Rubric，并用34%/0%突出挑战。",
+        "en": "Show a real reproduction workflow: Paper + Task → Sandbox Code → Simulation → Numerical Output → Expert Rubric, highlighting the 34% and 0% results."
+      }
+    },
+    {
+      "id": "autoresearchclaw",
+      "order": 6,
+      "track": 1,
+      "relationship": "core_contribution",
+      "title": {
+        "zh": "AutoResearchClaw｜自进化科研智能体系统",
+        "en": "AutoResearchClaw | Self-Evolving Research Agent System"
+      },
+      "publication": {
+        "zh": "arXiv preprint / open-source release (2026)",
+        "en": "arXiv preprint / open-source release (2026)"
+      },
+      "credits": {
+        "zh": "仇是（Shi Qiu）：共同第一作者、核心研发与牵头成员；跨校、跨机构合作作者见论文",
+        "en": "Shi Qiu: co-first author, core developer, and project leader; collaborators across universities and institutes are listed in the paper."
+      },
+      "teaser": {
+        "zh": "把科研从线性流水线升级为会辩论、会调试、会积累经验的迭代闭环。",
+        "en": "Turning research from a linear pipeline into an iterative loop that debates, debugs, and accumulates experience."
+      },
+      "description": {
+        "zh": "AutoResearchClaw 的出发点是一个朴素但关键的判断：真实科研从来不是“给出想法—生成代码—写成论文”的一次性流程，而是伴随假设质疑、实验失败、路线调整与经验积累的循环。该项目构建了面向端到端科研的多智能体框架，以五类机制支撑更可靠的自主研究：结构化多智能体辩论促进假设生成与结果审查，Pivot/Refine 自愈执行循环将实验失败转化为下一步决策依据，可验证的报告机制约束数据与引用真实性，七种不同程度的人机协作模式允许研究者在高价值节点介入，跨轮次经验演化则使系统能从历史失误中持续改进。2026年5月发布的论文在最初25个机器学习研究课题上评估系统，相比 AI Scientist v2 报告54.7%的性能提升；消融实验同时发现，关键节点的精准人工干预往往优于完全放手或逐步盯守。此后公开版本将实验阶段扩展到高能物理、生物等专业科研Agent，并发布涵盖机器学习、高能物理、量子物理、生物学和统计学共55个课题的 ARC-Bench。项目由仇是作为共同第一作者之一参与牵头与核心研发，开源仓库截至2026年10月已获得超过1.4万GitHub Stars。AutoResearchClaw 将团队的长期研究主线凝聚为一个可扩展的科研平台：AI不仅执行任务，还必须能够在证据约束下迭代、纠错和协同。",
+        "en": "AutoResearchClaw starts from a simple but critical observation: real research is never a one-off sequence of “propose an idea, generate code, write a paper.” It is an iterative cycle of questioning hypotheses, encountering experimental failures, adjusting research directions, and accumulating experience. The project builds a multi-agent framework for end-to-end research, supported by five mechanisms for more reliable autonomy: structured multi-agent debate for hypothesis generation and critical review of results; a self-healing Pivot/Refine execution loop that converts experimental failures into evidence for the next decision; verifiable reporting that safeguards the integrity of data and citations; seven modes of human-AI collaboration that enable researchers to intervene at high-value decision points; and cross-run experience evolution that allows the system to improve continuously from past mistakes. The paper released in May 2026 evaluated the system on an initial set of 25 machine-learning research topics and reported a 54.7% performance improvement over AI Scientist v2. Ablation studies also found that targeted human intervention at critical decision points often outperformed both complete autonomy and step-by-step supervision. Later public releases extended the experiment stage to specialized scientific agents for high-energy physics, biology, and other domains, and introduced ARC-Bench with 55 topics across machine learning, high-energy physics, quantum physics, biology, and statistics. Shi Qiu contributed as a co-first author, project leader, and core developer. By October 2026, the open-source repository had attracted more than 14,000 GitHub stars. AutoResearchClaw brings the team’s long-term research direction together in an extensible research platform: AI must do more than execute tasks—it must iterate, correct errors, and collaborate under evidence-based constraints."
+      },
+      "highlights": [
+        {
+          "zh": "五大核心机制：辩论、自愈、可核验、人机协作、跨轮次演化",
+          "en": "Five core mechanisms: debate, self-healing, verifiability, human-AI collaboration, and cross-run evolution"
+        },
+        {
+          "zh": "论文原始25个ML课题上较AI Scientist v2提升54.7%",
+          "en": "54.7% performance improvement over AI Scientist v2 on the original 25 machine-learning research topics"
+        },
+        {
+          "zh": "最新版ARC-Bench覆盖5领域55课题；公开项目超过1.4万Stars",
+          "en": "Latest ARC-Bench: 55 topics across five domains; the open-source project has more than 14,000 GitHub stars"
+        }
+      ],
+      "metrics": [
+        {
+          "value": "54.7%",
+          "label": {
+            "zh": "相对AI Scientist v2的性能提升",
+            "en": "performance improvement over AI Scientist v2"
+          }
+        },
+        {
+          "value": "55 / 5",
+          "label": {
+            "zh": "最新版ARC-Bench课题 / 学科领域",
+            "en": "latest ARC-Bench topics / domains"
+          }
+        },
+        {
+          "value": "14K+",
+          "label": {
+            "zh": "GitHub Stars（截至2026年10月）",
+            "en": "GitHub stars (October 2026)"
+          }
+        }
+      ],
+      "links": {
+        "paper": "https://arxiv.org/abs/2605.20025",
+        "journal": "",
+        "website": "",
+        "github": "https://github.com/aiming-lab/AutoResearchClaw",
+        "related": [
+          "https://github.com/aiming-lab/AutoResearchClaw/tree/main/experiments/arc_bench",
+          "https://huggingface.co/papers/2605.20025"
+        ]
+      },
+      "visual_brief": {
+        "zh": "用Research Loop环形图突出 Debate → Experiment → Failure/Pivot → Verify → Memory；独立附上一排跨领域专业agent图标。",
+        "en": "Use a circular research-loop diagram showing Debate → Experiment → Failure/Pivot → Verify → Memory, accompanied by a row of icons for specialist scientific agents in different domains."
+      }
+    },
+    {
+      "id": "rsi_exam",
+      "order": 7,
+      "track": 3,
+      "relationship": "core_contribution",
+      "title": {
+        "zh": "RSI-Exam｜递归自我改进科研评测",
+        "en": "RSI-Exam | Benchmark for Recursive Self-Improvement in Research"
+      },
+      "publication": {
+        "zh": "Open benchmark / project release (2026)",
+        "en": "Open benchmark / project release (2026)"
+      },
+      "credits": {
+        "zh": "仇是（Shi Qiu）：核心成员；王波（Bo Wang）：物理专家任务贡献",
+        "en": "Shi Qiu: core team member; Bo Wang: contributor of expert physics tasks."
+      },
+      "teaser": {
+        "zh": "评测Agent能否把弱但可运行的方法真正改好，并在隐藏数据上持续有效。",
+        "en": "Tests whether agents can meaningfully improve a weak but working method—and sustain that improvement on hidden data."
+      },
+      "description": {
+        "zh": "RSI-Exam 将 AI Evaluation 的问题再向前推进一步：相比静态解题或一次性的代码生成，更重要的是智能体能否在真实实验反馈下持续改进自己的方法。基准包含跨六大领域的88个可执行研究任务，其中35个公开、53个私有。每道任务均从一个“能运行、但明显有改进空间”的初始方法出发：它可能是直接求解问题的算法，也可能是驱动冻结模型的agent harness。评测允许智能体在固定预算内多轮修改代码、开展实验、读取可见反馈、决定保留或推翻假设；最终只将提交产物送入隔离验证环境，在此前未见过的隐藏测试集上评分，阻止靠公开数据过拟合制造虚假的进步。RSI-Exam 使用与 Harbor 对齐的沙箱与验证机制，并通过领域专家出题、独立开发、严格泄漏审计、真实轨迹复核等流程把控任务质量。其覆盖 AI模型与Agent、物理科学与工程、生命科学与医学，以及金融法律等应用研究，使“自我改进”变成可定量衡量而非抽象宣传的能力。仇是为项目核心成员，王波参与物理专家任务贡献。对团队而言，RSI-Exam 连接了高质量科研基准、可执行环境与长期智能体优化研究：一个系统只有在隐藏测试上复现了改进，才算真正学会了研究。",
+        "en": "RSI-Exam takes AI Evaluation a step further: beyond static problem solving or one-shot code generation, the key question is whether agents can continuously improve their own methods using feedback from real experiments. The benchmark contains 88 executable research tasks across six domains, including 35 public and 53 private tasks. Each task starts with a method that runs but has clear room for improvement: it may be an algorithm that directly solves the problem or an agent harness that drives a frozen model. Within a fixed budget, an agent can revise code across multiple rounds, conduct experiments, inspect visible feedback, and decide whether to retain or reject hypotheses. Only the final submitted artifact is sent to an isolated verification environment and scored on previously unseen hidden test data, preventing overfitting to public data from being mistaken for genuine progress. RSI-Exam uses Harbor-aligned sandbox and verification mechanisms, with task quality maintained through expert problem design, independent development, rigorous leakage audits, and reviews of real agent trajectories. Covering AI models and agents, physical sciences and engineering, life sciences and medicine, as well as applied research in finance and law, it turns “self-improvement” from an abstract promise into a quantitatively measurable capability. Shi Qiu is a core member of the project, and Bo Wang contributed physics-expert tasks. For the team, RSI-Exam connects high-quality scientific benchmarks, executable environments, and long-horizon agent optimization: a system can be said to have genuinely learned to conduct research only when its improvements hold up on hidden tests."
+      },
+      "highlights": [
+        {
+          "zh": "88个可执行研究任务，35公开、53私有，覆盖6个领域",
+          "en": "88 executable research tasks: 35 public and 53 private, covering six domains"
+        },
+        {
+          "zh": "弱但有效的初始方法，多轮改进，隐藏集一次性验证",
+          "en": "A weak but valid starting method, multiple rounds of improvement, and one-time verification on hidden data"
+        },
+        {
+          "zh": "兼顾方法优化与冻结模型的agent harness设计",
+          "en": "Evaluates both improvements to direct methods and the design of agent harnesses for frozen models"
+        }
+      ],
+      "metrics": [
+        {
+          "value": "88",
+          "label": {
+            "zh": "可执行研究任务",
+            "en": "executable research tasks"
+          }
+        },
+        {
+          "value": "35 / 53",
+          "label": {
+            "zh": "公开 / 私有任务",
+            "en": "public / private tasks"
+          }
+        },
+        {
+          "value": "6",
+          "label": {
+            "zh": "覆盖研究领域",
+            "en": "research domains"
+          }
+        }
+      ],
+      "links": {
+        "paper": "",
+        "journal": "",
+        "website": "https://rsi-exam.ai/",
+        "github": "https://github.com/aiming-lab/RSI-Exam",
+        "related": [
+          "https://rsi-exam.ai/blog.html"
+        ]
+      },
+      "visual_brief": {
+        "zh": "设计“Visible Experiments → Improve Artifact → Seal Submission → Hidden Verifier”示意图，突出防过拟合与通用化。",
+        "en": "Illustrate “Visible Experiments → Improve Artifact → Seal Submission → Hidden Verifier,” emphasizing resistance to overfitting and generalization."
+      }
+    }
+  ]
+}

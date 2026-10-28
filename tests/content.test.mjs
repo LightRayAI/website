@@ -1,0 +1,63 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
+import { resolve, dirname, join } from 'node:path';
+import { load } from 'cheerio';
+
+const data = JSON.parse(readFileSync('team_projects_zh_en.json', 'utf8'));
+const published = data.projects.filter(p => p.description.en && p.description.zh);
+const html = path => load(readFileSync(`dist/${path}/index.html`, 'utf8'));
+
+test('build publishes both languages and only the six complete projects', () => {
+  assert.equal(published.length, 6);
+  for (const lang of ['en', 'zh']) {
+    for (const page of ['', '/data', '/research', '/team']) {
+      assert.ok(existsSync(`dist/${lang}${page}/index.html`), `${lang}${page} is missing`);
+    }
+    for (const p of published) assert.ok(existsSync(`dist/${lang}/research/${p.id}/index.html`));
+    assert.ok(!existsSync(`dist/${lang}/research/loop_diagrams/index.html`));
+  }
+});
+
+test('research order and attribution match the approved brief', () => {
+  for (const lang of ['en', 'zh']) {
+    const $ = html(`${lang}/research`);
+    assert.deepEqual($('[data-project]').map((_, el) => $(el).attr('data-project')).get(),
+      ['collideragent', 'autoresearchclaw', 'detailed_balance', 'phybench', 'prbench', 'rsi_exam']);
+    for (const p of published) assert.equal($(`[data-project="${p.id}"]`).attr('data-relationship'), p.relationship);
+  }
+});
+
+test('every detail retains the complete localized descriptions, results, credits and links', () => {
+  for (const lang of ['en', 'zh']) for (const p of published) {
+    const $ = html(`${lang}/research/${p.id}`);
+    assert.equal($('[data-full-description]').text().replace(/\s+/g, ' ').trim(), p.description[lang].replace(/\s+/g, ' ').trim());
+    for (const highlight of p.highlights) assert.ok($('main').text().includes(highlight[lang]));
+    if (p.credits[lang]) assert.ok($('main').text().includes(p.credits[lang]));
+    for (const metric of p.metrics) {
+      assert.ok($('main').text().includes(metric.value));
+      assert.ok($('main').text().includes(metric.label[lang]));
+    }
+    const links = $('a').map((_, el) => $(el).attr('href')).get();
+    for (const url of Object.values(p.links).flat().filter(Boolean)) assert.ok(links.includes(url), `${p.id}: missing ${url}`);
+    assert.equal($('html').attr('lang'), lang === 'zh' ? 'zh-CN' : 'en');
+    assert.equal($('[data-language-switch]').attr('href'), `/website/${lang === 'en' ? 'zh' : 'en'}/research/${p.id}/`);
+  }
+});
+
+test('all generated local links, images and styles resolve under the deployment base', () => {
+  const walk = dir => readdirSync(dir, { withFileTypes: true }).flatMap(e => e.isDirectory() ? walk(join(dir, e.name)) : [join(dir, e.name)]);
+  for (const file of walk('dist').filter(f => f.endsWith('.html'))) {
+    const $ = load(readFileSync(file, 'utf8'));
+    assert.equal($('h1').length, 1, `${file}: exactly one heading`);
+    for (const el of $('[href], [src]').toArray()) {
+      const url = $(el).attr('href') || $(el).attr('src');
+      if (!url || /^(https?:|mailto:|data:|#)/.test(url)) continue;
+      const path = url.split(/[?#]/)[0];
+      const dest = path.startsWith('/website/') ? resolve('dist', path.slice(9)) : resolve(dirname(file), path);
+      assert.ok(existsSync(dest), `${file}: broken local link ${url}`);
+    }
+    assert.ok(!$('main').text().includes('Loop-Diagram Calculations'));
+    assert.ok(!$('main').text().includes('圈图计算'));
+  }
+});

@@ -126,3 +126,29 @@ for (const lang of ['en', 'zh']) {
     });
   }
 }
+
+test('deployment update refreshes cached pages without losing query or hash or looping', async ({ page }) => {
+  await page.route('**/version.json?*', route => route.fulfill({ json: { version: 'newrelease2026' } }));
+  let navigations = 0;
+  page.on('framenavigated', frame => { if (frame === page.mainFrame()) navigations += 1; });
+  await page.goto('/website/zh/data/?source=test#main');
+  await expect(page).toHaveURL(/source=test&v=newrelease2026#main$/);
+  const before = navigations;
+  await page.evaluate(() => window.dispatchEvent(new Event('focus')));
+  await expect.poll(() => page.locator('h1').innerText()).toContain('科学深度');
+  expect(navigations).toBe(before);
+});
+
+test('deployment check tolerates network failures and preserves open contact dialogs', async ({ page }) => {
+  await page.route('**/version.json?*', route => route.abort());
+  await page.goto('/website/en/data/');
+  await expect(page.locator('h1')).toContainText('Scientific depth');
+  await page.locator('[data-contact-open]').click();
+  await page.route('**/version.json?*', route => route.fulfill({ json: { version: 'nextrelease2026' } }));
+  await page.evaluate(() => window.dispatchEvent(new Event('focus')));
+  await expect(page.getByRole('dialog')).toBeVisible();
+  await expect(page).toHaveURL(/\/en\/data\/$/);
+  await page.getByRole('button', { name: 'Close', exact: true }).click();
+  await page.evaluate(() => window.dispatchEvent(new Event('focus')));
+  await expect(page).toHaveURL(/v=nextrelease2026/);
+});

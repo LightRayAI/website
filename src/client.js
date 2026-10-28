@@ -93,3 +93,34 @@ if (contactTrigger && contactDialog) {
   });
   contactDialog.addEventListener('close', () => contactTrigger.focus());
 }
+
+// Detect deployments even when GitHub Pages serves cached HTML.
+let checkingVersion = false;
+async function checkSiteVersion() {
+  if (checkingVersion || document.hidden || document.querySelector('dialog[open]')) return;
+  const { build, versionUrl } = document.body.dataset;
+  if (!build || !versionUrl) return;
+  checkingVersion = true;
+  try {
+    const response = await fetch(`${versionUrl}?t=${Date.now()}`, { cache: 'no-store' });
+    if (!response.ok) return;
+    const { version } = await response.json();
+    const target = new URL(window.location.href);
+    if (typeof version !== 'string' || !/^[a-z0-9]+$/.test(version) || version === build || target.searchParams.get('v') === version) return;
+    try { sessionStorage.setItem('lightray-update-scroll', JSON.stringify({ path: target.pathname, y: window.scrollY })); } catch { /* Storage is optional. */ }
+    target.searchParams.set('v', version);
+    window.location.replace(target.href);
+  } catch { /* Offline or a transient deployment failure: keep the current page. */ }
+  finally { checkingVersion = false; }
+}
+try {
+  const saved = JSON.parse(sessionStorage.getItem('lightray-update-scroll') || 'null');
+  sessionStorage.removeItem('lightray-update-scroll');
+  if (saved?.path === window.location.pathname && Number.isFinite(saved.y)) {
+    window.addEventListener('load', () => window.scrollTo({ top: saved.y, behavior: 'instant' }), { once: true });
+  }
+} catch { /* Storage is optional. */ }
+window.addEventListener('pageshow', checkSiteVersion);
+window.addEventListener('focus', checkSiteVersion);
+document.addEventListener('visibilitychange', checkSiteVersion);
+setInterval(checkSiteVersion, 60000);

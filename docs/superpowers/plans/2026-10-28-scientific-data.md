@@ -32,7 +32,7 @@ Keep pale surfaces, navy/blue typography, two-column offering cards, and compact
 
 - [x] 1. Add output contracts for four bilingual offerings, three grounded examples and one empty trajectory placeholder; implement editorial copy and team-wide achievement wording.
 - [x] 2. Integrate examples and top-of-page strengths into existing components/styles; inspect desktop/mobile previews, run lint/build/content/browser checks, and review source consistency.
-- [ ] 3. Commit, push, await Pages deployment, and verify the live bilingual data and team pages.
+- [x] 3. Commit, push, await Pages deployment, and verify the live bilingual data and team pages.
 
 ## Review focus
 
@@ -48,3 +48,11 @@ Keep pale surfaces, navy/blue typography, two-column offering cards, and compact
 - `npm run test:e2e`: all 22 browser tests passed, including bilingual mobile/desktop layouts, accessibility, contact dialogs, and deployment-refresh behavior.
 - Desktop full-page and example-card previews inspected; mobile previews saved under ignored `.preview/`.
 - Independent read-only review found no required changes.
+
+## Published result
+
+- Implementation commit: `62286f4`.
+- GitHub Actions build and deployment passed: https://github.com/LightRayAI/website/actions/runs/40740628763
+- Public English and Chinese data pages verified: exactly four offerings, three scientific examples, one reserved trajectory example, capability-map copy, and DMRG SOTA wording.
+- Public English and Chinese team pages verified: collective IPhO and national fourth-place wording; three existing profiles retained without assigning the awards to individuals.
+- Final documentation-only commit does not change the deployed site.

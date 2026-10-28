@@ -30,6 +30,7 @@ export const copy = {
     data: {
       eyebrow: 'DATA BUSINESS', title: 'Scientific depth.\nProduction rigor.',
       intro: 'High-quality scientific data and executable environments for frontier-model post-training. We bring domain experts, coding agents, and automated evaluation together in a reproducible production workflow.',
+      deliveryProof: { label: 'COLLABORATION & DELIVERY', title: 'Scientific data, delivered.', text: 'We work closely with ByteDance and Alibaba to deliver long-horizon scientific reasoning data and Agentic Science Tasks.', partners: ['ByteDance', 'Alibaba'], metric: '1,000+', metricLabel: 'Data items and tasks delivered', metricDetail: 'Combined total across long-horizon scientific reasoning data and Agentic Science Tasks.' },
       capabilities: 'What we build', capabilitiesTitle: 'From long-form reasoning to agentic research.',
       products: [
         { number: '01', title: 'Long-horizon scientific reasoning', text: 'Expert-designed problems paired with complete derivations, intermediate checkpoints, and granular scoring rubrics.', items: ['Detailed reasoning and reference solutions', 'Checkpoints for intermediate scientific validity', 'Rubrics that distinguish partial progress from correctness'] },
@@ -149,11 +150,12 @@ export const copy = {
     ],
     data: {
       eyebrow: '数据业务', title: '科学深度，\n交付精度。', intro: '面向前沿模型后训练的高质量科学数据与可执行环境。以领域专家、科研智能体和自动化评测环境为基础，将严谨的科学方法转化为可复现、可扩展的数据生产流程。',
-      capabilities: '核心能力', capabilitiesTitle: '从长程科学推理，到智能体科研任务。',
+      deliveryProof: { label: '合作与交付', title: '让科学数据走向实际应用。', text: '我们与字节跳动、阿里巴巴深度合作，持续交付长程科学推理数据与科研智能体任务。', partners: ['字节跳动', '阿里巴巴'], metric: '1,000+', metricLabel: '累计交付数据与任务', metricDetail: '涵盖长程科学推理数据与科研智能体任务，两类合计。' },
+      capabilities: '核心能力', capabilitiesTitle: '从长程科学推理，到科研智能体任务。',
       products: [
         { number: '01', title: '长程科学推理数据', text: '由领域专家设计科学问题，提供完整推导、中间检查点和细致评分标准。', items: ['完整推理过程与参考答案', '验证关键中间步骤的科学正确性', '区分部分进展与最终正确性的评分细则'] },
         { number: '02', title: '高难度科学任务', text: '构建 CritPt 等类型的高难度物理任务，以领域知识支撑任务设计，以严谨验证保障答案质量。', items: ['专家主导的问题设计与难度审核', '数学表达式与数值结果交叉验证', '明确科学假设、来源与验收标准'] },
-        { number: '03', title: 'Agentic Science Tasks', text: '让科研任务在真实科学软件环境中运行，配备工具调用接口与可执行验证器。', items: ['可复现的环境与专业工具链', '可执行参考流程与结果验证', '完整任务说明、依赖与评分逻辑'] },
+        { number: '03', title: '科研智能体任务', text: '让科研任务在真实科学软件环境中运行，配备工具调用接口与可执行验证器。', items: ['可复现的环境与专业工具链', '可执行参考流程与结果验证', '完整任务说明、依赖与评分逻辑'] },
         { number: '04', title: '训练与评测环境', text: '构建面向模型强化学习、能力提升和严格科学评测的数据与环境体系。', items: ['可验证反馈与结构化奖励信号', '开发数据与保留评测数据分离', '可审计执行轨迹与失败分析'] },
       ],
       pipelineLabel: '完整生产流程', pipelineTitle: '让专家判断贯穿每个关键环节。',

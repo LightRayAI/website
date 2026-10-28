@@ -501,3 +501,19 @@ html[lang="zh-CN"] .full-description { line-height: 2.1; }
 .scientist-research h5 { margin: 8px 0 10px; font-size: 1.03rem; font-weight: 600; }
 .scientist-research h5 a:hover { color: var(--blue); }
 .scientist-research p { font-size: .88rem; line-height: 1.85; }
+
+.delivery-proof { padding-top: 12px; }
+.delivery-proof-panel { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 56px; padding: 42px; background: var(--paper); border: 1px solid var(--line); border-radius: 6px; }
+.delivery-proof-panel h2 { font-size: clamp(1.5rem, 2.4vw, 2rem); margin: 14px 0 18px; }
+.delivery-proof-text { max-width: 590px; font-size: .95rem; line-height: 1.85; }
+.delivery-partners { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; padding: 0; margin: 24px 0 0; }
+.delivery-partners li { padding: 8px 18px; background: white; border: 1px solid var(--line); border-radius: 4px; font-size: .9rem; font-weight: 600; }
+.delivery-proof-metric { display: flex; flex-direction: column; justify-content: center; border-left: 1px solid var(--line); padding-left: 48px; }
+.delivery-proof-metric strong { color: var(--blue); font-size: clamp(3rem, 5vw, 4.8rem); font-weight: 600; line-height: 1.1; letter-spacing: -.04em; }
+.delivery-proof-label { margin-top: 16px; color: var(--ink); font-weight: 600; }
+.delivery-proof-detail { margin-top: 8px; font-size: .8rem; line-height: 1.75; }
+@media (max-width: 800px) {
+  .delivery-proof-panel { grid-template-columns: 1fr; gap: 28px; padding: 28px; }
+  .delivery-proof-metric { border-left: 0; border-top: 1px solid var(--line); padding: 28px 0 0; }
+}
+@media (max-width: 560px) { .delivery-proof-panel { padding: 22px; } }

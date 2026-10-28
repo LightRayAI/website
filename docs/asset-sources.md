@@ -38,3 +38,7 @@ The user selected these two 2025 PRL papers. Titles, authors, publication detail
 ## Zhuo-Yang Song portrait
 
 The user requested Song’s portrait from https://physx.phybench.cn/maintainers. Its public page bundle maps Zhuoyang Song to https://physx.phybench.cn/assets/song-zhuoyang-ByTOa21V.jpg. The original image is saved unchanged as `public/images/zhuoyang-song.jpg`; CSS fits it within the compact team card. Desktop cards use a four-column grid, with two columns on tablets and one on narrow phones.
+
+## Data collaboration and delivery
+
+The user directly supplied the deep collaborations with ByteDance and Alibaba and delivery of more than 1,000 long-horizon scientific reasoning data items and Agentic Science Tasks. The displayed 1,000+ is their combined total, not a per-partner or per-category count. No contract values, dates, endorsements, or corporate logos are inferred. The Chinese product name is 科研智能体任务.

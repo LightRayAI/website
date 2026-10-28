@@ -27,7 +27,8 @@ npm run preview              # Serve the current production build
 ## Content and structure
 
 - `team_projects_zh_en.json`: authoritative bilingual project data, read directly at build time. Keep this and `research_projects_bilingual.md` as supplied source documents.
-- `src/content.mjs`: shared bilingual editorial copy, team profiles, data-business content, source-derived workflow labels, and figure credits.
+- `src/content.mjs`: shared bilingual editorial copy, team profiles, source-derived workflow labels, and figure credits.
+- `src/data-business.mjs`: the four bilingual scientific-data offerings, concise task examples, production principles, and delivery workflow. The research-trajectory example is intentionally reserved; the DMRG example describes a multi-round optimization design and SOTA comparison objective, not a claimed performance result.
 - `src/model.mjs`: source loading, publication eligibility, ordering, URLs, and HTML escaping.
 - `src/components.mjs`: navigation, footer, cards, metrics, and shared sections.
 - `src/pages.mjs`: the four primary pages and project details.

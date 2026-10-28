@@ -78,3 +78,35 @@ test('team representative publications include authentic figures and direct sour
     }
   }
 });
+
+test('data page presents four distinct offerings with three brief examples and a reserved trajectory card', () => {
+  for (const lang of ['en', 'zh']) {
+    const $ = html(`${lang}/data`);
+    assert.deepEqual($('[data-offering]').map((_, el) => $(el).attr('data-offering')).get(), ['reasoning', 'agentic', 'trajectories', 'rsi']);
+    assert.equal($('[data-task-example="ready"]').length, 3);
+    const reserved = $('[data-offering="trajectories"] [data-task-example]');
+    assert.equal(reserved.attr('data-task-example'), 'pending');
+    assert.ok(reserved.text().includes(lang === 'zh' ? '示例待补充' : 'Example forthcoming'));
+    assert.equal(reserved.find('a, button, .example-brief').length, 0);
+    assert.ok($('[data-offering="reasoning"] .example-brief').text().includes('Majorana'));
+    assert.ok($('[data-offering="rsi"] .example-brief').text().includes('DMRG'));
+    assert.ok($('[data-offering="rsi"]').text().includes('SOTA'));
+    assert.ok($('[data-offering="agentic"]').text().includes('PRBench'));
+    assert.ok($('[data-offering="agentic"]').text().includes('Terminal-Bench-Science'));
+    assert.equal($('.data-principles article').length, 4);
+    assert.ok(!$('main').text().includes('/home/shiqiu/'));
+    assert.ok(!$('main').text().includes('answer.json'));
+  }
+});
+
+test('competition achievements are collective and the team still shows two core members and the chief scientist', () => {
+  for (const lang of ['en', 'zh']) {
+    const $ = html(`${lang}/team`);
+    const story = $('.team-prose').text();
+    assert.ok(story.includes('IPhO'));
+    assert.ok(story.includes(lang === 'zh' ? '第四名' : 'fourth-place'));
+    assert.equal($('.person-identity').length, 3);
+    assert.ok(!$('.person-featured').text().includes('IPhO'));
+    assert.ok(!$('main').text().includes('宋卓洋'));
+  }
+});

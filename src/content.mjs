@@ -1,3 +1,5 @@
+import { dataBusiness } from './data-business.mjs';
+
 // Editorial copy supplied by the user, plus the verified personal homepage.
 // Project facts and full descriptions are always read from the root JSON.
 export const copy = {
@@ -21,42 +23,13 @@ export const copy = {
     dataBandTag: 'DATA BUSINESS', dataBandTitle: 'Better scientific AI starts with better scientific data.',
     dataBandText: 'Expert-designed reasoning, executable research tasks, and rigorous verification environments for frontier-model post-training.',
     teamBandTag: 'PEOPLE & COLLABORATION', teamBandTitle: 'Across disciplines. Across institutions.',
-    teamBandText: 'Researchers and engineers connecting fundamental science, scientific computing, and advanced AI systems.', teamCta: 'Meet the team',
+    teamBandText: 'From IPhO gold-medal talent to doctoral and postdoctoral researchers and senior scientists, our team connects deep scientific training with advanced AI systems.', teamCta: 'Meet the team',
     tracks: [
       { title: 'AI for Science', subtitle: 'Build systems that discover.', description: 'Domain-specialized research agents and end-to-end autonomous research systems that plan, execute, verify, and improve.', detail: 'From ColliderAgent’s specialist scientific execution to AutoResearchClaw’s iterative, cross-domain research.' },
       { title: 'Physics of AI', subtitle: 'Understand how intelligence behaves.', description: 'Use the language of statistical physics to investigate the macroscopic dynamics of intelligent systems.', detail: 'Detailed balance provides a measurable theoretical perspective on LLM-driven agents.' },
       { title: 'AI Evaluation', subtitle: 'Measure what systems can really do.', description: 'Evaluate scientific reasoning, faithful paper reproduction, and improvement that holds up on unseen tasks.', detail: 'PHYBench → PRBench → RSI-Exam: from reasoning to reproduction to recursive self-improvement.' },
     ],
-    data: {
-      eyebrow: 'DATA BUSINESS', title: 'Scientific depth.\nProduction rigor.',
-      intro: 'High-quality scientific data and executable environments for frontier-model post-training. We bring domain experts, coding agents, and automated evaluation together in a reproducible production workflow.',
-      deliveryProof: { label: 'Close collaborations', partners: ['ByteDance', 'Alibaba'], metric: '1,000+', metricLabel: 'Scientific data items and tasks delivered' },
-      capabilities: 'What we build', capabilitiesTitle: 'From long-form reasoning to agentic research.',
-      products: [
-        { number: '01', title: 'Long-horizon scientific reasoning', text: 'Expert-designed problems paired with complete derivations, intermediate checkpoints, and granular scoring rubrics.', items: ['Detailed reasoning and reference solutions', 'Checkpoints for intermediate scientific validity', 'Rubrics that distinguish partial progress from correctness'] },
-        { number: '02', title: 'Challenging scientific tasks', text: 'Difficult physics tasks of the kind exemplified by CritPt, grounded in domain expertise and carefully verified answers.', items: ['Expert-led task design and difficulty review', 'Mathematical and numerical answer verification', 'Clear assumptions, provenance, and acceptance criteria'] },
-        { number: '03', title: 'Agentic Science Tasks', text: 'Research tasks that run in real scientific software environments, with tool use and executable verifiers.', items: ['Reproducible environments and domain toolchains', 'Executable reference workflows and validation', 'Task instructions, dependencies, and scoring logic'] },
-        { number: '04', title: 'Training & evaluation environments', text: 'Data and environments supporting reinforcement learning, capability development, and rigorous scientific evaluation.', items: ['Verifiable feedback and structured reward signals', 'Separate development and held-out evaluation', 'Auditable trajectories and failure analysis'] },
-        { number: '05', title: 'RSI for Science', text: 'Scientific data and tasks for recursive self-improvement (RSI), enabling agents to iteratively refine algorithms, code, and research workflows through experimental feedback.', items: ['Scientific optimization tasks with baselines and reproducible environments', 'Multi-round improvement trajectories with execution results and feedback', 'Held-out evaluation of accuracy, efficiency, and generalization'] },
-      ],
-      pipelineLabel: 'THE PRODUCTION WORKFLOW', pipelineTitle: 'Expert judgment, at every critical step.',
-      pipeline: [
-        ['Task design', 'Domain experts define the scientific objective, expected reasoning, difficulty, and scoring criteria.'],
-        ['Environment construction', 'Coding agents assist with tool integration, reference implementations, and reproducible execution environments.'],
-        ['Expert verification', 'Experts independently check derivations, numerical outputs, reference solutions, and verifier behavior.'],
-        ['Quality control', 'Review task consistency, reproducibility, data separation, and real agent execution traces.'],
-        ['Delivery & evaluation', 'Package tasks, environments, rubrics, and validation artifacts for agreed training or evaluation workflows.'],
-      ],
-      deliverables: 'A concrete delivery specification', deliverablesText: 'We scope each collaboration around the scientific domain, model capabilities, execution requirements, and evaluation criteria.',
-      deliveryItems: [
-        ['Task package', 'Instructions, scientific context, assumptions, and source provenance.'],
-        ['Reference evidence', 'Full derivations or executable solutions, intermediate checkpoints, and expert review records.'],
-        ['Environment & verifier', 'Dependencies, tool interfaces, reproducible execution, and explicit validation logic.'],
-        ['Evaluation package', 'Scoring rubrics, data split definitions, quality checks, and reporting criteria.'],
-      ],
-      foundation: 'Grounded in research', foundationText: 'Our work on PHYBench, PRBench, ColliderAgent, and RSI-Exam informs how we design scientific tasks, build reliable environments, and verify results.',
-      contactTitle: 'Let’s define the scientific challenge.', contactText: 'Discuss your domain, target capabilities, and requirements for data, environments, or evaluation.', contactCta: 'Discuss a data collaboration',
-    },
+    data: dataBusiness.en,
     research: {
       eyebrow: 'SCIENTIFIC RESEARCH', title: 'Build. Understand. Evaluate.', intro: 'A connected research program: advancing science with autonomous systems, understanding their underlying dynamics, and establishing trustworthy standards for their capabilities.',
       all: 'All research', relationship: 'Contribution', allRelations: 'All contributions', trackFilter: 'Research direction',
@@ -66,9 +39,10 @@ export const copy = {
       nodeLabels: { collideragent: 'Specialized research execution', autoresearchclaw: 'Iterative autonomous research', phybench: 'Physical reasoning', prbench: 'Real paper reproduction', rsi_exam: 'Recursive self-improvement', detailed_balance: 'Macroscopic agent dynamics' },
     },
     team: {
-      eyebrow: 'OUR TEAM', title: 'Scientific rigor.\nShared ambition.', intro: 'An interdisciplinary team building the systems, theory, and data infrastructure for the next generation of scientific AI.',
+      eyebrow: 'OUR TEAM', title: 'Scientific rigor.\nShared ambition.', intro: 'An active research team bringing together exceptional physics talent, doctoral and postdoctoral researchers, and senior scientists to build the next generation of scientific AI.',
       paragraphs: [
         'Our team brings together researchers and engineers with backgrounds at Peking University, Yale University, the University of California, Berkeley, the University of Cambridge, Brown University, and the University of North Carolina at Chapel Hill. We work in close scientific collaboration with researchers at MIT, Stanford University, and other leading institutions.',
+        'Our members include an International Physics Olympiad (IPhO) gold medalist and a fourth-place finisher in China’s national high-school physics competition. This depth of scientific training complements the doctoral, postdoctoral, and senior research expertise within our team.',
         'Our expertise spans fundamental physics, scientific computing, autonomous research agents, and frontier-model evaluation. Together, we connect rigorous scientific methodology with scalable AI systems. Our members have collectively contributed to open-source projects with over 50,000 GitHub stars, published more than 30 papers in leading scientific journals including Physical Review Letters, and authored multiple papers accepted at NeurIPS, ICLR, and ICML.',
         'We advance scientific discovery through intelligent research systems while developing the theoretical foundations, evaluation methodologies, and high-quality data infrastructure these systems require.',
       ],
@@ -143,41 +117,13 @@ export const copy = {
     selected: '代表性研究', selectedTitle: '让智能体真正执行科学研究。', viewAll: '查看全部研究',
     dataBandTag: '数据业务', dataBandTitle: '更好的科学智能，始于更好的科学数据。',
     dataBandText: '为前沿模型后训练构建专家设计的科学推理数据、可执行科研任务与严谨的验证环境。',
-    teamBandTag: '人才与合作', teamBandTitle: '跨越学科，连接机构。', teamBandText: '汇聚基础科学、科学计算与先进 AI 系统领域的研究者和工程师。', teamCta: '认识我们的团队',
+    teamBandTag: '人才与合作', teamBandTitle: '跨越学科，连接机构。', teamBandText: '从国际物理奥赛金牌获得者，到博士、博士后研究者与资深科学家，将深厚的科学训练与先进 AI 系统相结合。', teamCta: '认识我们的团队',
     tracks: [
       { title: 'AI for Science', subtitle: '构建能够发现的系统。', description: '打造专业科研智能体与端到端自主科研系统，让规划、执行、验证和持续改进形成闭环。', detail: '从 ColliderAgent 的专业科研执行，到 AutoResearchClaw 的跨领域迭代科研。' },
       { title: 'Physics of AI', subtitle: '理解智能系统的行为。', description: '以统计物理的方法研究智能系统的宏观动力学，探索复杂生成行为背后的基础规律。', detail: '以细致平衡研究为切入点，为大模型智能体提供可测量、可检验的理论描述。' },
       { title: 'AI Evaluation', subtitle: '衡量真实的科研能力。', description: '严格评估科学推理、真实论文复现，以及能够在未见数据上持续有效的方法改进。', detail: 'PHYBench → PRBench → RSI-Exam：从物理推理、论文复现，走向递归自我改进。' },
     ],
-    data: {
-      eyebrow: '数据业务', title: '科学深度，\n交付精度。', intro: '面向前沿模型后训练的高质量科学数据与可执行环境。以领域专家、科研智能体和自动化评测环境为基础，将严谨的科学方法转化为可复现、可扩展的数据生产流程。',
-      deliveryProof: { label: '深度合作', partners: ['字节跳动', '阿里巴巴'], metric: '1,000+', metricLabel: '累计交付科学数据与任务' },
-      capabilities: '核心能力', capabilitiesTitle: '从长程科学推理，到科研智能体任务。',
-      products: [
-        { number: '01', title: '长程科学推理数据', text: '由领域专家设计科学问题，提供完整推导、中间检查点和细致评分标准。', items: ['完整推理过程与参考答案', '验证关键中间步骤的科学正确性', '区分部分进展与最终正确性的评分细则'] },
-        { number: '02', title: '高难度科学任务', text: '构建 CritPt 等类型的高难度物理任务，以领域知识支撑任务设计，以严谨验证保障答案质量。', items: ['专家主导的问题设计与难度审核', '数学表达式与数值结果交叉验证', '明确科学假设、来源与验收标准'] },
-        { number: '03', title: '科研智能体任务', text: '让科研任务在真实科学软件环境中运行，配备工具调用接口与可执行验证器。', items: ['可复现的环境与专业工具链', '可执行参考流程与结果验证', '完整任务说明、依赖与评分逻辑'] },
-        { number: '04', title: '训练与评测环境', text: '构建面向模型强化学习、能力提升和严格科学评测的数据与环境体系。', items: ['可验证反馈与结构化奖励信号', '开发数据与保留评测数据分离', '可审计执行轨迹与失败分析'] },
-        { number: '05', title: 'RSI 科学数据', text: '面向递归自我改进（RSI）构建科学数据与任务，支持智能体根据实验反馈，持续改进科学算法、代码与科研流程。', items: ['配备基准方案与可复现环境的科学优化任务', '包含执行结果与反馈的多轮改进轨迹', '通过独立测试评估准确性、计算效率与泛化能力'] },
-      ],
-      pipelineLabel: '完整生产流程', pipelineTitle: '让专家判断贯穿每个关键环节。',
-      pipeline: [
-        ['任务设计', '领域专家明确科学目标、预期推理过程、任务难度与评分标准。'],
-        ['环境构建', 'Coding Agent 辅助完成工具集成、参考实现与可复现执行环境搭建。'],
-        ['专家核验', '专家独立检查推导、数值输出、参考解答与验证器行为。'],
-        ['质量控制', '审核任务一致性、结果可复现性、数据隔离与真实智能体执行轨迹。'],
-        ['交付与评测', '按照约定的训练或评测流程，交付任务、环境、评分细则与验证材料。'],
-      ],
-      deliverables: '清晰、具体的交付规范', deliverablesText: '围绕科学领域、目标模型能力、执行环境要求和评测标准，共同定义每项合作的范围。',
-      deliveryItems: [
-        ['任务包', '任务说明、科学背景、前提假设与来源记录。'],
-        ['参考证据', '完整推导或可执行参考方案、中间检查点与专家审核记录。'],
-        ['环境与验证器', '依赖配置、工具接口、可复现执行方式与明确验证逻辑。'],
-        ['评测材料', '评分细则、数据划分定义、质量检查与报告标准。'],
-      ],
-      foundation: '扎根真实科研', foundationText: 'PHYBench、PRBench、ColliderAgent 与 RSI-Exam 的研究实践，为科学任务设计、可靠环境构建和结果核验提供方法基础。',
-      contactTitle: '从明确科学问题开始。', contactText: '欢迎交流目标领域、模型能力，以及科学数据、执行环境或评测方面的需求。', contactCta: '洽谈数据合作',
-    },
+    data: dataBusiness.zh,
     research: {
       eyebrow: '科学研究', title: '构建、理解、评估。', intro: '一条相互支撑的科研主线：以自主智能系统推进科学发现，理解其底层动力学，并为真实能力建立严格、可信的衡量标准。',
       all: '全部研究', relationship: '贡献关系', allRelations: '全部贡献关系', trackFilter: '研究方向', count: '个项目', empty: '当前筛选条件下暂无项目。', reset: '重置筛选',
@@ -185,9 +131,10 @@ export const copy = {
       nodeLabels: { collideragent: '专业科研执行', autoresearchclaw: '迭代自主科研', phybench: '物理推理', prbench: '真实论文复现', rsi_exam: '递归自我改进', detailed_balance: '智能体宏观动力学' },
     },
     team: {
-      eyebrow: '我们的团队', title: '严谨求知，\n共同探索。', intro: '一支跨学科团队，为下一代科学智能构建系统、理论与数据基础设施。',
+      eyebrow: '我们的团队', title: '严谨求知，\n共同探索。', intro: '汇聚顶尖物理竞赛人才、博士与博士后研究者及资深科学家，活跃于科学前沿，共同构建下一代科学智能。',
       paragraphs: [
         '我们的团队汇聚了具有北京大学、耶鲁大学、加州大学伯克利分校、剑桥大学、布朗大学及北卡罗来纳大学教堂山分校等学术背景的研究者与工程师，并与麻省理工学院、斯坦福大学等机构的前沿科学家保持紧密科研合作。',
+        '团队成员中包括国际物理奥林匹克竞赛（IPhO）金牌获得者、全国中学生物理竞赛第四名获得者。深厚的科学训练与团队中的博士、博士后及资深科学家的研究积累相结合，支撑我们持续参与前沿科学探索。',
         '团队的专业积累横跨基础物理、科学计算、自主科研智能体和前沿模型评测，将严谨的科学方法与可扩展的 AI 系统相结合。团队成员参与贡献的开源项目累计获得超过 50,000 个 GitHub Stars，在包括 Physical Review Letters（PRL）在内的顶级科学期刊发表 30 余篇论文，并有多篇研究工作被 NeurIPS、ICLR、ICML 等顶级人工智能会议接收。',
         '我们致力于通过智能科研系统推进科学发现，同时发展下一代科学 AI 所需的理论基础、评测方法与高质量数据基础设施。',
       ],

@@ -61,6 +61,15 @@ export function metrics(project, lang, limit = 3) {
   return `<dl class="project-metrics">${project.metrics.slice(0, limit).map(m => `<div><dt>${esc(m.value)}</dt><dd>${esc(m.label[lang])}</dd></div>`).join('')}</dl>`;
 }
 
+export function dataOffering(product, lang) {
+  const d = copy[lang].data;
+  const example = product.example;
+  const sample = example.pending
+    ? `<section class="task-example example-pending" data-task-example="pending" aria-labelledby="example-${product.id}"><p class="eyebrow">${d.exampleLabel}</p><h4 id="example-${product.id}">${esc(example.title)}</h4><div class="example-reserved"><span>${esc(example.status)}</span></div></section>`
+    : `<section class="task-example" data-task-example="ready" aria-labelledby="example-${product.id}"><p class="example-category">${esc(example.tag)}</p><h4 id="example-${product.id}">${esc(example.title)}</h4><p class="example-brief"><span class="example-label">${d.promptLabel}</span>${esc(example.brief)}</p><dl class="example-facts"><div><dt>${d.outputLabel}</dt><dd>${esc(example.output)}</dd></div><div><dt>${d.verificationLabel}</dt><dd>${esc(example.verification)}</dd></div>${example.goal ? `<div><dt>${d.goalLabel}</dt><dd>${esc(example.goal)}</dd></div>` : ''}</dl></section>`;
+  return `<article class="capability data-offering" id="${product.id}" data-offering="${product.id}"><div class="offering-meta"><span class="index-number">${product.number}</span><span>${esc(product.unit)}</span></div><h3>${esc(product.title)}</h3><p>${esc(product.text)}</p><ul class="check-list">${product.items.map(item => `<li>${esc(item)}</li>`).join('')}</ul>${sample}</article>`;
+}
+
 export function miniVisual(project, lang) {
   const c = copy[lang];
   if (figures[project.id]) {

@@ -114,7 +114,7 @@ export const copy = {
       autoresearchclaw: '54.7% is the improvement over AI Scientist v2 on the original 25 machine-learning topics (May 2026). The later ARC-Bench release contains 55 topics across five domains. GitHub stars are a snapshot from October 2026.',
       phybench: 'Initial evaluation (2025): Gemini 2.5 Pro, 36.9%; human experts, 61.9%. The original paper reports a 204% gain in sample efficiency with EED over binary scoring.',
       prbench: 'Paper baselines (March 2026): Codex (GPT-5.3-Codex) scored 34% overall; all tested agents had a 0% strict complete-reproduction pass rate.',
-      detailed_balance: 'Published October 27, 2026, in PRX Intelligence 1, 023008. The detailed-balance findings apply to the defined states and tested experimental conditions.',
+      detailed_balance: 'Published October 27, 2026, in PRX Intelligence 1, 023008.',
       rsi_exam: 'Project release (2026): 88 executable tasks, comprising 35 public and 53 private tasks across six research domains.',
     },
     workflows: {
@@ -231,7 +231,7 @@ export const copy = {
       autoresearchclaw: '54.7% 为 2026 年 5 月论文中原始 25 个机器学习课题上相对 AI Scientist v2 的性能提升；后续 ARC-Bench 版本扩展为 5 个领域、55 个课题。GitHub Stars 为截至 2026 年 10 月的记录。',
       phybench: '2025 年初始评测：Gemini 2.5 Pro 正确率为 36.9%，人类专家为 61.9%。原论文报告 EED 相对二元评分提高了 204% 的样本效率。',
       prbench: '2026 年 3 月论文基线：Codex（GPT-5.3-Codex）综合得分为 34%；所有受测智能体的严格端到端完整复现通过率均为 0%。',
-      detailed_balance: '于 2026 年 10 月 27 日正式发表于 PRX Intelligence 1, 023008。细致平衡结果限定于论文明确的状态定义与实验条件。',
+      detailed_balance: '于 2026 年 10 月 27 日正式发表于 PRX Intelligence 1, 023008。',
       rsi_exam: '2026 年公开项目包含 88 个可执行研究任务，其中 35 个公开、53 个私有，覆盖 6 个研究领域。',
     },
     workflows: {

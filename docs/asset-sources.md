@@ -20,3 +20,5 @@ The personal profile uses the homepage's current About section (Computer Science
 The English/Chinese editorial copy on the website is original composition grounded in the supplied instruction and project documents. Project descriptions, metrics, highlights, publication details and credits are rendered verbatim from the JSON. The general layout takes inspiration from clear research navigation and typography on https://allenai.org/ without copying its content, branding, or assets.
 
 The user's follow-up specifically requested a figure-rich publication preview and authorized original paper/GitHub image retrieval. All six published projects now have original figures; the four representative works in Shi Qiu's profile include thumbnail figures, full-image links, figure-source attribution, and direct Paper / GitHub / Project links where provided.
+
+Bo Wang supplied his biography, Yale position, Zhejiang University education, research interests, and Google Scholar link directly. His profile uses the same layout as Shi Qiu’s; representative projects will be added when he supplies them.

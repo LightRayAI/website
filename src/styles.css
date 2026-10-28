@@ -225,6 +225,7 @@ h4 { font-size: 1rem; }
 .affiliations { margin-top: 50px; display: grid; grid-template-columns: 2fr 1fr; gap: 80px; padding-top: 30px; border-top: 1px solid var(--line); }
 .affiliations .institution-list { gap: 12px 24px; }
 .person-featured { display: grid; grid-template-columns: 300px 1fr; gap: 70px; padding-top: 10px; }
+.person-featured + .person-featured { margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--line); }
 .portrait { width: 245px; height: 245px; object-fit: cover; border-radius: 5px; margin-bottom: 27px; background: var(--paper); }
 .person-identity h3 { font-size: 1.65rem; margin-bottom: 14px; }
 .person-identity h3 span, .person-compact h3 span { font-size: .9rem; color: var(--muted); font-weight: 400; margin-left: 10px; display: inline-block; }
@@ -252,7 +253,6 @@ h4 { font-size: 1rem; }
 .publication-actions .text-link { gap: 8px; }
 .people-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 65px; padding-top: 40px; border-top: 1px solid var(--line); }
 .person-heading { display: flex; gap: 17px; align-items: center; margin-bottom: 20px; }
-.person-photo { width: 96px; height: 96px; object-fit: cover; border-radius: 3px; flex-shrink: 0; }
 .initials { width: 48px; height: 48px; display: grid; place-items: center; color: #59708f; background: var(--tint); font-size: .85rem; border-radius: 3px; flex-shrink: 0; }
 .person-compact h3 { font-size: 1.16rem; line-height: 1.6; }
 .person-heading .small-label { margin-top: 4px; font-size: .64rem; }
